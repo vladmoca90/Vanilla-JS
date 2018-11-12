@@ -1,16 +1,24 @@
 describe('math-utilities', function () {
-    describe('specificStringEnd()', function () {
-        it('throws an error if the sentence if empty', function() {
+    describe('countryProp()', function () {
+        it('throws an error if the object if empty', function () {
 
-            expect(function() {specificStringEnd('', 'abc')}).toThrowError();
+            expect(function () {
+                specificStringEnd('', 'abc')
+            }).toThrowError();
         });
-        it('throws an error if the end if empty', function() {
+        it('Returns the number of keys if the object is not empty', function () {
 
-            expect(function() {specificStringEnd('abcdefgh', '')}).toThrowError();
-        });
-        it('Returns true of the end matches the last word in the sentence', function() {
+            var country = {
+                name: "Uzbekistan",
+                population: 27, // in millions //
+                capital: "Tashkent",
+                otherCities: ["Samarkhand", "Burkhara", "Nukus"],
+                size: 447400,
+                region: "Central Asia",
+                independence: 1991,
+            }
 
-            expect(specificStringEnd('abc', 'c')).toBe(true);
+            expect(countryProp(country)).toBe(7);
         });
     });
 });

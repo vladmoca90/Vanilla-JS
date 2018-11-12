@@ -1,21 +1,19 @@
-//A function that checks if a string ends with a specific string
+//A object with properties of a country
 
-function specificStringEnd(sentence, end){
+var country = {
+    name: "Uzbekistan",
+    population: 27, // in millions //
+    capital: "Tashkent",
+    otherCities: ["Samarkhand", "Burkhara", "Nukus"],
+    size: 447400,
+    region: "Central Asia",
+    independence: 1991,
+}
 
-    if(sentence.length == 0) {
-        throw new Error('Sentence cannot be empty');
-    }
-    if(end.length == 0) {
-        throw new Error('End word cannot be empty');
-    }
-
-    var splitSentence = sentence.trim().split('');
-
-    for(var i = 0; i < sentence.length; i++) {
-        if(splitSentence[sentence.length - 1] !== end) {
-            return false;
-        }
+function countryProp(country) {
+    if(Object.keys(country).length == 0) {
+        throw new Error('The object cannot be empty');
     }
 
-    return true;
+    return Object.keys(country).length;
 }
