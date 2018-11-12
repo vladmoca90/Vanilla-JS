@@ -8,11 +8,11 @@ function createObject(list) {
     for (var i = 0; i < list.length; i++) {
         var persons = new Object();
 
-        persons.name = list[i];
-        persons.age = list[i + 1];
+        persons.name = list[i][0];
+        persons.age = list[i][1];
     }
 
     return persons;
 }
 
-createObject(['Alexandru', 25]);
+createObject([['Alexandru', 25]]);
