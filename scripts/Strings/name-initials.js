@@ -12,7 +12,7 @@ function nameInitials(name) {
     var initials = splitName[0];
 
     for (var i = 0; i < splitName.length; i++) {
-        initials = splitName[0].charAt(0) + splitName[i].charAt(0);
+        initials = splitName[i].charAt(0);
     }
 
     return initials;
