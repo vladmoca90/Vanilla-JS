@@ -1,24 +1,18 @@
 describe('math-utilities', function () {
-    describe('countryProp()', function () {
-        it('throws an error if the object if empty', function () {
+    describe('nameInitials()', function () {
+        it('throws an error if the name does not exist', function () {
 
-            expect(function () {
-                specificStringEnd('', 'abc')
+            expect(function () { 
+                nameInitials('')
             }).toThrowError();
         });
-        it('Returns the number of keys if the object is not empty', function () {
+        it('Returns the name if it has only one character', function () {
 
-            var country = {
-                name: "Uzbekistan",
-                population: 27, // in millions //
-                capital: "Tashkent",
-                otherCities: ["Samarkhand", "Burkhara", "Nukus"],
-                size: 447400,
-                region: "Central Asia",
-                independence: 1991,
-            }
+            expect(nameInitials('V')).toBe('V');
+        });
+        it('Returns the name initials if the name has more characters', function () {
 
-            expect(countryProp(country)).toBe(7);
+            expect(nameInitials('Vlad Mocanu')).toBe('VM');
         });
     });
 });
