@@ -8,7 +8,9 @@ function nameInitials(name) {
         return name;
     }
 
-    var splitName = name.trim().split(' ');
+    var newName = name.replace('-', ' ');;
+
+    var splitName = newName.trim().split(' ');
     var initials = '';
 
     for (var i = 0; i < splitName.length; i++) {
