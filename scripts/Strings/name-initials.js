@@ -9,10 +9,10 @@ function nameInitials(name) {
     }
 
     var splitName = name.trim().split(' ');
-    var initials = splitName[0];
+    var initials = '';
 
     for (var i = 0; i < splitName.length; i++) {
-        initials = splitName[i].charAt(0);
+        initials += splitName[i].charAt(0);
     }
 
     return initials;
