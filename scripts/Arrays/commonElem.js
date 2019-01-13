@@ -8,7 +8,7 @@ function showCommonElem(list) {
     var common = [];
 
     for(var i = 0; i < list.length; i++) {
-        if(list[i] == list[i + 1]) {
+        if(list[i] === list[i + 1]) {
             common.push(list[i]);
         }
     }
