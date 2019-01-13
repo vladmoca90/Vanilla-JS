@@ -1,21 +1,32 @@
-//A function that receives a string as a parameter (name) and returns the initials of that stirng (name)
+//A function that return how many days are left until Christmas
 
-function nameInitials(name) {
-    if (name.length == 0) {
-        throw new Error('the name msut be given');
-    }
-    if (name.length == 1) {
-        return name;
-    }
+function returnDaysUntilChristmas(today) {
+    var today = new Date();
 
-    var newName = name.replace('-', ' ');;
+    if (today.getMonth() == 11) {
+        if(today.getDate() < 25) {
+            return 25 - today.getDate();
+        }
+        if(today.getDate() == 25) {
+            return 0;
+        }
 
-    var splitName = newName.trim().split(' ');
-    var initials = '';
-
-    for (var i = 0; i < splitName.length; i++) {
-        initials += splitName[i].charAt(0);
+        return 31 - today.getDate() + 359;
     }
 
-    return initials;
+    var daysLeft = 24;
+
+    var daysOfTheMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    for (var i = today.getMonth() + 1; daysOfTheMonth.length - 1; i++) {
+        daysLeft += daysOfTheMonth[i] + (daysOfTheMonth[today.getMonth()] - today.getDate());
+
+        // if (daysOfTheMonth[1] == 29 && today.getMonth() == 0 || today.getMonth() == 1) {
+        //     daysLeft += daysOfTheMonth[i] + (daysOfTheMonth[today.getMonth()] - today.getDate()) + 1;
+        // }
+    }
+
+    return daysLeft;
 }
+
+

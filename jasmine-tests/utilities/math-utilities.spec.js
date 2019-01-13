@@ -1,30 +1,20 @@
 describe('math-utilities', function () {
-    describe('nameInitials()', function () {
-        it('throws an error if the name does not exist', function () {
+    describe('returnDaysUntilChristmas()', function () {
+        it('returns the number of days until Christmas if it is 1-24 December', function () {
 
-            expect(function () {
-                nameInitials('')
-            }).toThrowError();
+            expect(returnDaysUntilChristmas(2019, 11, 11)).toBe(14);
         });
-        it('Returns the name if it has only one character', function () {
+        it('returns zero if today is Christmas Day', function () {
 
-            expect(nameInitials('V')).toBe('V');
+            expect(returnDaysUntilChristmas(2019, 11, 25)).toBe(0);
         });
-        it('Returns the name initials if the name has more characters', function () {
+        it('returns zero if today is Christmas Day', function () {
 
-            expect(nameInitials('Vlad Mocanu')).toBe('VM');
+            expect(returnDaysUntilChristmas(2019, 11, 31)).toBe(359);
         });
-        it('Returns the name initials if the name has more characters', function () {
+        it('returns the total number of days until Christmas if is not December', function () {
 
-            expect(nameInitials('Ilinca Rolea Stroia')).toBe('IRS');
-        });
-        it('Returns the name initials if the name has more characters', function () {
-
-            expect(nameInitials('Ana-Maria Stanescu')).toBe('AMS');
-        });
-        it('Returns the name initials if the name has more characters', function () {
-
-            expect(nameInitials('ALEXANDRU MOCANU')).toBe('AM');
+            expect(returnDaysUntilChristmas(2019, 10, 25)).toBe(30);
         });
     });
 });
