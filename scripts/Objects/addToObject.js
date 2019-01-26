@@ -13,8 +13,6 @@ function addToStudent(student) {
     });
 }
 
-//Second object
-
 //A object with properties of a country
 
 var country = {

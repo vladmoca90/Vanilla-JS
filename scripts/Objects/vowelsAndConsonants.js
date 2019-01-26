@@ -6,11 +6,8 @@ function showVowelsAndConsonants(text) {
     }
 
     var splitText = text.trim().split('');
-
-    var letters = [];
-
+    var letters = {}
     var vowels = [];
-
     var consonants = [];
 
     for (var i = 0; i < splitText.length; i++) {
@@ -22,9 +19,9 @@ function showVowelsAndConsonants(text) {
         }
     }
 
-    return letters.push({
-        vowels: vowels,
-        consonants: consonants,
+    return Object.assign(letters, {
+            vowels: vowels,
+            consonants: consonants
     });
 }
 
