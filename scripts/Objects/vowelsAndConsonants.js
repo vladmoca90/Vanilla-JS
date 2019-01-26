@@ -11,10 +11,10 @@ function showVowelsAndConsonants(text) {
     var consonants = [];
 
     for (var i = 0; i < splitText.length; i++) {
-        if (isVowel(v)) {
+        if (isVowel()) {
             vowels.push(splitText[i]);
         }
-        if (isConsonant(c)) {
+        else {
             consonants.push(splitText[i]);
         }
     }
@@ -25,14 +25,10 @@ function showVowelsAndConsonants(text) {
     });
 }
 
-function isVowel(v) {
-    var v = (splitText[i] == 'a' || splitText[i] == 'e' || splitText[i] == 'i' || splitText[i] == 'o' || splitText[i] == 'u');
-
-    return v;
+function isVowel() {
+    return (splitText[i] == 'a' || splitText[i] == 'e' || splitText[i] == 'i' || splitText[i] == 'o' || splitText[i] == 'u');
 }
 
-function isConsonant(c) {
-    var c = (splitText[i] !== 'a' || splitText[i] !== 'e' || splitText[i] !== 'i' || splitText[i] !== 'o' || splitText[i] !== 'u');
-
-    return c;
+function isConsonant() {
+    return (splitText[i] !== 'a' || splitText[i] !== 'e' || splitText[i] !== 'i' || splitText[i] !== 'o' || splitText[i] !== 'u');
 }

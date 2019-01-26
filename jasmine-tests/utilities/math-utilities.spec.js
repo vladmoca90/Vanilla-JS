@@ -1,20 +1,28 @@
 describe('math-utilities', function () {
-    describe('returnDaysUntilChristmas()', function () {
-        it('returns the number of days until Christmas if it is 1-24 December', function () {
+    describe('compareNumbersWith()', function () {
+        it('returns an error if list is empty', function () {
 
-            expect(returnDaysUntilChristmas(2019, 11, 11)).toBe(14);
+            expect(function() {
+                compareNumbersWith([], 1)
+            }).toThrowError();
         });
-        it('returns zero if today is Christmas Day', function () {
+        it('returns an error if n doesnot exist', function () {
 
-            expect(returnDaysUntilChristmas(2019, 11, 25)).toBe(0);
+            expect(function() {
+                compareNumbersWith([10, 20, 30])
+            }).toThrowError();
         });
-        it('returns zero if today is Christmas Day', function () {
+        it('returns true is at least one element is greater than n', function () {
 
-            expect(returnDaysUntilChristmas(2019, 11, 31)).toBe(359);
+            expect(compareNumbersWith([1, 2, 3], 2)).toBeTruthy();
         });
-        it('returns the total number of days until Christmas if is not December', function () {
+        it('returns false if no element is greater than n', function () {
 
-            expect(returnDaysUntilChristmas(2019, 10, 25)).toBe(30);
+            expect(compareNumbersWith([1, 2, 3], 3)).toBeFalsy();
+        });
+        it('returns false if all elements in the list are equal and no element is greater than n', function () {
+
+            expect(compareNumbersWith([7, 7], 7)).toBeFalsy();
         });
     });
 });
