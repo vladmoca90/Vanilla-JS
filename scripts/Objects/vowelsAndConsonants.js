@@ -5,17 +5,16 @@ function showVowelsAndConsonants(text) {
         throw new Error('The text must be given');
     }
 
-    var splitText = text.trim().split('');
     var letters = {}
     var vowels = [];
     var consonants = [];
 
-    for (var i = 0; i < splitText.length; i++) {
-        if (isVowel()) {
-            vowels.push(splitText[i]);
+    for (var i = 0; i < text.length; i++) {
+        if (charAt(i) == isVowel()) {
+            vowels.push(text[i]);
         }
         else {
-            consonants.push(splitText[i]);
+            consonants.push(text[i]);
         }
     }
 
@@ -26,5 +25,5 @@ function showVowelsAndConsonants(text) {
 }
 
 function isVowel() {
-    return (splitText[i] == 'a' || splitText[i] == 'e' || splitText[i] == 'i' || splitText[i] == 'o' || splitText[i] == 'u');
+    return (text[i] == 'a' || text[i] == 'e' || text[i] == 'i' || text[i] == 'o' || text[i] == 'u');
 }
