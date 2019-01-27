@@ -1,14 +1,12 @@
-//Returns true is at least one element in an array in smaller than a given number
+//A function that returns true if all elements have a certain condition
 
-function compareNumbersWith(list, n) {
-    if (list.length == 0) {
+function everyElemSmaller(list, n) {
+    if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
-    if (!n) {
+    if(!n) {
         throw new Error('The n number must be given');
     }
 
-    return list.some(function(elem) {
-        return elem > n;
-    });
+    return list.every(elem => elem < n);
 }

@@ -1,16 +1,12 @@
 //A function that returns true if all elements have a certain condition
 
-function everyElem(list) {
-
+function everyElemSmaller(list, n) {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
+    if(!n) {
+        throw new Error('The n number must be given');
+    }
 
-   for(i=0; i<list.length; i++) {
-       if(list[i] > 10) {
-           return false;
-       }
-   }
-
-    return true;
+    return list.every(elem => elem < n);
 }
