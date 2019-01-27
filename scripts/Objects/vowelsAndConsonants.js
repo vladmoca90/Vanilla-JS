@@ -28,7 +28,3 @@ function showVowelsAndConsonants(text) {
 function isVowel() {
     return (splitText[i] == 'a' || splitText[i] == 'e' || splitText[i] == 'i' || splitText[i] == 'o' || splitText[i] == 'u');
 }
-
-function isConsonant() {
-    return (splitText[i] !== 'a' || splitText[i] !== 'e' || splitText[i] !== 'i' || splitText[i] !== 'o' || splitText[i] !== 'u');
-}
