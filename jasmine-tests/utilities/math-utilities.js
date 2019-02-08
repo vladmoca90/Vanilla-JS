@@ -1,12 +1,9 @@
-//A function that returns true if all elements have a certain condition
+//A function the parameterizes a string
 
-function everyElemSmaller(list, n) {
-    if(list.length == 0) {
-        throw new Error('The list cannot be empty');
-    }
-    if(!n) {
-        throw new Error('The n number must be given');
+function parameterizeText(text) {
+    if(text.length == 0) {
+        throw new Error('The text must be given')
     }
 
-    return list.every(elem => elem < n);
+    return text.trim().toLowerCase().replace(' ', '-');
 }
