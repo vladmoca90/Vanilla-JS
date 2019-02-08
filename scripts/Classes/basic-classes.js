@@ -1,9 +1,11 @@
 //A file with very basic classes
 
-class MyName {
+class Myself {
     constructor() {
         this.name = "Vlad Mocanu";
     }
 }
 
-console.log(MyName.name);
+var myself = new Myself();
+
+console.log(myself(name));
