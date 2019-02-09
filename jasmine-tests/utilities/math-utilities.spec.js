@@ -1,13 +1,13 @@
 describe('math-utilities', function () {
-    describe('parameterizeText()', function () {
+    describe('swapcaseText()', function () {
         it('returns an error if text does not exist', function () {
             expect(function() {
-                parameterizeText('')
+                swapcaseText('')
             }).toThrowError();
         });
-        it('returns parameterize string if the text exists', function () {
+        it('returns swapcase string if the text exists', function () {
 
-            expect(parameterizeText('Alexandru Mocanu')).toBe('alexandru-mocanu');
+            expect(swapcaseText('aaBB')).toBe('AAbb');
         });
     });
 });
