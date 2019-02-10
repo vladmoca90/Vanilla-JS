@@ -2,12 +2,12 @@
 
 function swapcaseText(text) {
     if(text.length == 0) {
-        throw new Error('The text must be given')
+        throw new Error('The text must be given');
     }
 
     var res = '';
 
-    for(var i = 0; text.length; i++) {
+    for(var i = 0; i < text.length; i++) {
         if(text.charAt(i) == text.charAt(i).toLowerCase()) {
             res += text.charAt(i).toUpperCase();
         }
