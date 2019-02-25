@@ -5,13 +5,13 @@ function capitalizeVowels(text) {
         throw new error('The text must be given');
     }
 
-    var capitalizedText = '';
+    var capVowel = '';
 
     for(var i = 0; i < text.length; i++) {
         if(text.charAt(i) == 'a' || text.charAt(i) == 'e' || text.charAt(i) == 'i' || text.charAt(i) == 'o' || text.charAt(i) == 'u') {
-            capitalizedText += text.charAt(i).toUpperCase();
+            capVowel += text.charAt(i).toUpperCase();
         }
     }
 
-    return capitalizedText;
+    return capVowel;
 }
