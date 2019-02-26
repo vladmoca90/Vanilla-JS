@@ -2,20 +2,24 @@ describe('math-utilities', function () {
     describe('capitalizeConsonants()', function () {
         it('returns an error if text does not exist', function () {
             expect(function() {
-                capitalizeConsonants('')
+                trimText('')
             }).toThrowError();
         });
-        it('capitalize all letters if it contains only consonants', function () {
+        it('returns text if there is no space', function () {
 
-            expect(capitalizeConsonants('bbbb')).toBe('BBBB');
+            expect(trimText('a')).toBe('a');
         });
-        it('do not capitalize any letter if there are no consonants', function () {
+        it('returns text with no spaces if spaces are only at the beginning and the end', function () {
 
-            expect(capitalizeConsonants('aaee')).toBe('aaee');
+            expect(trimText(' Alexandru ')).toBe('Alexandru');
         });
-        it('capitalize all consonants in a text', function () {
+        it('returns text with no spaces if spaces are only between the words', function () {
 
-            expect(capitalizeConsonants('aabbeedd')).toBe('aaBBeeDD');
+            expect(trimText('Alex andru')).toBe('Alexandru');
+        });
+        it('returns text with no spaces if spaces are everywhere', function () {
+
+            expect(trimText(' A l e x a n d r u ')).toBe('Alexandru');
         });
     });
 });
