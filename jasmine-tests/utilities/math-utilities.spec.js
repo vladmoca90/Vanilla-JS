@@ -1,21 +1,21 @@
 describe('math-utilities', function () {
-    describe('swapcaseText()', function () {
+    describe('capitalizeVowels()', function () {
         it('returns an error if text does not exist', function () {
             expect(function() {
-                swapcaseText('')
+                capitalizeVowels('')
             }).toThrowError();
         });
-        it('returns all lowercase if the original has only uppercase', function () {
+        it('capitalize all letters if it contains only vowels', function () {
 
-            expect(swapcaseText('AACBBC')).toBe('aacbbc');
+            expect(capitalizeVowels('aaaa')).toBe('AAAA');
         });
-        it('returns all uppercase if the original has only lowercase', function () {
+        it('do not capitalize any letter if there are no vowels', function () {
 
-            expect(swapcaseText('aabbcc')).toBe('AABBCC');
+            expect(capitalizeVowels('bbcc')).toBe('bbcc');
         });
-        it('returns swapcase string if the text exists', function () {
+        it('capitalize all vowels in a text', function () {
 
-            expect(swapcaseText('aaBBcD')).toBe('AAbbCd');
+            expect(capitalizeVowels('aabbeedd')).toBe('AAbbEEdd');
         });
     });
 });
