@@ -1,12 +1,12 @@
 //A function the creates an object
 
-function createObject(list) {
+function createPerson(list) {
     if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
     for (var i = 0; i < list.length; i++) {
-        var persons = new Object();
+        var persons = {};
 
         persons.name = list[i][0];
         persons.age = list[i][1];
@@ -15,4 +15,4 @@ function createObject(list) {
     return persons;
 }
 
-createObject([['Alexandru', 25]]);
+createPerson([['Alexandru', 25]]);
