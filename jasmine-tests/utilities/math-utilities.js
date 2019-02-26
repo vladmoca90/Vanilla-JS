@@ -1,19 +1,18 @@
-//A function that capitalizes every vowels in a text
-
-function capitalizeVowels(text) {
+//A function that capitalizes every consonant in text
+function capitalizeConsonants(text) {
     if(text.length == 0) {
         throw new error('The text must be given');
     }
 
-    var capVowel = '';
+    var capConst = '';
 
     for(var i = 0; i < text.length; i++) {
-        if(text.charAt(i) == 'a' || text.charAt(i) == 'e' || text.charAt(i) == 'i' || text.charAt(i) == 'o' || text.charAt(i) == 'u') {
-            capVowel += text.charAt(i).toUpperCase();
+        if(text.charAt(i) !== 'a' || text.charAt(i) !== 'e' || text.charAt(i) !== 'i' || text.charAt(i) !== 'o' || text.charAt(i) !== 'u') {
+            capConst += text.charAt(i).toUpperCase();
         } else {
-            capVowel += text.charAt(i);
+            capConst += text.charAt(i);
         }
     }
 
-    return capVowel;
+    return capConst;
 }

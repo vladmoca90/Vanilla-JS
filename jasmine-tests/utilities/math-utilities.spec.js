@@ -1,21 +1,21 @@
 describe('math-utilities', function () {
-    describe('capitalizeVowels()', function () {
+    describe('capitalizeConsonants()', function () {
         it('returns an error if text does not exist', function () {
             expect(function() {
-                capitalizeVowels('')
+                capitalizeConsonants('')
             }).toThrowError();
         });
-        it('capitalize all letters if it contains only vowels', function () {
+        it('capitalize all letters if it contains only consonants', function () {
 
-            expect(capitalizeVowels('aaaa')).toBe('AAAA');
+            expect(capitalizeConsonants('bbbb')).toBe('BBBB');
         });
-        it('do not capitalize any letter if there are no vowels', function () {
+        it('do not capitalize any letter if there are no consonants', function () {
 
-            expect(capitalizeVowels('bbcc')).toBe('bbcc');
+            expect(capitalizeConsonants('aaee')).toBe('aaee');
         });
-        it('capitalize all vowels in a text', function () {
+        it('capitalize all consonants in a text', function () {
 
-            expect(capitalizeVowels('aabbeedd')).toBe('AAbbEEdd');
+            expect(capitalizeConsonants('aabbeedd')).toBe('aaBBeeDD');
         });
     });
 });
