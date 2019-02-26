@@ -6,7 +6,6 @@ var student = {
 };
 
 function addToStudent(student) {
-
     return Object.assign(student, {
         grade: 10,
         pastConvictions: false
@@ -23,7 +22,6 @@ var country = {
 }
 
 function addNewProperties(country) {
-
     return Object.assign(country, {
         size: 447400,
         region: "Central Asia",
