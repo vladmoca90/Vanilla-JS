@@ -15,3 +15,19 @@ class Triangle {
 }
 
 console.log(new Triangle(4, 6, 8).total); //results 18
+
+//A class that is sibling of another class
+class formatDate extends Date {
+  constructor(dateStr) {
+    super(dateStr);
+  }
+
+  getFormattedDate() {
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    return `${this.getDate()}-${months[this.getMonth()]}-${this.getFullYear()}`;
+  }
+}
+
+console.log(new formatDate('August 19, 1975 23:15:30').getFormattedDate());
