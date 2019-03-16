@@ -15,3 +15,11 @@ class Triangle {
 }
 
 console.log(new Triangle(4, 6, 8).total); //results 18
+
+//A class that is sibling of another class
+class Square extends Polygon {
+  constructor(length) {
+    super(length, length);
+    this.name = 'Square';
+  }
+}
