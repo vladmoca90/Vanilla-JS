@@ -8,10 +8,13 @@ class Vehicle {
 class Car extends Vehicle {
     constructor(make, model) {
         super(make, model);
-        console.log('This car is a ' + this.make + ' ' + this.model);
+    }
+
+    get carType() {
+        return 'This car is a ' + this.make + ' ' + this.model;
     }
 }
 
-let car = console.log(new Car('Ford', 'Fiesta'));
+let car = new Car('Ford', 'Fiesta');
 
-console.log(car);
+console.log(car.carType);
