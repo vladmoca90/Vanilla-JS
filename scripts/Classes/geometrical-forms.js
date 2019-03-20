@@ -20,6 +20,9 @@ console.log(square); // return {area: 1000}
 class Rectangle extends Polygon {
   constructor(height, width) {
     super(height, width);
-    
   }
 }
+
+let rectangle = new Rectangle(15, 11);
+
+console.log(rectangle); // return {area: 165}
