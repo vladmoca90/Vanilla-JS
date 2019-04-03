@@ -7,7 +7,7 @@ class Name {
 
     // Adding a method to the constructor
     greet() {
-        return this.name + 'is my name. I am' + this.age + 'years old';
+        return 'My name is' + this.name + 'and I am' + this.age + 'years old';
     }
 }
 

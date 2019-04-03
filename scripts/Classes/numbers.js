@@ -1,11 +1,11 @@
-class Vehicle {
+class Numbers {
     constructor(make, model) {
         this.make = make;
         this.model = model;
     }
 }
 
-class Car extends Vehicle {
+class Even extends Numbers {
     constructor(make, model) {
         super(make, model);
     }
