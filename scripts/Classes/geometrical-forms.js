@@ -10,11 +10,15 @@ class Square extends Polygon {
   constructor(height, width) {
     super(height, width);
   }
+
+  get squareArea() {
+    return this.area;
+  }
 }
 
 let square = new Square(100, 100);
 
-console.log(square); // return {area: 1000}
+console.log(square.squareArea);
 
 //A class that is sibling of another class
 class Rectangle extends Polygon {
