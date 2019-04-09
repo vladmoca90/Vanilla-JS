@@ -6,8 +6,8 @@ class Name {
     }
 
     // Adding a method to the constructor
-    greet() {
-        return 'My name is' + this.name + 'and I am' + this.age + 'years old';
+    get greet() {
+        return 'My name is ' + this.name + ' and I am ' + this.age + ' years old';
     }
 }
 
