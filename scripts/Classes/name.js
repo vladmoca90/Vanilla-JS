@@ -13,4 +13,4 @@ class Name {
 
 const myself = new Name('Vlad Mocanu', 28);
 
-console.log(myself); // returns an object with the name and age
+console.log(myself.greet); // returns a text with your name in it
