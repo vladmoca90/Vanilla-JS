@@ -11,10 +11,19 @@ class Tiger extends Animal {
     }
 
     get animalType() {
-        return this.family + ' - ' + this.species;
+        return this.family + ' ' +  'and' + ' ' +  this.species;
+    }
+
+    set animalType(newSpecies) { //the setter can have only one parameter
+       if(typeof newSpecies  == 'string') {
+            this.species = newSpecies;
+       } 
+       else {
+            throw new Error('The output is not valid');
+       }
     }
 }
 
-let tiger = new Tiger('Felidae', 'Panthera tigris');
+const tiger = new Tiger('Felidae', 'Panthera tigris');
 
 console.log(tiger.animalType);
