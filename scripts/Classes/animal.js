@@ -24,6 +24,6 @@ class Tiger extends Animal {
     }
 }
 
-const tiger = new Tiger('Felidae', 'Panthera tigris');
+const tiger = new Tiger('Felidae', 'Panthera onca');
 
 console.log(tiger.animalType);
