@@ -1,8 +1,8 @@
 describe('math-utilities', function () {
-    describe('capitalizeConsonants()', function () {
-        it('returns an error if text does not exist', function () {
+    describe('removeEvenIndexes()', function () {
+        it('returns an error if the list is empty', function () {
             expect(function() {
-                trimText('')
+                removeEvenIndexes([])
             }).toThrowError();
         });
         it('returns text if there is no space', function () {
