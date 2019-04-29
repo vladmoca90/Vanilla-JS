@@ -4,6 +4,9 @@ function removeOddIndexes(list) {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
+    if(list.length == 1) {
+        return list[0];
+    }
 
     var newList = [];
 
