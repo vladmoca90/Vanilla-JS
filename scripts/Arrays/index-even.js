@@ -5,7 +5,7 @@ function removeEvenIndexes(list) {
         throw new Error('The list cannot be empty');
     }
     if (list.length == 1) {
-        return [];
+        return list[0];
     }
 
     var newList = [];
