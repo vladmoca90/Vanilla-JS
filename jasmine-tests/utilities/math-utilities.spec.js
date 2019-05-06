@@ -11,7 +11,7 @@ describe('math-utilities', function () {
         });
         it('returns array with elements on odd indexes only', function () {
 
-            expect(removeEvenIndexes([0, 1, 2, 3])).toBe([1, 3]);
+            expect(removeEvenIndexes([0, 1, 2, 3, 4, 5])).toBe([1, 3, 5]);
         });
     });
 });
