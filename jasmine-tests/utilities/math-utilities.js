@@ -1,20 +1,12 @@
-//A function that removes the elements on an even index
+//A function that repeats a text n times
 
-function removeEvenIndexes(list) {
-    if (list.length == 0) {
-        throw new Error('The list cannot be empty');
+function repeatText(text, n) {
+     if (text.length == 0) {
+        throw new Error('The text cannot be empty');
     }
-    if (list.length == 1) {
-        return list[0];
+    if(n == 0) {
+        throw new Error('n must be greater or equal to 1');
     }
-
-    var newList = [];
-
-    for (var i = 0; i < list.length; i++) {
-        if (i % 2 !== 0) {
-            newList.push(list[i]);
-        }
-    }
-
-    return newList;
+    
+    return text.repeat(n);
 }

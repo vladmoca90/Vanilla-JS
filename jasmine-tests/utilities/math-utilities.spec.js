@@ -1,17 +1,17 @@
 describe('math-utilities', function () {
-    describe('removeEvenIndexes()', function () {
-        it('returns an error if the list is empty', function () {
+    describe('repeatText()', function () {
+        it('returns an error if the text does not exist', function () {
             expect(function() {
-                removeEvenIndexes([])
+                repeatText('', 4)
             }).toThrowError();
         });
-        it('returns the only element if the list has only one element', function () {
+        it('returns an error if the number is 0', function () {
 
-            expect(removeEvenIndexes([1])).toBe(1);
+            expect(repeatText('Ana', 0)).toThrowError();
         });
-        it('returns array with elements on odd indexes only', function () {
+        it('returns a text repeated n timesif everything is valid', function () {
 
-            expect(removeEvenIndexes([0, 1, 2, 3, 4, 5])).toBe([1, 3, 5]);
+            expect(repeatText('Ana', 3)).toBe('AnaAnaAna');
         });
     });
 });
