@@ -7,7 +7,9 @@ describe('math-utilities', function () {
         });
         it('returns an error if the number is 0', function () {
 
-            expect(repeatText('Ana', 0)).toThrowError();
+            expect(function() {
+                repeatText('Ana', 0)
+            }).toThrowError();
         });
         it('returns a text repeated n timesif everything is valid', function () {
 
