@@ -1,9 +1,7 @@
-//A function that changed the order of the elements in an array in random order
+//A function that changed the order of the elements in an list in random order
 
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
+function shuffle(list) {
+  return list.sort(() => Math.random() - 0.5);
 }
 
-let arr = [1, 2, 3];
-shuffle(arr);
-alert(arr);
+shuffle([1, 2, 3, 4]);
