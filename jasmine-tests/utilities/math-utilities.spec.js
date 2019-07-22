@@ -6,7 +6,6 @@ describe('math-utilities', function () {
             }).toThrowError();
         });
         it('returns the list itself if it has only one element', function () {
-
             expect(function() {
                 randomizeElem([1])
             }).toBe([1]);
