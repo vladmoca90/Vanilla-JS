@@ -1,19 +1,19 @@
 describe('math-utilities', function () {
-    describe('repeatText()', function () {
-        it('returns an error if the text does not exist', function () {
+    describe('randomizeElem()', function () {
+        it('returns an error if the list is empty', function () {
             expect(function() {
-                repeatText('', 4)
+                randomizeElem([])
             }).toThrowError();
         });
-        it('returns an error if the number is 0', function () {
+        it('returns the list itself if it has only one element', function () {
 
             expect(function() {
-                repeatText('Ana', 0)
-            }).toThrowError();
+                randomizeElem([1])
+            }).toBe([1]);
         });
-        it('returns a text repeated n timesif everything is valid', function () {
+        it('returns a random array if it has more than one element', function () {
 
-            expect(repeatText('Ana', 3)).toBe('AnaAnaAna');
+            expect(randomizeElem([1, 2, 3])).toBe([3, 2, 1]);
         });
     });
 });
