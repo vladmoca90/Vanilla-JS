@@ -1,12 +1,14 @@
-//A function that repeats a text n times
+//A function that changed the order of the elements in an list in random order
 
-function repeatText(text, n) {
-     if (text.length == 0) {
-        throw new Error('The text cannot be empty');
-    }
-    if(n == 0) {
-        throw new Error('n must be greater or equal to 1');
-    }
-    
-    return text.repeat(n);
+function randomizeElem(list) {
+  if(list.length == 0) {
+    throw new Error('The list cannot be empty');
+  }
+   if(list.length == 1) {
+    return list[0];
+  }
+
+  return list.sort(() => Math.random() - 0.5);
 }
+
+randomizeElem([1, 2, 3, 4]);
