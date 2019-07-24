@@ -1,18 +1,20 @@
 describe('math-utilities', function () {
-    describe('randomizeElem()', function () {
-        it('returns an error if the list is empty', function () {
-            expect(function() {
-                randomizeElem([])
+    describe('removeCharacters()', function () {
+        it('returns an error if the text does not exist', function () {
+            expect(function () {
+                removeCharacters('', 3)
             }).toThrowError();
         });
-        it('returns the list itself if it has only one element', function () {
-            expect(function() {
-                randomizeElem([1])
-            }).toBe([1]);
+        it('returns the only character if the text has only one', function () {
+            expect(function () {
+                removeCharacters('a', 3)
+            }).toBe('a');
         });
-        it('returns a random array if it has more than one element', function () {
+        it('returns the number of charcters that you want to remove', function () {
 
-            expect(randomizeElem([1, 2, 3])).toBe([3, 2, 1]);
+            expect(function() {
+                removeCharacters('abcdefghijk', 3)
+            }).toBe('abc');
         });
     });
 });
