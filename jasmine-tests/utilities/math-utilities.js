@@ -1,19 +1,12 @@
-//A function that removes a certain number of characters from a string
+//A function that changed the order of the elements in an list in random order
 
-function removeCharacters(text, n) {
+function randomizeElem(list) {
+  if(list.length == 0) {
+    throw new Error('The list cannot be empty');
+  }
+   if(list.length == 1) {
+    return list;
+  }
 
-    if (text.length == 0) {
-        throw new Error('Text must exist');
-    }
-    if(text.length == 1) {
-        return text[0];
-    }
-    // if (n < 0) {
-    //   throw new Error('The number cannot be negative');
-    // }
-    // if (n == 0) {
-    //   return text[0];
-    // }
-
-    return text.substring(0, n);
+  return list.sort(() => Math.random() - 0.5);
 }
