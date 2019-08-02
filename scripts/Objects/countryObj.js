@@ -4,7 +4,7 @@ var country = {
     name: "Uzbekistan",
     population: 27, // in millions //
     capital: "Tashkent",
-    otherCities: ["Samarkhand", "Burkhara", "Nukus"],
+    otherCities: ["Samarkhand", "Burkhara", "Nukus", "Fergana Valley"],
     size: 447400,
     region: "Central Asia",
     independence: 1991,
