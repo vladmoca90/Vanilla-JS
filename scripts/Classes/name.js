@@ -4,6 +4,7 @@ class Name {
         this.age = age;
     }
 
+    //this is called a method
     get greet() {
         return 'My name is ' + this.name + ' and I am ' + this.age + ' years old';
     }
