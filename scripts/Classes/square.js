@@ -19,14 +19,3 @@ class Square extends Polygon {
 let square = new Square(100, 100);
 
 console.log(square.squareArea);
-
-//A class that is sibling of another class
-class Rectangle extends Polygon {
-  constructor(height, width) {
-    super(height, width);
-  }
-}
-
-let rectangle = new Rectangle(15, 11);
-
-console.log(rectangle); // return {area: 165}
