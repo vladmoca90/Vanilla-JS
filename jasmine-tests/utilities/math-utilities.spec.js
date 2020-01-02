@@ -1,17 +1,18 @@
 describe('math-utilities', function () {
-    describe('randomizeElem()', function () {
-        it('returns an error if the list is empty', function () {
+    describe('digitsAddition()', function () {
+        it('returns an error if the number does not exist', function () {
             expect(function () {
-                randomizeElem([ ])
+                digitsAddition()
             }).toThrowError();
         });
-        it('returns the list if it has only one element', function () {
-
-            expect(randomizeElem([0])).toBe([0]);
+         it('returns an error if the number is negative', function () {
+            expect(function () {
+                digitsAddition(-3)
+            }).toThrowError();
         });
-        it('returns a list with random elements', function () {
+        it('returns the sum of digits if the number exists and it is positive', function () {
 
-            expect(randomizeElem([1, 2, 3])).toBe([3, 1, 2]);
+            expect(digitsAddition(123)).toBe(6);
         });
     });
 });
