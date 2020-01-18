@@ -1,4 +1,4 @@
-class Name {
+class Profile {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -10,6 +10,10 @@ class Name {
     }
 }
 
-const myself = new Name('Vlad Mocanu', 28);
+class Name extends Profile {
+
+}
+
+// const myself = new Name('Vlad Mocanu', 28);
 
 console.log(myself.greet);
