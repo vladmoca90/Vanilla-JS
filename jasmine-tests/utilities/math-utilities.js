@@ -1,19 +1,22 @@
-//A function that calculates the addition between the digits of a number
-function digitsAddition(n) {
-    if(!n) {
-        throw new Error('The number must be given');
-    }
-    if (n < 0) {
-        throw new Error('The number must be positive');
-    }
+//A function that calculates how many times a word appears in a text
 
-    var sum = 0;
-
-    while (n > 0) {
-        var digit = n % 10;
-        sum += digit;
-        n = Math.floor(n / 10)
+function countWord(word, text) {
+    if (word.length == 0) {
+        throw new Error('The word must exist');
+    }
+    if (text.length == 0) {
+        throw new Error('The text must exist');
     }
 
-    return sum;
+    var count = 0;
+
+    var wordsList = text.split(' ');
+
+    for (var i = 0; i < wordsList.length; i++) {
+        if (wordsList[i] === word) {
+            count++;
+        }
+    }
+
+    return count;
 }

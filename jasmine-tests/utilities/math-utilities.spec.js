@@ -1,18 +1,18 @@
 describe('math-utilities', function () {
-    describe('digitsAddition()', function () {
-        it('returns an error if the number does not exist', function () {
+    describe('countWord()', function () {
+        it('returns an error if the word does not exist', function () {
             expect(function () {
-                digitsAddition()
+                countWord('', 'Alex is my brother')
             }).toThrowError();
         });
-         it('returns an error if the number is negative', function () {
+        it('returns an error if the text doesnot exist', function () {
             expect(function () {
-                digitsAddition(-3)
+                countWord('Alex', '')
             }).toThrowError();
         });
-        it('returns the sum of digits if the number exists and it is positive', function () {
+        it('returns the number of times a word appears in the text', function () {
 
-            expect(digitsAddition(123)).toBe(6);
+            expect(countWord('Alex', 'Alex Alex Alex')).toBe(3);
         });
     });
 });
