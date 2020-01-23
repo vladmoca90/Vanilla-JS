@@ -5,7 +5,7 @@ describe('math-utilities', function () {
                 countWord('', 'Alex is my brother')
             }).toThrowError();
         });
-        it('returns an error if the text doesnot exist', function () {
+        it('returns an error if the text does not exist', function () {
             expect(function () {
                 countWord('Alex', '')
             }).toThrowError();
