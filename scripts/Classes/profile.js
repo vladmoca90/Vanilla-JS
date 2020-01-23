@@ -6,11 +6,11 @@ class Profile {
 }
 
 class Name extends Profile {
-        constructor(name, age) {
-            super(name, age);
-        }
+    constructor(name, age) {
+        super(name, age);
+    }
 
-        //this is called a method
+    //this is called a method
     get greet() {
         return 'My name is ' + this.name + ' and I am ' + this.age + ' years old';
     }
