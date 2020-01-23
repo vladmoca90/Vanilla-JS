@@ -1,9 +1,9 @@
 //A function that switches the days of the week
 
 function getCurrentDay(day) {
-    var day;
+    var day = new Date();
 
-    switch (new Date().getDay()) {
+    switch (day.getDay()) {
         case 0:
             day = 'Sunday';
             break;
