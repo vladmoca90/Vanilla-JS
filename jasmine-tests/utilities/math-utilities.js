@@ -9,7 +9,6 @@ function countWord(word, text) {
     }
 
     var count = 0;
-
     var wordsList = text.split(' ');
 
     for (var i = 0; i < wordsList.length; i++) {
