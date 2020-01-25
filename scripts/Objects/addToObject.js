@@ -8,12 +8,11 @@ var student = {
 function addToStudent(student) {
     return Object.assign(student, {
         grade: 10,
-        pastConvictions: false
+        pastConvictions: false,
     });
 }
 
 //A object with properties of a country
-
 var country = {
     name: "Uzbekistan",
     population: 27, // in millions //
@@ -21,10 +20,11 @@ var country = {
     otherCities: ["Samarkhand", "Burkhara", "Nukus"],
 }
 
-function addNewProperties(country) {
+function addToCountry(country) {
     return Object.assign(country, {
         size: 447400,
         region: "Central Asia",
+        continent: "Asia",
         independence: 1991,
     });
 }
