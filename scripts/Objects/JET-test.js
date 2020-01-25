@@ -1,5 +1,5 @@
 //Please write some object oriented code in JavaScript The code should be made as reusable as possible. 
-//It should tell me how many letter e’s are in the following sentence ‘Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eanean sodales justo et Enim ornare, a congue lacus commodo.’, 
+//It should tell me how many times letter 'e' appears in the following sentence ‘Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eanean sodales justo et Enim ornare, a congue lacus commodo.’, 
 //how many number 1s are in the following number 17272838119191929838299111
 //the result of 7 + 5
 
