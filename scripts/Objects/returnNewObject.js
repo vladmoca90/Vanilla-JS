@@ -15,8 +15,6 @@ function addInNewObject(student) {
         throw new Error('The object cannot be empty');
     }
 
-    var properties = {}
-
     return Object.assign({
         length: Object.keys(student).length,
         keys: Object.keys(student),
