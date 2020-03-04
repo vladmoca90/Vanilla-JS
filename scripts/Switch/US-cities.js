@@ -6,13 +6,7 @@ var city = {
     "New York City",
     "Los Angeles",
     "Atlanta",
-    "Detroit"
-  ],
-  state: [
-    "New York",
-    "California",
-    "Georgia",
-    "Michigan",
+    "Detroit",
   ],
 }
 
