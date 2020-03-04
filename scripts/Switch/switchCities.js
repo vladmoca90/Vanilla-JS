@@ -5,7 +5,7 @@ var city = {
   name: [
     "New York City",
     "Los Angeles",
-    "Atlanta"
+    "Atlanta",
   ],
     state: [
       "New York",
@@ -19,10 +19,15 @@ function cities(city) {
   switch (city.name) {
 
     case "New York City":
-      return console.log("The city is called New York City");
+      console.log("The city is called New York City");
+      break;
     case "Los Angeles":
-      return console.log("This californian city is Los Angeles");
+      console.log("This californian city is Los Angeles");
+      break;
     case "Atlanta":
-      return console.log("Atlanta is the capital of Georgia state");
+      console.log("Atlanta is the capital of Georgia state");
+      break;
+    default:
+      throw new Error('City does not exist');
   }
 }
