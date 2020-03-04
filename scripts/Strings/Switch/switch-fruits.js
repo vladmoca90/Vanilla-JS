@@ -2,27 +2,27 @@ function getGrocery(groceryItem) {
 
     switch (groceryItem) {
         case 'tomato':
-            console.log('Tomatoes are $0.49');
+            console.log('Tomatoes are $0.79');
             break;
         case 'lime':
             console.log('Limes are $1.49');
+            break;
+        case 'apple':
+            console.log('Apples are £0.99');
             break;
         case 'papaya':
             console.log('Papayas are $1.29');
             break;
         default:
-            console.log('Invalid item');
+            console.log('Sorry we ran out of' + groceryItem);
             break;
     }
 }
 
 GetGrocery('papaya');
 
-// Prints 'Papayas are $1.29'
-
 
 // Theory
-
 
 // The switch keyword initiates the statement and is followed by ( ... ), 
 // which contains the value that each case will compare. In the example, the value or expression of the switch statement 
