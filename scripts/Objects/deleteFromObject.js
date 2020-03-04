@@ -4,28 +4,27 @@ var library = [
     {
         title: 'The Road Ahead',
         author: 'Bill Gates',
-        libraryID: 1254,
+        libraryId: 0775,
     },
     {
-        title: 'Walter Isaacson',
+        title: 'The Life of Walter Isaacson',
         author: 'Steve Jobs',
-        libraryID: 4264,
+        libraryId: 4064,
     },
     {
         title: 'Mockingjay: The Final Book of The Hunger Games',
         author: 'Suzanne Collins',
-        libraryID: 3245,
+        libraryId: 1919,
     }
 ];
 
-function deleteFromObj(library) {
-
+function deletedObjProp(library) {
     if (library.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
-    for (i = 0; i < library.length; i++) {
-        delete library[i].libraryID;
+    for (var i = 0; i < library.length; i++) {
+        delete library[i].libraryId;
     }
 
     return library;

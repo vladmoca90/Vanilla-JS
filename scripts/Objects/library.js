@@ -25,7 +25,7 @@ function bookStatus(library) {
 
     var status = [];
 
-    for (i = 0; i < library.length; i++) {
+    for (var i = 0; i < library.length; i++) {
         if(library[i].readingStatus == true) {
             status.push(Object.values(library[i]));
         }
