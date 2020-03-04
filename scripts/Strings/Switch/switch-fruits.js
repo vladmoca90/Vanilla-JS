@@ -1,4 +1,10 @@
 function getGrocery(groceryItem) {
+    if(!groceryItem) {
+        throw new Error('The grocery must exist');
+    }
+    if(groceryItem.length == 0) {
+        throw new Error('The grocery must be given.');
+    }
 
     switch (groceryItem) {
         case 'tomato':

@@ -1,4 +1,10 @@
 function getAthletePosition(position) {
+    if (!position) {
+        throw new Error('The grocery must exist');
+    }
+    if (position.length == 0) {
+        throw new Error('The grocery must be given.');
+    }
 
     switch (position) {
         case 'first place':
