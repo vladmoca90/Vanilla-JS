@@ -1,6 +1,6 @@
-function getAthletePosition(athleteFinalPosition) {
+function getAthletePosition(position) {
 
-    switch (athleteFinalPosition) {
+    switch (position) {
         case 'first place':
             console.log('You get the gold medal!');
             break;

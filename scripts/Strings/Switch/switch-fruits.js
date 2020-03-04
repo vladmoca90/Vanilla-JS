@@ -14,12 +14,12 @@ function getGrocery(groceryItem) {
             console.log('Papayas are $1.29');
             break;
         default:
-            console.log('Sorry we ran out of' + groceryItem);
+            console.log('Sorry we ran out of ' + groceryItem);
             break;
     }
 }
 
-GetGrocery('papaya');
+getGrocery('papaya');
 
 
 // Theory
