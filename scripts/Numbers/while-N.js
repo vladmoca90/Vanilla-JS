@@ -1,4 +1,6 @@
-const increaseXbyN = (n, x) => {
+const increaseXbyN = n => {
+    let x;
+
     while(n < 6) {
         n++;
         x =+ n;
@@ -7,4 +9,4 @@ const increaseXbyN = (n, x) => {
     return x;
 }
 
-increaseXbyN(1, 4);
+increaseXbyN(3);
