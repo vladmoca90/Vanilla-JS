@@ -1,18 +1,13 @@
 describe('math-utilities', function () {
-    describe('countWord()', function () {
-        it('returns an error if the word does not exist', function () {
-            expect(function () {
-                countWord('', 'Alex is my brother')
-            }).toThrowError();
+    describe('increaseXbyN()', function () {
+        it('returns the x value if n is greater than 6', function () {
+            expect(increaseXbyN(11, 4)).toBe(4);
         });
-        it('returns an error if the text does not exist', function () {
-            expect(function () {
-                countWord('Alex', '')
-            }).toThrowError();
+          it('returns the x value if n is equal to 6', function () {
+            expect(increaseXbyN(6, 4)).toBe(4);
         });
-        it('returns the number of times a word appears in the text', function () {
-
-            expect(countWord('Alex', 'Alex Alex Alex')).toBe(3);
+        it('returns the x increased value by n if n is smaller than 6', function () {
+            expect(increaseXbyN(4, 4)).toBe(6);
         });
     });
 });

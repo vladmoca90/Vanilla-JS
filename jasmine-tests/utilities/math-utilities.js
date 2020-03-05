@@ -7,4 +7,4 @@ const increaseXbyN = (n, x) => {
     return x;
 }
 
-increaseXbyN(1, 4);
+increaseXbyN(4, 4);
