@@ -1,7 +1,7 @@
-function sumOfMultiples() {
+function sumOfMultiples(n) {
     var sum = 0;
 
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < n; i++) {
         if (i % 3 == 0) {
             sum += i;
         }
@@ -9,4 +9,4 @@ function sumOfMultiples() {
     return sum;
 }
 
-sumOfMultiples();
+sumOfMultiples(100);
