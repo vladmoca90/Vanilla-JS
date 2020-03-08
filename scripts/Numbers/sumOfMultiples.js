@@ -1,20 +1,12 @@
-function sumOfMultiples(m) {
-    if(m <= 0) {
-        throw new Error('The number must be positive and greater than 0');
-    }
-    if(n <= 0) {
-        throw new Error('The number must be positive and greater than 0');
-    }
-
+function sumOfMultiples() {
     var sum = 0;
 
-    for(var n = 0; n < 1000; n++) {
-        if(n % m == 0) {
-            sum += n;
+    for (var i = 0; i < 1000; i++) {
+        if (i % 3 == 0) {
+            sum += i;
         }
-
-        return sum;
     }
+    return sum;
 }
 
-sumOfMultiples(3);
+sumOfMultiples();
