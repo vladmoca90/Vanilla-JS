@@ -55,6 +55,6 @@ function mathUtilities() {
 
 var mathUtils = new mathUtilities();
 
-console.log(mathUtils.countDigit(17272838119191929838299111, 1)); //returns 5
+console.log(mathUtils.countDigit(17271191919299111, 1)); //returns 5
 
 console.log(mathUtils.add(7, 5)); //returns 12
