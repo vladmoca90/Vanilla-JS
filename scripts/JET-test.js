@@ -32,17 +32,14 @@ console.log(textUtils.countLetters('Lorem ipsum dolor sit amet, consectetur adip
 //returns 10
 
 function mathUtilities() {
-
     this.add = function (a, b) {
         return a + b;
     }
 
     this.countDigit = function (number, digit) {
-
         if (number == null || digit == null) {
             throw new Error('The number or digit cannot have a null value');
         }
-
         if (digit < 0 || digit > 9) {
             throw new Error('The digit cannot be outside the interval of [0, 9]');
         }
@@ -56,5 +53,4 @@ function mathUtilities() {
 var mathUtils = new mathUtilities();
 
 console.log(mathUtils.countDigit(17271191919299111, 1)); //returns 5
-
 console.log(mathUtils.add(7, 5)); //returns 12
