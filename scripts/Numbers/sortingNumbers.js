@@ -1,4 +1,8 @@
 function sortingNUmbers(x, y, x) {
+    if(!x || !y || !z) {
+        throw new Error('EVery element must be a valid number');
+    }
+
     if (x > y && x > z) {
         if (y > z) {
             console.log(x + ", " + y + ", " + z);
