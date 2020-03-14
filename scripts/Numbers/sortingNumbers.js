@@ -1,4 +1,4 @@
-function sortingNUmbers(x, y, z) {
+function sortDescNumbers(x, y, z) {
 
     if (x > y && x > z) {
         if (y > z) {
@@ -21,4 +21,4 @@ function sortingNUmbers(x, y, z) {
     }
 }
 
-sortingNUmbers(-1, 7, 0);
+ortDescNumbers(-1, 7, 0);
