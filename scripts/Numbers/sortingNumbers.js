@@ -1,4 +1,13 @@
 function sortDescNumbers(x, y, z) {
+    if(isNaN(x) == true) {
+        throw new Error('The x must be a valid number');
+    }
+    if(isNaN(y) == true) {
+        throw new Error('The y must be a valid number');
+    }
+    if(isNaN(z) == true) {
+        throw new Error('The z must be a valid number');
+    }
 
     if (x > y && x > z) {
         if (y > z) {
@@ -21,4 +30,4 @@ function sortDescNumbers(x, y, z) {
     }
 }
 
-ortDescNumbers(-1, 7, 0);
+sortDescNumbers(-1, 7, 0);
