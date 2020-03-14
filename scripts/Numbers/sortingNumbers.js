@@ -1,7 +1,4 @@
-function sortingNUmbers(x, y, x) {
-    if(!x || !y || !z) {
-        throw new Error('Every element must be a valid number');
-    }
+function sortingNUmbers(x, y, z) {
 
     if (x > y && x > z) {
         if (y > z) {
