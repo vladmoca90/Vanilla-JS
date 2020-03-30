@@ -1,6 +1,6 @@
 //A function that receives a string as a parameter (name) and returns the initials of that stirng (name)
 
-function nameInitials(name) {
+const nameInitials = (name) => {
     if (name.length == 0) {
         throw new Error('the name msut be given');
     }
@@ -9,7 +9,6 @@ function nameInitials(name) {
     }
 
     var newName = name.replace('-', ' ');;
-
     var splitName = newName.trim().split(' ');
     var initials = '';
 
