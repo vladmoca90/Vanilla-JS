@@ -1,4 +1,4 @@
-//A function that returns a certain digit from a number
+//A function that returns a certain digit from a number. The position m of a digit in a number.
 
 function getCertainDigit(n, m) {
     if (n.toString().length == 0) {
