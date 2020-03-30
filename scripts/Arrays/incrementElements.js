@@ -6,7 +6,7 @@ function incrementElements(list, n) {
         throw new Error('The list cannot be empty');
     }
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         list[i] += n;
     }
 

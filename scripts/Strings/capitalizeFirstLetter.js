@@ -14,7 +14,7 @@ function capitalizeFirstLetter(text) {
 
     var capitalizedLetters = [];
 
-    for (i = 0; i < splitText.length; i++) {
+    for (var i = 0; i < splitText.length; i++) {
         capitalizedLetters.push(splitText[i].charAt(0).toUpperCase() + splitText[i].substring(1));
     }
 

@@ -15,7 +15,7 @@ function evenSum(list) {
 
     var even = 0;
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         if (list[i] % 2 == 0) {
             even += list[i];
         }

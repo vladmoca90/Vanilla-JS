@@ -10,7 +10,7 @@ function longestWordLength(text) {
 
     var longest = splitText[0].length;
 
-    for (i = 0; i < splitText.length; i++) {
+    for (var i = 0; i < splitText.length; i++) {
         longest = Math.max(longest, splitText[i].length);
     }
 

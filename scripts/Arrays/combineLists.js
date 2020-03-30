@@ -25,7 +25,7 @@ function combineLists(a, b) {
 
     var primaListaEMare = a == listaMare;
 
-    for (i = 0; i < listaMica.length; i++) {
+    for (var i = 0; i < listaMica.length; i++) {
         if (primaListaEMare) {
             c.push(listaMare[i]);
             c.push(listaMica[i]);

@@ -10,7 +10,7 @@ function longestWord(text) {
 
     var word = splitText[0];
 
-    for (i = 0; i < splitText.length; i++) {
+    for (var i = 0; i < splitText.length; i++) {
         if(word.length < splitText[i].length) {
             word = splitText[i];
         }

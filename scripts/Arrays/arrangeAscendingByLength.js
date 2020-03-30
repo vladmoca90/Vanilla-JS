@@ -11,7 +11,7 @@ function sortAscByLength(list) {
 
     var sortedList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         if (list[i].length < list[i + 1].length) {
             sortedList.push(list[i]);
         }

@@ -6,7 +6,7 @@ function squareList(list) {
         return list;
     }
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         var number = list[i] * list[i];
         list[i] = number;
     }

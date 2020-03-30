@@ -6,7 +6,7 @@ function mappingMultiplication(list) {
 
     var mappedList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] * 2);
         });
@@ -23,7 +23,7 @@ function mappingAddition(list) {
 
     var mappedList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] + 100);
         });
@@ -40,7 +40,7 @@ function mappingSubstraction(list) {
 
     var mappedList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] - 10);
         });
@@ -57,7 +57,7 @@ function mappingDivision(list) {
 
     var mappedList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i]/2);
         });

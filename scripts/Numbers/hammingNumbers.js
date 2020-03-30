@@ -4,7 +4,7 @@ function returnTotalOfHamming(n, m, p) {
 
     var count = 0;
 
-    for (i = 0; i < 1000; i++) {
+    for (var i = 0; i < 1000; i++) {
         if (i % n == 0 || i % m == 0 || i % p == 0) {
             count++;
         }

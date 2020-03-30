@@ -12,7 +12,7 @@ function allDivisors(list, n) {
 
     var divisorsList = [];
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         if (list[i] % n == 0) {
             divisorsList.push(list[i]);
         }

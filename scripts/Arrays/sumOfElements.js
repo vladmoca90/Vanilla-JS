@@ -12,7 +12,7 @@ function sum(list) {
 
     var sum = 0;
 
-    for (i = 0; i < list.length; i++) {
+    for (var i = 0; i < list.length; i++) {
         sum += list[i];
     }
 

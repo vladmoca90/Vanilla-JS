@@ -14,7 +14,7 @@ function countDigit(number, digit) {
 
     var newNumber = number.toString();
 
-    for (i = 0; i < newNumber.length; i++) {
+    for (var i = 0; i < newNumber.length; i++) {
         if(newNumber.charAt(i) == digit) {
             count++;
         }
