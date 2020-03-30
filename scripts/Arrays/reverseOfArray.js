@@ -2,7 +2,7 @@
 
 function reverse(list) {
 
-    for (i = 0, j = list.length - 1; i < list.length / 2 && j >= list.length / 2; i++, j--) {
+    for (var i = 0; j = list.length - 1; i < list.length / 2 && j >= list.length / 2; i++, j--) {
         var a = list[i];
         var b = list[j];
 
