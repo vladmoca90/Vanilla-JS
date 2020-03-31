@@ -6,7 +6,6 @@ function camelize(text) {
     }
 
     var splitText = text.trim().split(' ');
-
     var camelizedList = [];
 
     for (var i = 0; i < splitText.length; i++) {

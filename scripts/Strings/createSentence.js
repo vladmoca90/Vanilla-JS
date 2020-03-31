@@ -2,7 +2,6 @@
 //but are separated through a space, and you have "." at the end
 
 function createdSentence(sentence) {
-
     if (sentence.length == 0) {
         throw new Error("The sentence is empty");
     }

@@ -2,7 +2,6 @@
 
 //will make the entire text as an array
 function textToList(text) {
-
     if (text.length == 0) {
         throw new Error('The text cannot be empty');
     }
@@ -13,7 +12,6 @@ function textToList(text) {
 
 //will make each text character as an array element
 function textToList(text) {
-
     if (text.length == 0) {
         throw new Error('The text cannot be empty');
     }

@@ -1,7 +1,6 @@
 //A function that checks if a string ends with a specific string
 
 function specificStringEnd(sentence, end){
-
     if(sentence.length == 0) {
         throw new Error('Sentence cannot be empty');
     }

@@ -3,7 +3,6 @@
 //charFreq("abbabcbdbabdbdbabababcbcbab")
 
 function charFreq(text) {
-
     if (text.length == 0) {
         throw new Error("The string is empty");
     }
