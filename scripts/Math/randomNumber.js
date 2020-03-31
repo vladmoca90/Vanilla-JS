@@ -1,7 +1,5 @@
 //A function that returns a random number between a cartain interval
-
-function randomNumber(min, max) {
-
+const randomNumber = (min, max) => {
     if (min > max) {
         throw new Error('The interval is invalid');
     }
