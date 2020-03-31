@@ -1,7 +1,6 @@
 ﻿//sum of all even elements in an list//
 
 function evenSum(list) {
-
     if (list.length == 0) {
         throw new Error("The list is empty");
     }

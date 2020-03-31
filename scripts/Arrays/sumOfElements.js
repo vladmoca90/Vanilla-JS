@@ -1,7 +1,6 @@
 ﻿//sum of the elements of an list//
 
 function sum(list) {
-
     if (list.length == 0) {
         throw new Error("The list is empty");
     }
