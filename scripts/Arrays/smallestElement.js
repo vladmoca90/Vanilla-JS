@@ -1,7 +1,6 @@
 ﻿//smallest element in an list//
 
 function min(list) {
-
     if (list.length == 0) {
         throw new Error("The list cannot be empty");
     }

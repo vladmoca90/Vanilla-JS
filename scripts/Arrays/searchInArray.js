@@ -1,7 +1,6 @@
 ﻿//search the element in an list//
 
-function search(list, n) {
-    //validations//
+function searchInList(list, n) {
     if (list.length == 0) {
         return false;
     }
