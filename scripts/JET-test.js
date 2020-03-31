@@ -5,7 +5,6 @@
 
 function textUtilities() {
     this.countLetters = function (text, letter) {
-
         if (text.length == 0) {
             return 0;
         }
