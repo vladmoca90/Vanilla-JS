@@ -1,6 +1,6 @@
 //A function that returns the total of Hammning numbers up to 1000 (or any other limit)
 
-function returnTotalOfHamming(n, m, p) {
+const totalOfHamming = (n, m, p) => {
 
     var count = 0;
 

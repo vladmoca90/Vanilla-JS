@@ -1,22 +1,14 @@
-//A function that receives a string as a parameter (name) and returns the initials of that stirng (name)
+//A function that returns the total of Hammning numbers up to 1000 (or any other limit)
 
-const nameInitials = (name) => {
-    if (name.length == 0) {
-        throw new Error('the name msut be given');
-    }
-    if (name.length == 1) {
-        return name;
-    }
+const totalOfHamming = (n, m, p) => {
 
-    var newName = name.replace('-', ' ');;
-    var splitName = newName.trim().split(' ');
-    var initials = '';
+    var count = 0;
 
-    for (var i = 0; i < splitName.length; i++) {
-        initials += splitName[i].charAt(0);
+    for (var i = 0; i < 1000; i++) {
+        if (i % n == 0 || i % m == 0 || i % p == 0) {
+            count++;
+        }
     }
 
-    return initials;
+    return count;
 }
-
-nameInitials('Vlad Mocanu');
