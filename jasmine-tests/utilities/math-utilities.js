@@ -1,14 +1,12 @@
-//A function that returns the total of Hammning numbers up to 1000 (or any other limit)
+ //A function that compares the length of two lists and returns the longest one
 
-const totalOfHamming = (n, m, p) => {
+ function longestList(x, y) {
+     if (x.length == y.length) {
+         throw new Error("The lists are equal");
+     } else if (x.length > y.length) {
+         return x;
+     } else {
+         return y;
+     }
 
-    var count = 0;
-
-    for (var i = 0; i < 1000; i++) {
-        if (i % n == 0 || i % m == 0 || i % p == 0) {
-            count++;
-        }
-    }
-
-    return count;
-}
+ }
