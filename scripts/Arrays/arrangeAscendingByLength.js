@@ -1,7 +1,6 @@
 //A function that sorts the strings of an array by length from shortest to longest
 
 function sortAscByLength(list) {
-
     if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }

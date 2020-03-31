@@ -4,7 +4,6 @@
 //last([]): returns the last element of the list 
 
 function head(list) {
-
     if (list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -16,15 +15,12 @@ function head(list) {
 }
 
 function tail(list) {
-
     if (list.length == 0) {
         throw new Error("The list is empty");
     }
     if (list.length == 1) {
         return [];
     }
-
-    var removeFirst = list.shift();
 
     return list;
 }

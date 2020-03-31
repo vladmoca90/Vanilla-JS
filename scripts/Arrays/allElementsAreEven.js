@@ -1,8 +1,6 @@
 //A function that returns true if all elements in an list are even and false otherwise
 
-
 function allElementsAreEven(list) {
-
     if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }

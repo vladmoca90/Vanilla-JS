@@ -2,7 +2,6 @@
 //c = [a0, b0, a1, b1, ...]
 
 function combineLists(a, b) {
-
     if (a.length == 0) {
         return b;
     }
