@@ -1,10 +1,10 @@
-﻿var europeanCountries = ["Spain", "Greece", "Austria", "Netherlands", "Poland"];
+﻿// var europeanCountries = ["Spain", "Greece", "Austria", "Netherlands", "Poland"];
 
-document.getElementById("european").innerHTML = europeanCountries;
+// document.getElementById("european").innerHTML = europeanCountries;
 
-function EuroCountries() {
+// function EuroCountries() {
 
-    document.getElementById("european").innerHTML = europeanCountries[0];
+//     document.getElementById("european").innerHTML = europeanCountries[0];
 
-}
+// }
 

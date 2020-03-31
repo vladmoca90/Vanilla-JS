@@ -1,11 +1,11 @@
-﻿var fruits = ["Banana", "Orange", "Apple", "Mango", "Apricot", "Fig"];
+﻿// var fruits = ["Banana", "Orange", "Apple", "Mango", "Apricot", "Fig"];
 
-document.getElementById("spliceArray").innerHTML = fruits;
+// document.getElementById("spliceArray").innerHTML = fruits;
 
-function myFunction() {
+// function myFunction() {
 
-    fruits.splice(1, 1, "Kiwi");
+//     fruits.splice(1, 1, "Kiwi");
 
-    document.getElementById("spliceArray").innerHTML = fruits;
+//     document.getElementById("spliceArray").innerHTML = fruits;
 
-}
+// }

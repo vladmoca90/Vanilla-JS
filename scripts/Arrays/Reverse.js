@@ -1,9 +1,9 @@
-﻿var names = ["Elliot", "Joana", "Vlad", "Sarah", "Alexander", "Katherine"];
+﻿// var names = ["Elliot", "Joana", "Vlad", "Sarah", "Alexander", "Katherine"];
 
-document.getElementById("reversing").innerHTML = names;
+// document.getElementById("reversing").innerHTML = names;
 
-function reverseNames() {
+// function reverseNames() {
 
-    document.getElementById("reversing").innerHTML = names.reverse();
+//     document.getElementById("reversing").innerHTML = names.reverse();
 
-}
+// }

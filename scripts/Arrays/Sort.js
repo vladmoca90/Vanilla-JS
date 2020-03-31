@@ -1,9 +1,9 @@
-﻿var names = ["Elliot", "Joana", "Vlad", "Sarah", "Alexander", "Katherine"];
+﻿// var names = ["Elliot", "Joana", "Vlad", "Sarah", "Alexander", "Katherine"];
 
-document.getElementById("sorting").innerHTML = names;
+// document.getElementById("sorting").innerHTML = names;
 
-function sortingNames() {
+// function sortingNames() {
 
-    document.getElementById("sorting").innerHTML = names.sort();
+//     document.getElementById("sorting").innerHTML = names.sort();
 
-}
+// }

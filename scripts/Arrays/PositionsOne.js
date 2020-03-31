@@ -1,10 +1,10 @@
-﻿var africanCountries = ["South Africa", "Zimbabwe", "Nigeria", "Morocco", "Ethiopia"];
+﻿// var africanCountries = ["South Africa", "Zimbabwe", "Nigeria", "Morocco", "Ethiopia"];
 
-document.getElementById("african").innerHTML = africanCountries;
+// document.getElementById("african").innerHTML = africanCountries;
 
-function AfricanCountries() {
+// function AfricanCountries() {
 
-    document.getElementById("african").innerHTML = africanCountries[2];
+//     document.getElementById("african").innerHTML = africanCountries[2];
 
-}
+// }
 
