@@ -13,15 +13,12 @@ describe('math-utilities', function () {
             }).toThrowError();
         });
         it('returns true is at least one element is greater than n', function () {
-
             expect(everyElemSmaller([1, 2, 3], 4)).toBeTruthy();
         });
         it('returns false if no element is greater than n', function () {
-
             expect(everyElemSmaller([1, 2, 3], 3)).toBeFalsy();
         });
         it('returns false if all elements in the list are equal and no element is greater than n', function () {
-
             expect(everyElemSmaller([7, 7], 7)).toBeFalsy();
         });
     });
