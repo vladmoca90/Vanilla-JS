@@ -10,14 +10,6 @@ var country = {
     independence: 1991,
 }
 
-function countryProp(country) {
-    return Object.keys(country);
-}
-
-function countryValues(country) {
-    return Object.values(country);
-}
-
-function countryPairs(country) {
-    return Object.entries(country);
-}
+const countryProp = country => Object.keys(country);
+const countryValues = country => Object.values(country);
+const countryPairs = country => Object.entries(country);
