@@ -1,7 +1,3 @@
 //Return a portion of an array
 
-function partOfSentence(sentence) {
-
-    return sentence.substring(0, 10);
-
-}
+const partOfSentence = sentence => sentence.substring(0, 10);
