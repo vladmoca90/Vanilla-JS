@@ -15,7 +15,6 @@ function returnDaysUntilChristmas(today) {
     }
 
     var daysLeft = 24;
-
     var daysOfTheMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     for (var i = today.getMonth() + 1; daysOfTheMonth.length - 1; i++) {
