@@ -1,7 +1,3 @@
 //A funtion that calculates a logarithm
 
-function calcLog(x) {
-
-    return Math.log(x);
-
-}
+const calcLog = x => Math.log(x);
