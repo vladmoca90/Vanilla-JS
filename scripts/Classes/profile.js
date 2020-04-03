@@ -16,6 +16,6 @@ class Name extends Profile {
     }
 }
 
-const myselt = new Name('Vlad Mocanu', 28);
+const myself = new Name('Vlad Mocanu', 28);
 
 console.log(myself.greet);
