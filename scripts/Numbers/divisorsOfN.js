@@ -1,7 +1,6 @@
 ﻿//Given a number n, return a list with all the divisors of n
 
 function findDivisors(n) {
-
     if (n <= 0) {
         throw new Error("The n must be positive only");
     }

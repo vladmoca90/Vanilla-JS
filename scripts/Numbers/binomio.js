@@ -1,13 +1,11 @@
 ﻿//Calculate (a + b)^n, with a, b, n natural non-zero numbers
 
 function calcGeneralBinomio(a, b, n) {
-
     if (a <= 0 || b <= 0 || n <= 0) {
         throw new Error("a, b and n must be > 0");
     }
 
     var result = 1;
-
     var i = 0;
 
     while (i < n) {
@@ -19,13 +17,11 @@ function calcGeneralBinomio(a, b, n) {
 }
 
 function calculateBinomioWithCombinations(a, b, n) {
-
     if (a <= 0 || b <= 0 || n <= 0) {
         throw new Error("a, b and n must be > 0");
     }
 
     var result = 0;
-
     var i = 0;
 
     while (i <= n) {

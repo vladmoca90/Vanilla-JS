@@ -5,11 +5,10 @@ function degreesIntoRadians(degrees) {
         throw new Error('The degrees must be a positive number');
     }
     if(degrees > 360) {
-        throw new Error('The degrees must be a number between 0 and 360');
+        throw new Error('The degrees must be a number 0 and 360');
     }
 
     var pi = 3.14;
-
     var radians = pi*(degrees/180);
 
     return radians;
@@ -22,7 +21,6 @@ function radiansIntoDegrees(radians) {
     }
 
     var pi = 3.14;
-
     var degrees = (radians*180)/pi;
 
     return degrees;

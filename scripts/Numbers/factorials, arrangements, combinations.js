@@ -1,7 +1,6 @@
 ﻿//Calculate the factorial
 
 function fact(n) {
-
     if (n < 0) {
         throw new Error("the n must be greater of equal to 0");
     }
@@ -15,7 +14,6 @@ function fact(n) {
 //Calculate arrangements
 
 function calculateArrangements(n, k) {
-
     if (k > n) {
         throw new Error("The k must be < than n");
     }
@@ -32,7 +30,6 @@ function calculateArrangements(n, k) {
 //Calculate combinations
 
 function calculateCombinations(n, k) {
-
     if (k > n) {
         throw new Error("The k must be < than n");
     }
