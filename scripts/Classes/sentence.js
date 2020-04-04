@@ -1,10 +1,10 @@
-class Words {
+class Sentence {
     constructor(word) {
         this.word = word;
     }
 }
 
-class Greeting extends Words {
+class Greeting extends Sentence {
     constructor(word) {
         super(word);
     }
