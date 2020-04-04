@@ -1,20 +1,17 @@
-//Given a text, return the reverse of the text
+//Calculate (a + b)^n, with a, b, n natural non-zero numbers
 
-function reverseText(text) {
-    if(text.length == 0) {
-        throw new Error('Text must exist');
-    }
-    if(text.length == 1) {
-        return text;
+function calcGeneralBinomio(a, b, n) {
+    if (a <= 0 || b <= 0 || n <= 0) {
+        throw new Error("a, b and n must be > 0");
     }
 
-    var reversed = "";
+    var result = 1;
+    var i = 0;
 
-    for (i = text.length - 1; i >= 0; i--) {
-        var c = text.charAt(i);
-        reversed = reversed + c;
+    while (i < n) {
+        result = result * (a + b);
+        i++;
     }
 
-    return reversed;
+    return result;
 }
-

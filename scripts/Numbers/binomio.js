@@ -16,6 +16,9 @@ function calcGeneralBinomio(a, b, n) {
     return result;
 }
 
+
+//This functions calculates the bonomio with combinations
+
 function calculateBinomioWithCombinations(a, b, n) {
     if (a <= 0 || b <= 0 || n <= 0) {
         throw new Error("a, b and n must be > 0");

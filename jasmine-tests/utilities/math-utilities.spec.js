@@ -1,18 +1,17 @@
 describe('math-utilities', function () {
-    describe('longestList()', function () {
-        it('returns an error if one of the lists is empty', function () {
+    describe('calcGeneralBinomio()', function () {
+        it('returns an error if at least one of the numbers is zero.', function () {
             expect( function() {
-                longestList([], [3])
+                calcGeneralBinomio(2, 0, 2);
             }).toThrowError();
         });
-        it('returns the first list if the have equal length', function () {
-            expect(longestList(['a'], ['c'])).toEqual(['a']);
+        it('returns an error if at least one of the numbers is negative.', function () {
+            expect( function() {
+                calcGeneralBinomio(-1, 0, -7);
+            }).toThrowError();
         });
-        it('returns the first list is this one is longer than the second', function () {
-            expect(longestList([1, 2, 3], ['a'])).toEqual([1, 2, 3]);
-        });
-        it('returns the second list if this one is longer than the first', function () {
-            expect(longestList([1], ['a', 'b'])).toEqual(['a', 'b']);
+        it('calculates the binomio isall numbers are greater than 0.', function() {
+            expect(calcGeneralBinomio(2, 2, 2)).toBe(16);
         });
     });
 });
