@@ -1,26 +1,12 @@
-//Calculate the factorial
+//A function that uses the theorem of Pitagora
 
-const fact = (n) => {
-    if (n < 0) {
-        throw new Error("the n must be greater of equal to 0");
+const calcPitagora = (a, b, c) => {
+    if(a == 0 || b == 0 || c == 0) {
+        throw new Error('The shape is not a triangle');
     }
-    if (n == 0) {
-        return 1;
-    }
-
-    return n*fact(n-1);
-}
-
-const calcArrangements = (n, k) => {
-    if (k > n) {
-        throw new Error("The k must be < than n");
-    }
-    if (k == 1) {
-        return n;
-    }
-    if (n == k) {
-        return 1;
+    if(c*c == b*b + a*a) {
+        return false;
     }
 
-    return fact(n) / fact(n - k);
+    return true;
 }
