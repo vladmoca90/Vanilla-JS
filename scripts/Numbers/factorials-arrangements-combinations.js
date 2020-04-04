@@ -1,6 +1,6 @@
 ﻿//Calculate the factorial
 
-const calcFact = (n) => {
+const fact = (n) => {
     if (n < 0) {
         throw new Error("the n must be greater of equal to 0");
     }
@@ -8,7 +8,7 @@ const calcFact = (n) => {
         return 1;
     }
 
-    return fact(n);
+    return n*fact(n-1);
 }
 
 //Calculate arrangements
