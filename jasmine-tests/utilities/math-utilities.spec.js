@@ -1,15 +1,18 @@
 describe('math-utilities', function () {
-    describe('fact()', function () {
-        it('Returns an error if the n is negative.', function() {
+    describe('calcArrangements()', function () {
+        it('Returns an error if k if greater than n.', function() {
             expect(function() {
-                fact(-7).toThrowError();
+                calcArrangements(5, 9).toThrowError();
             });
         });
-        it('Returns 1 if the n number is 0.', function() {
-            expect(fact(0)).toBe(1);
+        it('Returns the value of n if k is equal to 1', function() {
+            expect(calcArrangements(4, 1)).toBe(4);
         });
-        it('Calculates the factorial if n is positive and greater than 0.', function() {
-            expect(fact(3)).toEqual(6);
+        it('Returns 1 if n is equal to k.', function() {
+            expect(calcArrangements(2, 2)).toBe(1);
+        });
+        it('Calculates the arrangement if all conditions are fulfilled.', function() {
+            expect(calcArrangements(4, 2)).toBe(12);
         });
     });
 });
