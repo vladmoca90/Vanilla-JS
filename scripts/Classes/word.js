@@ -1,10 +1,13 @@
 class Words {
     constructor(word) {
-        super(word);
+        this.word = word;
     }
 }
 
 class Greeting extends Words {
+    constructor(word) {
+        super(word);
+    }
 
     get hello() {
         return word;
@@ -18,3 +21,7 @@ class Greeting extends Words {
         }
     }
 }
+
+const sentence = new Greeting('Hello world!');
+
+console.log(sentence.hello);
