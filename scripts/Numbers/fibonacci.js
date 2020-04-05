@@ -1,4 +1,4 @@
-﻿function fibonacci(n) {
+﻿const fibonacci = n => {
     if (n < 0) {
         throw new Error("n must be positive or 0 only!");
     }

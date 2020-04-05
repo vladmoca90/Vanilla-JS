@@ -1,15 +1,12 @@
-//A function that transforms degrees into radians
-
-function degreesToRadians(degrees) {
-    var pi = 3.14;
-    var radians = pi*(degrees/180);
-
-    if(degrees < 0) {
-        throw new Error('The degrees must be a positive number');
+const fibonacci = n => {
+    if (n < 0) {
+        throw new Error("n must be positive or 0 only!");
     }
-    if(degrees > 360) {
-        throw new Error('The degrees must be a number 0 and 360');
+    if (n == 0) {
+        return 1;
     }
-
-    return radians;
+    if (n == 1) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
