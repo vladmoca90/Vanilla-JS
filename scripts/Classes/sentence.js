@@ -24,4 +24,4 @@ class Greeting extends Sentence {
 
 const sentence = new Greeting('Hello world!');
 
-console.log(sentence.hello);
+console.log(sentence.word);
