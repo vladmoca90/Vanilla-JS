@@ -1,14 +1,15 @@
-function sumOfMultiples(n) {
-    if (n <= 0) {
-        throw new Error('The n must be positive and greater than 0');
+//A function that transforms degrees into radians
+
+function degreesToRadians(degrees) {
+    var pi = 3.14;
+    var radians = pi*(degrees/180);
+s
+    if(degrees < 0) {
+        throw new Error('The degrees must be a positive number');
+    }
+    if(degrees > 360) {
+        throw new Error('The degrees must be a number 0 and 360');
     }
 
-    var sum = 0;
-
-    for (var i = 0; i < n; i++) {
-        if (i % 3 == 0) {
-            sum += i;
-        }
-    }
-    return sum;
+    return radians;
 }
