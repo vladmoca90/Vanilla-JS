@@ -1,12 +1,14 @@
-//A function the returns the max and minimum number of two digits
-
-function numberOfTwo(min, max) {
-    var max = Math.ceil(max);
-    var min = Math.floor(min);
-
-    if (min < 10 || max < 10 && min > 99 || max > 99) {
-        throw new Error('The number must be between 10 and 99 only');
+function sumOfMultiples(n) {
+    if (n <= 0) {
+        throw new Error('The n must be positive and greater than 0');
     }
 
-    return Math.floor(Math.random() * (max - min)) + min;
+    var sum = 0;
+
+    for (var i = 0; i < n; i++) {
+        if (i % 3 == 0) {
+            sum += i;
+        }
+    }
+    return sum;
 }

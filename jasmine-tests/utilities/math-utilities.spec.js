@@ -1,12 +1,12 @@
 describe('math-utilities', function () {
-    describe('numberOfTwo()', function () {
-        it('Returns an error if min or max are < 0 or > 99', function() {
+    describe('sumOfMultiples()', function () {
+        it('Returns an error if n is smaller than 0.', function() {
             expect(function() {
-                numberOfTwo(2, 105).toThrowError();
+                sumOfMultiples(-1).toThrowError();
             });
         });
-        it('', function() {
-            expect(numberOfTwo(29, 75)).toBe(48);
+        it('Returns the sum of all multiples of n', function() {
+            expect(sumOfMultiples(8)).toBe(9);
         });
     });
 });
