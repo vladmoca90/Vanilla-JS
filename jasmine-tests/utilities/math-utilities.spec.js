@@ -11,7 +11,7 @@ describe('math-utilities', function () {
             });
         });
         it('Returns the degrees converted into radians if the number is between 0 and 360', function() {
-            expect(degreesToRadians(75)).toBe(7.53);
+            expect(degreesToRadians(90)).toBe(1.57);
         });
     });
 });

@@ -3,7 +3,7 @@
 function degreesToRadians(degrees) {
     var pi = 3.14;
     var radians = pi*(degrees/180);
-s
+
     if(degrees < 0) {
         throw new Error('The degrees must be a positive number');
     }
