@@ -1,17 +1,24 @@
 describe('math-utilities', function () {
-    describe('degreesToRadians()', function () {
-        it('Returns an error if the degrees number is smaller than 0.', function() {
+    describe('fibonacci()', function () {
+        it('Returns an error if the n number is negative.', function() {
             expect(function() {
-                degreesToRadians(-90).toThrowError();
+                fibonacci(-4).toThrowError();
             });
         });
-         it('Returns an error if the degrees number is greater than 360.', function() {
+        it('Returns 1 if the n number is 0.', function() {
             expect(function() {
-                degreesToRadians(425).toThrowError();
+                fibonacci(0).toBe(1);
             });
         });
-        it('Returns the degrees converted into radians if the number is between 0 and 360', function() {
-            expect(degreesToRadians(90)).toBe(1.57);
+        it('Returns 1 if the n number is also 1.', function() {
+            expect(function() {
+                fibonacci(0).toBe(1);
+            });
+        });
+        it('Calculates fibonacci function is the n number is positive and greater than 1.', function() {
+            expect(function() {
+                fibonacci(7).toBe(21);
+            });
         });
     });
 });
