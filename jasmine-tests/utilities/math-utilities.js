@@ -1,13 +1,12 @@
-//Calculate the precise value of a given number
-function preciseNumber(n, p) {
+const fibonacci = n => {
     if (n < 0) {
-        throw new Error("Then number must be greater than 0");
+        throw new Error("n must be positive, greater or equal to 0.");
     }
     if (n == 0) {
-        return 0;
+        return 1;
     }
-
-    m = n.toPrecision(p);
-
-    return m;
+    if (n == 1) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
