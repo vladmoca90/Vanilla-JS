@@ -1,12 +1,12 @@
 describe('math-utilities', function () {
-    describe('allNumbersSmaller()', function () {
-        it('Returns an error if the number n is negative or equal to 0.', function() {
+    describe('numberOfTwo()', function () {
+        it('Returns an error if min or max are < 0 or > 99', function() {
             expect(function() {
-                allNumbersSmaller(-3).toThrowError();
+                numberOfTwo(2, 105).toThrowError();
             });
         });
-        it('The number n is greater or equal than 0.', function() {
-            expect(allNumbersSmaller(3)).toEqual([0, 1, 2]);
+        it('', function() {
+            expect(numberOfTwo(29, 75)).toBe(48);
         });
     });
 });

@@ -1,17 +1,12 @@
-//A function that returns a list with all the numbers smaller than a certain number
+//A function the returns the max and minimum number of two digits
 
-function allNumbersSmaller(n) {
-    if (n <= 0) {
-        throw new Error("The number must be greater than 0");
+function numberOfTwo(min, max) {
+    var max = Math.ceil(max);
+    var min = Math.floor(min);
+
+    if (min < 10 || max < 10 && min > 99 || max > 99) {
+        throw new Error('The number must be between 10 and 99 only');
     }
 
-    var smaller = [];
-
-    for (var i = 0; i < n; i++) {
-        if (n > i) {
-            smaller.push(i);
-        }
-    }
-
-    return smaller;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
