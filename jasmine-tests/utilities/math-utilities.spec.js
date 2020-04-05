@@ -1,19 +1,12 @@
 describe('math-utilities', function () {
-    describe('calcPitagora()', function () {
-        it('Returns an error one of the sides has a value of 0.', function() {
+    describe('allNumbersSmaller()', function () {
+        it('Returns an error if the number n is negative or equal to 0.', function() {
             expect(function() {
-                calcPitagora(5, 5, 0).toThrowError();
+                allNumbersSmaller(-3).toThrowError();
             });
         });
-        it('Returns false if the sum of squares of a and b is not equal to the square of c.', function() {
-            expect(function() {
-                calcPitagora(2, 3, 4).toBeFalsy();
-            });
-        });
-        it('Returns true if the sum of squares of a and b is equal to the square of c.', function() {
-            expect(function() {
-                calcPitagora(4, 3, 5).toBeFalsy();
-            });
+        it('The number n is greater or equal than 0.', function() {
+            expect(allNumbersSmaller(3)).toEqual([0, 1, 2]);
         });
     });
 });

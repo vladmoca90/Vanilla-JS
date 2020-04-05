@@ -1,12 +1,17 @@
-//A function that uses the theorem of Pitagora
+//A function that returns a list with all the numbers smaller than a certain number
 
-const calcPitagora = (a, b, c) => {
-    if(a == 0 || b == 0 || c == 0) {
-        throw new Error('The shape is not a triangle');
-    }
-    if(c*c == b*b + a*a) {
-        return false;
+function allNumbersSmaller(n) {
+    if (n <= 0) {
+        throw new Error("The number must be greater than 0");
     }
 
-    return true;
+    var smaller = [];
+
+    for (var i = 0; i < n; i++) {
+        if (n > i) {
+            smaller.push(i);
+        }
+    }
+
+    return smaller;
 }
