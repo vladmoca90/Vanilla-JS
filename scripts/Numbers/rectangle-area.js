@@ -1,11 +1,9 @@
-const rectArea = function(width, height) {
-    return width * height
+const rectArea = (width, height) =>{
+    if(width == 0 || height == 0) {
+        throw new Error('The shape is not a rectangle.');
+    }
+
+    return width * height;
 };
-
-console.log(rectArea(7, 4));
-
-
-//Same function written with arrow functions
-const rectArea = (width, height) => width * height;
 
 console.log(rectArea(7, 4));
