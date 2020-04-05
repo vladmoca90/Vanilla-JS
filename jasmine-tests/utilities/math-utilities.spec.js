@@ -1,18 +1,15 @@
 describe('math-utilities', function () {
-    describe('fibonacci()', function () {
-        it('Returns an error if the n number is negative.', function () {
+    describe('becomeAbbreviated()', function () {
+        it('Returns an error if the text is empty.', function () {
             expect(function () {
-                fibonacci(-4).toThrowError();
+                becomeAbbreviated('').toThrowError();
             });
         });
-        it('Returns 1 if the n number is 0.', function () {
-            expect(fibonacci(0)).toBe(1);
+        it('Returns the text, followed by dot if the text has only one letter.', function () {
+            expect(becomeAbbreviated('v')).toBe('v.');
         });
-        it('Returns 1 if the n number is also 1.', function () {
-            expect(fibonacci(0)).toBe(1);
-        });
-        it('Calculates fibonacci function is the n number is positive and greater than 1.', function () {
-            expect(fibonacci(7)).toBe(21);
+        it('Abbreviates the text if it has more letters or words.', function () {
+            expect(becomeAbbreviated('Vlad Mocanu')).toBe('V.M.');
         });
     });
 });

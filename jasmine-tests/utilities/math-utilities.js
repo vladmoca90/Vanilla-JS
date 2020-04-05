@@ -1,12 +1,17 @@
-const fibonacci = n => {
-    if (n < 0) {
-        throw new Error("n must be positive, greater or equal to 0.");
+//A function that converts a string (name) into abbreviated form (ex. Alex Mocanu => A.M.)
+function becomeAbbreviated(text) {
+    if (text.length == 0) {
+        throw new Error('Text cannot be empty');
     }
-    if (n == 0) {
-        return 1;
+    if (text.length == 1) {
+        return text + '.';
     }
-    if (n == 1) {
-        return 1;
+
+    var splitText = text.trim().split(' ');
+
+    if(splitText.length > 1) {
+        return splitText[0].charAt(0) + '.' + splitText[1].charAt(0) + '.';
     }
-    return fibonacci(n - 1) + fibonacci(n - 2);
+
+    return splitText.join();
 }
