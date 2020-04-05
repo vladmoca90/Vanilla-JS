@@ -10,9 +10,9 @@ class Greeting extends Sentence {
     }
 
     get hello() {
-        return word;
+        return this.word;
     }
-    set sayHello(helloWord) {
+    set hello(helloWord) { //the setter can have only one parameter
         if(typeof helloWord == 'string') {
             this.word = helloWord;
         }
@@ -24,4 +24,4 @@ class Greeting extends Sentence {
 
 const sentence = new Greeting('Hello world!');
 
-console.log(sentence.word);
+console.log(sentence.hello);

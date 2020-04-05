@@ -13,7 +13,7 @@ class Car extends Vehicle {
     get carType() {
         return 'This car is a ' + this.make + ' ' + this.model;
     }
-    set vehicleType(newMake) {
+    set carType(newMake) { //the setter can have only one parameter
         if(typeof make == 'string') {
             this.make = newMake;
         } else {
