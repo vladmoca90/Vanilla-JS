@@ -9,12 +9,12 @@ class Greeting extends Sentence {
         super(word);
     }
 
-    get hello() {
-        return this.word;
+    get wordType() {
+        return 'The word is ' + this.word;
     }
-    set hello(helloWord) { //the setter can have only one parameter
-        if(typeof helloWord == 'string') {
-            this.word = helloWord;
+    set wordType(newWord) { //the setter can have only one parameter
+        if(typeof newWord == 'string') {
+            this.word = newWord;
         }
         else {
             throw new Error('The word can be only a text.');
@@ -22,6 +22,6 @@ class Greeting extends Sentence {
     }
 }
 
-const sentence = new Greeting('Hello world!');
+const greeting = new Greeting('Hello world!');
 
-console.log(sentence.hello);
+console.log(text.wordType);
