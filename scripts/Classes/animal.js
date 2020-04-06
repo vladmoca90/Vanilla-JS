@@ -13,14 +13,6 @@ class Tiger extends Animal {
     get animalType() {
         return this.family + ' ' +  'and' + ' ' +  this.species;
     }
-    set animalType(newSpecies) { //the setter can have only one parameter
-       if(typeof newSpecies  == 'string') {
-            this.species = newSpecies;
-       } 
-       else {
-            throw new Error('The output is not valid');
-       }
-    }
 }
 
 const tiger = new Tiger('Felidae', 'Panthera onca');
