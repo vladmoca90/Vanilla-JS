@@ -13,6 +13,13 @@ class Tiger extends Animal {
     get animalType() {
         return this.family + ' ' +  'and' + ' ' +  this.species;
     }
+    set animalType(newSpecies) {
+        if(newSpecies.length < 3) {
+            throw new Error('The animal name is too short');
+        } else {
+            this.species = newSpecies;
+        }
+    }
 }
 
 const tiger = new Tiger('Felidae', 'Panthera onca');

@@ -10,11 +10,11 @@ class Car extends Vehicle {
         super(make, model);
     }
 
-    get carType() {
+    get vehicleType() {
         return 'This car is a ' + this.make + ' ' + this.model;
     }
 }
 
 const car = new Car('Seat', 'Leon');
 
-console.log(car.carType);
+console.log(car.vehicleType);
