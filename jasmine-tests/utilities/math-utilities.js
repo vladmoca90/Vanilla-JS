@@ -7,7 +7,7 @@ function becomeAbbreviated(text) {
         return text + '.';
     }
 
-    var splitText = text.trim().split(' ');
+    let splitText = text.trim().split(' ');
 
     if(splitText.length > 1) {
         return splitText[0].charAt(0) + '.' + splitText[1].charAt(0) + '.';
