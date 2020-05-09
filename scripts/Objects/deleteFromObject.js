@@ -1,6 +1,6 @@
 //A function that deletes a property from an object
 
-var library = [
+const library = [
     {
         title: 'The Road Ahead',
         author: 'Bill Gates',
@@ -18,7 +18,7 @@ var library = [
     }
 ];
 
-function deletedObjProp(library) {
+const delLibraryId = library => {
     if (library.length == 0) {
         throw new Error('The list cannot be empty');
     }

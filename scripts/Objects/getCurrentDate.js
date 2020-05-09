@@ -1,7 +1,7 @@
 //A function that return the current date
 
-function getCurrentDate() {
-    var today = new Date();
+const getCurrentDate = today => {
+    let today = new Date();
 
     return today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
 }

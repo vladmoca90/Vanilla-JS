@@ -1,6 +1,6 @@
 //A function that calculates the length of an object
 
-var student = {
+const student = {
     name: "David Rayy",
     degree: "Bsc Computer Science",
     university: "University of Birmingham",
@@ -10,10 +10,14 @@ var student = {
     accomodation: "Maple Bank",
 };
 
-function getObjectLength(student) {
-    if(Object.keys(student).length == 0) {
+const getStudentLength = student => {
+    let total = Object.keys(student);
+
+    if(total.length == 0) {
         throw new Error('The object cannot be empty');
     }
 
-    return Object.keys(student).length;
+    return total.length;
 }
+
+getStudentLength(student);
