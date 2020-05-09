@@ -1,6 +1,6 @@
 //A function that returns certain properties of an object in another object
 
-var student = {
+const student = {
     name: 'David Rayy',
     degree: 'Bsc Computer Science',
     university: 'University of Birmingham',
@@ -10,7 +10,7 @@ var student = {
     accomodation: 'Maple Bank',
 };
 
-function addInNewObject(student) {
+const addElements = student => {
     if(Object.keys(student).length == 0) {
         throw new Error('The object cannot be empty');
     }
@@ -22,3 +22,5 @@ function addInNewObject(student) {
         values: Object.values(student),
     });
 }
+
+addElements(student);

@@ -1,6 +1,6 @@
 //Write a JavaScript program that display the book title with true status
 
-var library = [
+const library = [
     {
         author: 'Bill Gates',
         title: 'The Road Ahead',
@@ -18,14 +18,14 @@ var library = [
     }
 ];
 
-function bookStatus(library) {
+const bookStatus = library => {
     if (library.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
-    var status = [];
+    let status = [];
 
-    for (var i = 0; i < library.length; i++) {
+    for (let i = 0; i < library.length; i++) {
         if(library[i].readingStatus == true) {
             status.push(Object.values(library[i]));
         }
@@ -33,3 +33,5 @@ function bookStatus(library) {
 
     return status;
 }
+
+bookStatus(library);

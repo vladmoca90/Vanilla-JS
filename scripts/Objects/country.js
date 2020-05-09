@@ -1,6 +1,6 @@
 //A object with properties of a country
 
-var country = {
+const country = {
     name: "Uzbekistan",
     population: 27, // in millions //
     capital: "Tashkent",
