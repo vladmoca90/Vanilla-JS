@@ -1,6 +1,6 @@
 //An array of objects that has the properties of cars and returns an array with specific values from the object
 
-var cars = [
+const cars = [
     {
         model: 'Volvo',
         country: 'Sweden',
@@ -24,7 +24,7 @@ var cars = [
 ];
 
 //Returns the values of the properties
-function chooseCarModel(n) {
+const chooseCarModel = n => {
     if (n < 0 || n > 3) {
         throw new Error('The number must be 0, 1, 2 or 3');
     }
@@ -35,7 +35,7 @@ function chooseCarModel(n) {
 chooseCarModel(3);
 
 //Returns the the properties
-function chooseCarProperty(n) {
+const chooseCarProperty = n => {
     if (n < 0 || n > 2) {
         throw new Error('The number must be 0, 1, 2 or 3');
     }
@@ -46,7 +46,7 @@ function chooseCarProperty(n) {
 chooseCarProperty(0);
 
 //Returns the properties and values as pairs of arrays
-function chooseCarEntries(n) {
+const chooseCarEntries = n => {
     if (n < 0 || n > 3) {
         throw new Error('The number must be 0, 1 or 2');
     }
