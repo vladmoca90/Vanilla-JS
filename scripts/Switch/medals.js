@@ -1,4 +1,4 @@
-function getAthletePosition(position) {
+const getAthletePosition = position => {
     if (!position) {
         throw new Error('The grocery must exist');
     }

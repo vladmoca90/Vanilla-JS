@@ -1,7 +1,7 @@
 //An object that is named city and has the property name
 //The function cities() analyzes the cases
 
-var city = {
+const city = {
   name: [
     "New York City",
     "Los Angeles",
@@ -10,10 +10,8 @@ var city = {
   ],
 }
 
-function cities(city) {
-
+const cities = city => {
   switch (city.name) {
-
     case "New York City":
       console.log("The city is called New York City.");
       break;

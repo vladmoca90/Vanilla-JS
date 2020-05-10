@@ -1,7 +1,7 @@
 //A function that switches the days of the week
 
-function getCurrentDay(day) {
-    var day = new Date();
+const getCurrentDay = day => {
+    let day = new Date();
 
     switch (day.getDay()) {
         case 0:

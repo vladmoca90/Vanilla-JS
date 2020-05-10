@@ -1,5 +1,4 @@
-function correctDay(day) {
-
+const correctDay = day =>{
     switch (day) {
         case 'Monday':
             console.log('This is the first day of the week!');

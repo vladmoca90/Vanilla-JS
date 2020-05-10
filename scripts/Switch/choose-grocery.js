@@ -1,4 +1,4 @@
-function getGrocery(groceryItem) {
+const getGrocery = groceryItem => {
     if(!groceryItem) {
         throw new Error('The grocery must exist');
     }

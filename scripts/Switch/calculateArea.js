@@ -2,8 +2,7 @@
 //"type" can have circle, rectangle, square
 //the function returns the area of the shape
 
-function calculateArea(shape) {
-
+const calculateArea = shape => {
     switch (shape.type) {
         case "circle":
             return Math.PI * shape.r * shape.r;
