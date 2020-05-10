@@ -4,6 +4,9 @@ const createPerson = list => {
     if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
+    if (list.length == 1) {
+        return list;
+    }
 
     for (let i = 0; i < list.length; i++) {
         let persons = {};
