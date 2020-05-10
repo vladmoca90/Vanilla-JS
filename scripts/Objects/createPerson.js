@@ -9,13 +9,11 @@ const createPerson = list => {
     }
 
     for (let i = 0; i < list.length; i++) {
-        let persons = {};
+        let person = {};
 
-        persons.name = list[i][0];
-        persons.age = list[i][1];
+        person.name = list[i][0];
+        person.age = list[i][1];
     }
 
-    return persons;
+    return person;
 }
-
-createPerson([['Alexandru', 25]]);

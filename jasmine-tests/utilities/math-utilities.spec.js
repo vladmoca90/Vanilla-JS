@@ -1,15 +1,15 @@
 describe('math-utilities', function () {
-    describe('becomeAbbreviated()', function () {
+    describe('createPerson()', function () {
         it('Returns an error if the text is empty.', function () {
             expect(function () {
-                becomeAbbreviated('').toThrowError();
+                createPerson('').toThrowError();
             });
         });
-        it('Returns the text, followed by dot if the text has only one letter.', function () {
-            expect(becomeAbbreviated('v')).toBe('v.');
+        it('Returns the list if the list hasonly one element.', function () {
+            expect(createPerson(['Alexandru'])).toBe("person = { name: 'Alexandru Mocanu' }");
         });
-        it('Abbreviates the text if it has more letters or words.', function () {
-            expect(becomeAbbreviated('Vlad Mocanu')).toBe('V.M.');
+        it('Returns an object with two properties of the list has two elements.', function () {
+            expect(createPerson('Vlad Mocanu', 25)).toBe("person = {name: 'Alexandru', age: 25}");
         });
     });
 });
