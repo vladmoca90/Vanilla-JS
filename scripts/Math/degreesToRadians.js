@@ -1,6 +1,6 @@
 //A function that converts degrees into radians
 
-function degreesIntoRadians(n) {
+const degreesIntoRadians = n => {
     if(n == null) {
         throw new Error('The number cannot be null');
     }
@@ -8,14 +8,14 @@ function degreesIntoRadians(n) {
         return n;
     }
 
-    var pi = Math.PI;
-    var radian = n * (pi/180);
+    let pi = Math.PI;
+    let radian = n * (pi/180);
 
     return radian;
 }
 
 //A function that converts radians into degrees
-function radiansIntoDegrees(n) {
+const radiansIntoDegrees = n => {
     if(n == null) {
         throw new Error('The number cannot be null');
     }
@@ -23,8 +23,8 @@ function radiansIntoDegrees(n) {
         return n;
     }
 
-    var pi = Math.PI;
-    var degrees = n * (180/pi);
+    let pi = Math.PI;
+    let degrees = n * (180/pi);
 
     return degrees;
 }
