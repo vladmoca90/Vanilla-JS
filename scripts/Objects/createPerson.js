@@ -5,7 +5,7 @@ const createPerson = list => {
         throw new Error('The list cannot be empty');
     }
     if (list.length == 1) {
-        return list;
+        return person.name = list[0];
     }
 
     for (let i = 0; i < list.length; i++) {
