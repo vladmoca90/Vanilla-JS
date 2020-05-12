@@ -1,4 +1,4 @@
-function sortDescNumbers(x, y, z) {
+const sortDescNumbers = (x, y, z) => {
     if(isNaN(x) == true) {
         throw new Error('The x must be a valid number');
     }
