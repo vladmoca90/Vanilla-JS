@@ -1,6 +1,6 @@
 //A function that capitalizes each word in a text
 
-function capitalizeFirstLetter(text) {
+const capitalizeFirstLetter = text => {
     if (text.length == 0) {
         throw new Error('The text cannot be empty');
     }
@@ -8,10 +8,10 @@ function capitalizeFirstLetter(text) {
         return text.toUpperCase();
     }
 
-    var splitText = text.trim().split(' ');
-    var capitalizedLetters = [];
+    let splitText = text.trim().split(' ');
+    let capitalizedLetters = [];
 
-    for (var i = 0; i < splitText.length; i++) {
+    for (let i = 0; i < splitText.length; i++) {
         capitalizedLetters.push(splitText[i].charAt(0).toUpperCase() + splitText[i].substring(1));
     }
 
