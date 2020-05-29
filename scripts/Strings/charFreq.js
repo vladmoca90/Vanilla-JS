@@ -2,7 +2,7 @@
 //contained in it. Represent the frequency listing as a Javascript object. Try it with something like
 //charFreq("abbabcbdbabdbdbabababcbcbab")
 
-function charFreq(text) {
+const charFreq = text => {
     if (text.length == 0) {
         throw new Error("The string is empty");
     }
@@ -10,10 +10,10 @@ function charFreq(text) {
         return text;
     }
 
-    var freq = {};
+    let freq = {};
 
-    for (var i = 0; i < text.length; i++) {
-        var c = text.charAt(i);
+    for (let i = 0; i < text.length; i++) {
+        let c = text.charAt(i);
 
         if (freq[c] == null) {
             freq[c] = 1;
