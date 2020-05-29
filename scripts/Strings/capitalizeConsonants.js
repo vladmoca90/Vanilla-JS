@@ -1,12 +1,12 @@
 //A function that capitalizes every consonant in text
-function capitalizeConsonants(text) {
+const capitalizeConsonants = text => {
     if(text.length == 0) {
         throw new error('The text must be given');
     }
 
-    var capConst = '';
+    let capConst = '';
 
-    for(var i = 0; i < text.length; i++) {
+    for(let i = 0; i < text.length; i++) {
         if(text.charAt(i) !== 'a' || text.charAt(i) !== 'e' || text.charAt(i) !== 'i' || text.charAt(i) !== 'o' || text.charAt(i) !== 'u') {
             capConst += text.charAt(i).toUpperCase();
         }
