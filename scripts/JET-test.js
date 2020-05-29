@@ -13,9 +13,9 @@ function textUtilities() {
             throw new Error('The letter cannot be empty or cannot have a null value');
         }
 
-        var count = 0;
+        let count = 0;
 
-        for (var i = 0; i < text.length; i++) {
+        for (let i = 0; i < text.length; i++) {
             if (text[i] === letter) {
                 count++;
             }
@@ -25,7 +25,7 @@ function textUtilities() {
     }
 }
 
-var textUtils = new textUtilities();
+let textUtils = new textUtilities();
 
 console.log(textUtils.countLetters('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eanean sodales justo et Enim ornare, a congue lacus commodo.', 'e'));
 //returns 10
@@ -43,13 +43,13 @@ function mathUtilities() {
             throw new Error('The digit cannot be outside the interval of [0, 9]');
         }
 
-        var textUtils = new textUtilities();
+        let textUtils = new textUtilities();
 
         return textUtils.countLetters(number.toString(), digit.toString());
     }
 }
 
-var mathUtils = new mathUtilities();
+let mathUtils = new mathUtilities();
 
 console.log(mathUtils.countDigit(17271191919299111, 1)); //returns 5
 console.log(mathUtils.add(7, 5)); //returns 12
