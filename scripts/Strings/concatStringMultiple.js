@@ -1,6 +1,6 @@
 //A function that concatenates a string multiple times
 
-function concatenateMultiple(text, n) {
+const concatenateMultiple = (text, n) => {
     if (text.length == 0) {
         throw new Error('The text cannot be empty');
     }
@@ -11,7 +11,7 @@ function concatenateMultiple(text, n) {
         return text;
     }
 
-    var concatenated = text.concat(text);
+    let concatenated = text.concat(text);
 
     return concatenated.repeat(n);
 }
