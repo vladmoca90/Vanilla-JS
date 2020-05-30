@@ -1,5 +1,5 @@
 const getAthletePosition = position => {
-    if (!position) {
+    if(!position) {
         throw new Error('The grocery must exist');
     }
     if (position.length == 0) {

@@ -1,7 +1,7 @@
 ﻿//Calculate (a + b)^n, with a, b, n natural non-zero numbers
 
 function calcGeneralBinomio(a, b, n) {
-    if (a <= 0 || b <= 0 || n <= 0) {
+    if(a <= 0 || b <= 0 || n <= 0) {
         throw new Error("a, b and n must be > 0");
     }
 
@@ -20,7 +20,7 @@ function calcGeneralBinomio(a, b, n) {
 //This functions calculates the bonomio with combinations
 
 function calculateBinomioWithCombinations(a, b, n) {
-    if (a <= 0 || b <= 0 || n <= 0) {
+    if(a <= 0 || b <= 0 || n <= 0) {
         throw new Error("a, b and n must be > 0");
     }
 

@@ -11,7 +11,7 @@ function removeOddIndexes(list) {
     var newList = [];
 
     for (var i = 0; i < list.length; i++) {
-        if (i % 2 == 0) {
+        if(i % 2 == 0) {
             newList.push(list[i]);
         }
     }

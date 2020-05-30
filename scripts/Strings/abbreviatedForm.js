@@ -1,9 +1,9 @@
 //A function that converts a string (name) into abbreviated form (ex. Alex Mocanu => A.M.)
 function becomeAbbreviated(text) {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('Text cannot be empty');
     }
-    if (text.length == 1) {
+    if(text.length == 1) {
         return text + '.';
     }
 

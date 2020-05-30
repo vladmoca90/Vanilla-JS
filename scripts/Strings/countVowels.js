@@ -1,6 +1,6 @@
 ﻿//write a function that, given a text, returns the number of vowels in the text
 const countVowels = text => {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
 
@@ -8,7 +8,7 @@ const countVowels = text => {
 
     for (let i = 0; i < text.length; i++) {
         let c = text.charAt(i);
-        if (isVowel(c)) {
+        if(isVowel(c)) {
             count++;
         }
     }

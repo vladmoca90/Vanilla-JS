@@ -4,10 +4,10 @@
 //last([]): returns the last element of the list 
 
 function head(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error("The list is empty");
     }
-    if (list.length == 1) {
+    if(list.length == 1) {
         return list[0];
     }
 
@@ -15,10 +15,10 @@ function head(list) {
 }
 
 function tail(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error("The list is empty");
     }
-    if (list.length == 1) {
+    if(list.length == 1) {
         return [];
     }
 
@@ -27,10 +27,10 @@ function tail(list) {
 
 function last(list) {
 
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error("The list is empty");
     }
-    if (list.length == 1) {
+    if(list.length == 1) {
         return list[0];
     }
 

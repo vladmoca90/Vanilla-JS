@@ -2,10 +2,10 @@
 //c = [a0, b0, a1, b1, ...]
 
 function combineLists(a, b) {
-    if (a.length == 0) {
+    if(a.length == 0) {
         return b;
     }
-    if (b.length == 0) {
+    if(b.length == 0) {
         return a;
     }
 
@@ -13,7 +13,7 @@ function combineLists(a, b) {
 
     var listaMica = [], listaMare = [];
 
-    if (a.length > b.length) {
+    if(a.length > b.length) {
         listaMare = a;
         listaMica = b;
     }
@@ -25,7 +25,7 @@ function combineLists(a, b) {
     var primaListaEMare = a == listaMare;
 
     for (var i = 0; i < listaMica.length; i++) {
-        if (primaListaEMare) {
+        if(primaListaEMare) {
             c.push(listaMare[i]);
             c.push(listaMica[i]);
         }

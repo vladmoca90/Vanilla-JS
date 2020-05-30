@@ -1,8 +1,8 @@
 const createPerson = list => {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('The list cannot be empty.');
     }
-    if (list.length == 1) {
+    if(list.length == 1) {
         throw new Error('The list needs two elements.');
     }
 

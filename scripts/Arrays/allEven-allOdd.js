@@ -8,7 +8,7 @@ function allEven(list) {
     var b = list[1];
     var c = list[2];
 
-    if (a % 2 == 0 && b % 2 == 0 && c % 2 == 0) {
+    if(a % 2 == 0 && b % 2 == 0 && c % 2 == 0) {
         return true
     } else {
         return false;

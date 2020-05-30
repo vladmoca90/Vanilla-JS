@@ -1,7 +1,7 @@
 //A function that writes a string as camel case
 
 const camelize = text => {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
 

@@ -1,6 +1,6 @@
 //A function that uses map and makes a multiplication
 function mappingMultiplication(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
@@ -17,7 +17,7 @@ function mappingMultiplication(list) {
 
 //A function that uses and makes an addition
 function mappingAddition(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
@@ -34,7 +34,7 @@ function mappingAddition(list) {
 
 //A function that uses and makes a substraction
 function mappingSubstraction(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
@@ -51,7 +51,7 @@ function mappingSubstraction(list) {
 
 //A function that uses and makes a division
 function mappingDivision(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 

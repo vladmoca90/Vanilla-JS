@@ -14,7 +14,7 @@ function calculateBinomio(a, b) {
 //Calculate a^2 - b^2
 
 function calculateDiffOfSquares(a, b) {
-    if (a == b) {
+    if(a == b) {
         return 0;
     }
 

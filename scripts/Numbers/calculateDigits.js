@@ -3,7 +3,7 @@ function digitsAddition(n) {
     if(!n) {
         throw new Error('The number must be given');
     }
-    if (n < 0) {
+    if(n < 0) {
         throw new Error('The number must be positive');
     }
 

@@ -2,17 +2,17 @@
 //but are separated through a space, and you have "." at the end
 
 const createdSentence = sentence => {
-    if (sentence.length == 0) {
+    if(sentence.length == 0) {
         throw new Error("The sentence is empty");
     }
-    if (sentence.length == 1) {
+    if(sentence.length == 1) {
         return sentence[0] + ".";
     }
 
     let combine = "";
 
     for (let i = 0; i < sentence.length; i++) {
-        if (i < sentence.length - 1) {
+        if(i < sentence.length - 1) {
             combine += sentence[i] + " ";
         }
         else {

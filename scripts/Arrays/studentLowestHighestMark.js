@@ -3,10 +3,10 @@
 
 function findBestAndWorstMarks(students) {
 
-    if (students.length == 0) {
+    if(students.length == 0) {
         throw new Error("The array is empty");
     }
-    if (students.length == 1) {
+    if(students.length == 1) {
         return {
             max: students[0],
             min: students[0]
@@ -18,10 +18,10 @@ function findBestAndWorstMarks(students) {
     var maxMark = students[0];
 
     for (var i = 0; i < students.length; i++) {
-        if (students[i].mark < minMark.mark) {
+        if(students[i].mark < minMark.mark) {
             minMark = students[i];
         }
-        if (students[i].mark > maxMark.mark) {
+        if(students[i].mark > maxMark.mark) {
             maxMark = students[i];
         }
     }

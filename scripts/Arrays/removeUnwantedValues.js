@@ -1,7 +1,7 @@
 //A function that removes null, undefined, ' ', 0, NaN values from an array
 
 function removeUnwantedValues(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 

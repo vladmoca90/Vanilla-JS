@@ -1,7 +1,7 @@
 //A function that return a json object with vowels and consonants or a text
 
 function showVowelsAndConsonants(text) {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('The text must be given');
     }
 
@@ -10,7 +10,7 @@ function showVowelsAndConsonants(text) {
     var consonants = [];
 
     for (var i = 0; i < text.length; i++) {
-        if (charAt(i) == isVowel()) {
+        if(charAt(i) == isVowel()) {
             vowels.push(text[i]);
         }
         else {

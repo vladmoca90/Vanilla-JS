@@ -1,10 +1,10 @@
 //A function that capitalizes each word in a text
 
 const capitalizeFirstLetter = text => {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
-    if (text.length == 1) {
+    if(text.length == 1) {
         return text.toUpperCase();
     }
 

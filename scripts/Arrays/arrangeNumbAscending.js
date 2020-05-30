@@ -7,11 +7,11 @@ function sortList(list) {
   var b = list[1];
   var c = list[2];
 
-  if (a <= b) {
-    if (a <= c) {
+  if(a <= b) {
+    if(a <= c) {
       sortedList.push(a);
 
-      if (b <= c) {
+      if(b <= c) {
         sortedList.push(b);
         sortedList.push(c);
 
@@ -26,11 +26,11 @@ function sortList(list) {
     return sortedList;
   }
 
-  if (b <= c) {
-    if (b <= a) {
+  if(b <= c) {
+    if(b <= a) {
       sortedList.push(b);
 
-      if (a <= c) {
+      if(a <= c) {
         sortedList.push(a);
         sortedList.push(c);
       } else {
@@ -44,10 +44,10 @@ function sortList(list) {
     return sortedList;
   }
 
-  if (c <= a) {
-    if (c <= b) {
+  if(c <= a) {
+    if(c <= b) {
       sortedList.push(c);
-      if (b <= a) {
+      if(b <= a) {
         sortedList.push(b);
         sortedList.push(a);
 

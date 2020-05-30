@@ -3,10 +3,10 @@
 //charFreq("abbabcbdbabdbdbabababcbcbab")
 
 const charFreq = text => {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error("The string is empty");
     }
-    if (text.length == 1) {
+    if(text.length == 1) {
         return text;
     }
 
@@ -15,7 +15,7 @@ const charFreq = text => {
     for (let i = 0; i < text.length; i++) {
         let c = text.charAt(i);
 
-        if (freq[c] == null) {
+        if(freq[c] == null) {
             freq[c] = 1;
         }
         else {

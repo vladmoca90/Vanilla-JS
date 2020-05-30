@@ -19,7 +19,7 @@ const library = [
 ];
 
 const delLibraryId = library => {
-    if (library.length == 0) {
+    if(library.length == 0) {
         throw new Error('The list cannot be empty');
     }
 

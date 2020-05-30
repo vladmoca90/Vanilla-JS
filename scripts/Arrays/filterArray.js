@@ -1,6 +1,6 @@
 //A function that filters an list
 function filterList(list) {
-    if (list.lenth == 0) {
+    if(list.lenth == 0) {
         throw new Error('The list cannot be empty');
     }
 

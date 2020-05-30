@@ -1,9 +1,9 @@
 ﻿//A function has a string and receives and array, with all the words of the string
 function createList(text) {
-    if (text.length == 0) {
+    if(text.length == 0) {
         return [];
     }
-    if (text.search(" ") == -1) {
+    if(text.search(" ") == -1) {
         return [text];
     }
 

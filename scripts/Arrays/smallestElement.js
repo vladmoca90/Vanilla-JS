@@ -1,10 +1,10 @@
 ﻿//smallest element in an list//
 
 function min(list) {
-    if (list.length == 0) {
+    if(list.length == 0) {
         throw new Error("The list cannot be empty");
     }
-    if (list.length == 1) {
+    if(list.length == 1) {
         return list[0];
     }
 
@@ -12,7 +12,7 @@ function min(list) {
 
     for (var i = 0; i < list.length; i++) {
 
-        if (list[i] < minSoFar) {
+        if(list[i] < minSoFar) {
             minSoFar = list[i];
         }
     }
