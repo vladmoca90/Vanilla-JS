@@ -1,5 +1,5 @@
 //A function that write a text uppercase
-function upperCaseText(text) {
+const upperCaseText = text => {
     if(text.length == 0) {
         throw new Error('Text cannot be empty');
     }
@@ -8,7 +8,7 @@ function upperCaseText(text) {
 }
 
 //A function that write a text lowercase
-function lowerCaseText(text) {
+const lowerCaseText = text => {
     if(text.length == 0) {
         throw new Error('Text cannot be empty');
     }
