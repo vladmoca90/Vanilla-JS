@@ -1,8 +1,8 @@
 //A function that transforms degrees into radians
 
-function degreesToRadians(degrees) {
-    var pi = 3.14;
-    var radians = pi*(degrees/180);
+const degreesToRadians = degrees => {
+    let pi = 3.14;
+    let radians = pi*(degrees/180);
 
     if(degrees < 0) {
         throw new Error('The degrees must be a positive number');
@@ -15,9 +15,9 @@ function degreesToRadians(degrees) {
 }
 
 //A function that transforms radians into degrees
-function radiansToDegrees(radians) {
-    var pi = 3.14;
-    var degrees = (radians*180)/pi;
+const radiansToDegrees = radians => {
+    let pi = 3.14;
+    let degrees = (radians*180)/pi;
 
     if(radians < 0) {
         throw new Error('The degrees must be a positive number');
