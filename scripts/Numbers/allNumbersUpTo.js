@@ -1,7 +1,7 @@
 //A function that returns all the numbers divisible by m and n
 
 function numbersDivisibleWithOr(n, m) {
-    var count = 0;
+    let count = 0;
 
     for (i = 1; i < 100; i++) {
         if(i % n == 0 || i % m == 0) {
@@ -14,7 +14,7 @@ function numbersDivisibleWithOr(n, m) {
 
 //A function that returns all the numbers divisible by m up to n
 function numbersDivisibleWithAnd(n, m) {
-    var count = 0;
+    let count = 0;
 
     for (i = 1; i < m; i++) {
         if(i % n == 0) {
@@ -26,10 +26,10 @@ function numbersDivisibleWithAnd(n, m) {
 }
 
 //A function that returns the total of numbers with 3 digits up to m
-function countNumbersBetweenInterval(n, m) {
-    var count = 0;
+const countNumbersBetweenInterval = (n, m) => {
+    let count = 0;
 
-    for (var i = 0; i < m; i++) {
+    for (let i = 0; i < m; i++) {
         if(i >= n) {
             count++;
         }
