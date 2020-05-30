@@ -1,5 +1,5 @@
 //A function that applies subtext() to a text
-function subText(text, a, b) {
+const subText = (text, a, b) => {
     if (text.length == 0) {
         throw new Error('The text cannot be empty');
     }
@@ -8,8 +8,8 @@ function subText(text, a, b) {
 }
 
 //A function that applies substr() to a text
-function substrText(text, a, b) {
-    if (text.length == 0) {
+const substrText = (text, a, b) => {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
 
