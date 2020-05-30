@@ -1,6 +1,6 @@
 //A function that calculates how many times a word appears in a text
 
-function countWord(word, text) {
+const countWord = (word, text) => {
     if (word.length == 0) {
         throw new Error('The word must exist');
     }
@@ -8,10 +8,10 @@ function countWord(word, text) {
         throw new Error('The text must exist');
     }
 
-    var count = 0;
-    var wordsList = text.split(' ');
+    let count = 0;
+    let wordsList = text.split(' ');
 
-    for (var i = 0; i < wordsList.length; i++) {
+    for (let i = 0; i < wordsList.length; i++) {
         if (wordsList[i] === word) {
             count++;
         }
