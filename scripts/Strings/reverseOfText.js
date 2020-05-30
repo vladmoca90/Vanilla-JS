@@ -1,6 +1,6 @@
 ﻿//Given a text, return the reverse of the text
 
-function reverseText(text) {
+const reverseText = text => {
     if(text.length == 0) {
         throw new Error('Text must exist');
     }
@@ -8,10 +8,10 @@ function reverseText(text) {
         return text;
     }
 
-    var reversed = "";
+    let reversed = "";
 
     for (i = text.length - 1; i >= 0; i--) {
-        var c = text.charAt(i);
+        let c = text.charAt(i);
         reversed = reversed + c;
     }
 
