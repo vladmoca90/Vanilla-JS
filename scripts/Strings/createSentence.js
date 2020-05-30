@@ -1,7 +1,7 @@
 ﻿//A function receives a list of words and return a string with all the words, 
 //but are separated through a space, and you have "." at the end
 
-function createdSentence(sentence) {
+const createdSentence = sentence => {
     if (sentence.length == 0) {
         throw new Error("The sentence is empty");
     }
@@ -9,9 +9,9 @@ function createdSentence(sentence) {
         return sentence[0] + ".";
     }
 
-    var combine = "";
+    let combine = "";
 
-    for (var i = 0; i < sentence.length; i++) {
+    for (let i = 0; i < sentence.length; i++) {
         if (i < sentence.length - 1) {
             combine += sentence[i] + " ";
         }
