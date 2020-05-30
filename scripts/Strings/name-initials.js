@@ -8,11 +8,11 @@ const nameInitials = (name) => {
         return name;
     }
 
-    var newName = name.replace('-', ' ');;
-    var splitName = newName.trim().split(' ');
-    var initials = '';
+    let newName = name.replace('-', ' ');;
+    let splitName = newName.trim().split(' ');
+    let initials = '';
 
-    for (var i = 0; i < splitName.length; i++) {
+    for (let i = 0; i < splitName.length; i++) {
         initials += splitName[i].charAt(0);
     }
 
