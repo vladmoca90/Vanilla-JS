@@ -1,6 +1,6 @@
 //a function that truncates a string with a certain number of words
 
-function truncateString(text, n) {
+const truncateString = (text, n) => {
     if(text.length == 0) {
        throw new Error('The text cannot be empty'); 
     }
@@ -8,7 +8,7 @@ function truncateString(text, n) {
         throw new Error('n must be greater or equal to 1'); 
     }
 
-    var splitText = text.trim().split('');
+    let splitText = text.trim().split('');
 
     return splitText.splice(0, n).join('');
 }
