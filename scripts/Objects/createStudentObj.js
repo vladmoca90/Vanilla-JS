@@ -11,16 +11,18 @@ const student = {
 };
 
 const addStudentProp = student => {
-    if(Object.keys(student).length == 0) {
+    let studentProp = Object.keys(student);
+
+    if(studentProp.length == 0) {
         throw new Error('The object cannot be empty');
     }
 
     return Object.assign({
-        length: Object.keys(student).length,
-        keys: Object.keys(student),
+        length: studentProp.length,
+        keys: studentProp,
         entries: Object.entries(student),
         values: Object.values(student),
     });
 }
 
-addElements(student);
+addStudentProp(student);
