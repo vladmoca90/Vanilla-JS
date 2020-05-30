@@ -10,7 +10,7 @@ const student = {
     accomodation: 'Maple Bank',
 };
 
-const addElements = student => {
+const addStudentProp = student => {
     if(Object.keys(student).length == 0) {
         throw new Error('The object cannot be empty');
     }
