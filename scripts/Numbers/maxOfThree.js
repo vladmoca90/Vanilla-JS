@@ -1,6 +1,6 @@
 ﻿//Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them
 
-function maxOfThree(x, y, z) {
+const maxOfThree = (x, y, z) => {
     if(x == y && y == z) {
         return x;
     }
