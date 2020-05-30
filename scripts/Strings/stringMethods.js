@@ -1,6 +1,6 @@
 //A function that applies subtext() to a text
 const subText = (text, a, b) => {
-    if (text.length == 0) {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
 
