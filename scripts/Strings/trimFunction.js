@@ -1,6 +1,6 @@
 //A function that trims texts
 
-function trimText(text) {
+const trimText = text => {
     if(text.length == 0) {
         throw new Error('the text must be given');
     }
