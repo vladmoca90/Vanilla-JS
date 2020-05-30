@@ -23,7 +23,7 @@ const delLibraryId = library => {
         throw new Error('The list cannot be empty');
     }
 
-    for (var i = 0; i < library.length; i++) {
+    for (let i = 0; i < library.length; i++) {
         delete library[i].libraryId;
     }
 
