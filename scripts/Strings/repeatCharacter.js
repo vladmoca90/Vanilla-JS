@@ -1,7 +1,7 @@
 //A function that repeats characters in a string
 
-function repeatCharacter(text, n) {
-    if (text.length == 0) {
+const repeatCharacter = (text, n) => {
+    if(text.length == 0) {
         throw new Error('The text cannot be empty');
     }
     if(n == 0) {
