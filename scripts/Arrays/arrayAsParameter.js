@@ -3,7 +3,7 @@
 //tail([]): returns the list without the first element
 //last([]): returns the last element of the list 
 
-function head(list) {
+const head = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -14,7 +14,7 @@ function head(list) {
     return list[0];
 }
 
-function tail(list) {
+const tail = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -25,8 +25,7 @@ function tail(list) {
     return list;
 }
 
-function last(list) {
-
+const last = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
