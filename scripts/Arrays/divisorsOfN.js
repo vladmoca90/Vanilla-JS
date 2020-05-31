@@ -1,6 +1,6 @@
 ﻿//Given a list and an the number n, return all the numbers from the list that can be divided by n
 
-function allDivisors(list, n) {
+const allDivisors = (list, n) => {
     if(n <= 0) {
         throw new Error("The n must be positive only");
     }
@@ -8,9 +8,9 @@ function allDivisors(list, n) {
         return list;
     }
 
-    var divisorsList = [];
+    let divisorsList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(list[i] % n == 0) {
             divisorsList.push(list[i]);
         }
