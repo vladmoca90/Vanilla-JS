@@ -2,11 +2,10 @@
 
 //First case
 
-function allEven(list) {
-
-    var a = list[0];
-    var b = list[1];
-    var c = list[2];
+const allEven = list => {
+    let a = list[0];
+    let b = list[1];
+    let c = list[2];
 
     if(a % 2 == 0 && b % 2 == 0 && c % 2 == 0) {
         return true
@@ -18,11 +17,10 @@ function allEven(list) {
 
 //Second case
 
-function allEven(list) {
-
-    var a = list[0];
-    var b = list[1];
-    var c = list[2];
+const allEven = list => {
+    let a = list[0];
+    let b = list[1];
+    let c = list[2];
 
     return a % 2 == 0 && b % 2 == 0 && c % 2 == 0;
 
@@ -30,11 +28,10 @@ function allEven(list) {
 
 //Return true is all numbers are odd
 
-function allOdd(list) {
-
-    var a = list[0];
-    var b = list[1];
-    var c = list[2];
+const allOdd = list => {
+    let a = list[0];
+    let b = list[1];
+    let c = list[2];
 
     return a % 2 !== 0 && b % 2 !== 0 && c % 2 !== 0;
 
