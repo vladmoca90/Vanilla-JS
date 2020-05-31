@@ -1,6 +1,6 @@
 //A function that sorts the strings of an array by length from shortest to longest
 
-function sortAscByLength(list) {
+const sortAscByLength = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
@@ -8,9 +8,9 @@ function sortAscByLength(list) {
         return list[0];
     }
 
-    var sortedList = [];
+    let sortedList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(list[i].length < list[i + 1].length) {
             sortedList.push(list[i]);
         }
