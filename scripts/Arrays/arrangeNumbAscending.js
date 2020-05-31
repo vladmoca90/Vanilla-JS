@@ -1,11 +1,10 @@
 //A function that sort the elements of an array
-function sortList(list) {
+const sortList = list =>{
+  let sortedList = [];
 
-  var sortedList = [];
-
-  var a = list[0];
-  var b = list[1];
-  var c = list[2];
+  let a = list[0];
+  let b = list[1];
+  let c = list[2];
 
   if(a <= b) {
     if(a <= c) {
