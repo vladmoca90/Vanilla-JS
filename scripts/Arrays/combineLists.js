@@ -1,7 +1,7 @@
 ﻿//Given two lists, a and b, return a list c such that
 //c = [a0, b0, a1, b1, ...]
 
-function combineLists(a, b) {
+const combineLists = (a, b) => {
     if(a.length == 0) {
         return b;
     }
@@ -9,9 +9,9 @@ function combineLists(a, b) {
         return a;
     }
 
-    var c = [];
+    let c = [];
 
-    var listaMica = [], listaMare = [];
+    let listaMica = [], listaMare = [];
 
     if(a.length > b.length) {
         listaMare = a;
@@ -22,9 +22,9 @@ function combineLists(a, b) {
         listaMica = a;
     }
 
-    var primaListaEMare = a == listaMare;
+    let primaListaEMare = a == listaMare;
 
-    for (var i = 0; i < listaMica.length; i++) {
+    for (let i = 0; i < listaMica.length; i++) {
         if(primaListaEMare) {
             c.push(listaMare[i]);
             c.push(listaMica[i]);
@@ -35,7 +35,7 @@ function combineLists(a, b) {
         }
     }
 
-    for (i = listaMica.length; i < listaMare.length; i++) {
+    for (let i = listaMica.length; i < listaMare.length; i++) {
         c.push(listaMare[i]);
     }
 
