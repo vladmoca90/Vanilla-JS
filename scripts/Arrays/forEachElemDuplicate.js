@@ -1,11 +1,11 @@
 //A function that returns a new form for each element in an array
 
-function duplicateElem(list) {
+const duplicateElem = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         list.forEach(function () {
             return list[i] += 10;
         });
