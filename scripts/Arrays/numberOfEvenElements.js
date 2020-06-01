@@ -1,6 +1,6 @@
 //A function that returns the number of even elements in an list
 
-function numberOfEvenElements(list) {
+const numberOfEvenElements = list => {
     if(list.length == 0) {
         return 0;
     }
@@ -8,9 +8,9 @@ function numberOfEvenElements(list) {
         return list[0] % 2 == 0 ? 1 : 0;
     }
 
-    var count = 0;
+    let count = 0;
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(list[i] % 2 == 0) {
             count++;
         }
