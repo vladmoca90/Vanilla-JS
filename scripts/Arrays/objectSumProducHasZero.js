@@ -7,7 +7,7 @@
     hasZero: false
 }
 */
-function calculateProperties(list) {
+const calculateProperties = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -19,10 +19,10 @@ function calculateProperties(list) {
         }
     }
 
-    var sum = 0;
-    var product = 1;
+    let sum = 0;
+    let product = 1;
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         sum += list[i];
         product *= list[i];
     }
