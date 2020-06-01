@@ -1,6 +1,6 @@
 //A function that removes the elements on an even index
 
-function removeEvenIndexes(list) {
+const removeEvenIndexes = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
@@ -8,9 +8,9 @@ function removeEvenIndexes(list) {
         return list[0];
     }
 
-    var newList = [];
+    let newList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(i % 2 !== 0) {
             newList.push(list[i]);
         }
