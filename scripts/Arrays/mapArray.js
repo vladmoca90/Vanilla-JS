@@ -1,12 +1,12 @@
 //A function that uses map and makes a multiplication
-function mappingMultiplication(list) {
+const mappingMultiplication = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
-    var mappedList = [];
+    let mappedList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] * 2);
         });
@@ -16,14 +16,14 @@ function mappingMultiplication(list) {
 }
 
 //A function that uses and makes an addition
-function mappingAddition(list) {
+const mappingAddition = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
-    var mappedList = [];
+    let mappedList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] + 100);
         });
@@ -33,14 +33,14 @@ function mappingAddition(list) {
 }
 
 //A function that uses and makes a substraction
-function mappingSubstraction(list) {
+const mappingSubstraction = list =>{
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
-    var mappedList = [];
+    let mappedList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i] - 10);
         });
@@ -50,14 +50,14 @@ function mappingSubstraction(list) {
 }
 
 //A function that uses and makes a division
-function mappingDivision(list) {
+const mappingDivision = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
 
-    var mappedList = [];
+    let mappedList = [];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         list.map(function () {
             return mappedList.push(list[i]/2);
         });
