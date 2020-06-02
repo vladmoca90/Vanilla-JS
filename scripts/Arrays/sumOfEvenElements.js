@@ -1,6 +1,6 @@
 ﻿//sum of all even elements in an list//
 
-function evenSum(list) {
+const evenSum = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -12,9 +12,9 @@ function evenSum(list) {
         }
     }
 
-    var even = 0;
+    let even = 0;
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(list[i] % 2 == 0) {
             even += list[i];
         }
