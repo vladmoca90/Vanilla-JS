@@ -1,6 +1,6 @@
 ﻿//search the element in an list//
 
-function searchInList(list, n) {
+const searchInList = (list, n) => {
     if(list.length == 0) {
         return false;
     }
@@ -11,7 +11,7 @@ function searchInList(list, n) {
             return false;
         }
     }
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if(list[i] == n) {
             return true;
         }
