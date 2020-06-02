@@ -1,6 +1,6 @@
 ﻿//smallest element in an list//
 
-function min(list) {
+const min = list => {
     if(list.length == 0) {
         throw new Error("The list cannot be empty");
     }
@@ -8,9 +8,9 @@ function min(list) {
         return list[0];
     }
 
-    var minSoFar = list[0];
+    let minSoFar = list[0];
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
 
         if(list[i] < minSoFar) {
             minSoFar = list[i];
