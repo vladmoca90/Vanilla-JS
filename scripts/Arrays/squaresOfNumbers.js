@@ -1,12 +1,12 @@
 ﻿//Give a list of numbers, return a list with the squares of these numbers
 
-function squareList(list) {
+const squareList = list => {
     if(list.length == 0) {
         return list;
     }
 
-    for (var i = 0; i < list.length; i++) {
-        var number = list[i] * list[i];
+    for (let i = 0; i < list.length; i++) {
+        let number = list[i] * list[i];
         list[i] = number;
     }
 
