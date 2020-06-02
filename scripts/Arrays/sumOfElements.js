@@ -1,6 +1,6 @@
 ﻿//sum of the elements of an list//
 
-function sum(list) {
+const sum = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
     }
@@ -9,9 +9,9 @@ function sum(list) {
             return list[0];
     }
 
-    var sum = 0;
+    let sum = 0;
 
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         sum += list[i];
     }
 

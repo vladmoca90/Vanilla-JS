@@ -1,8 +1,7 @@
 ﻿//input: array of students; each student has a name and a mark
 //output: object that contains the student with the highest and the lowest mark
 
-function findBestAndWorstMarks(students) {
-
+const findBestAndWorstMarks = students => {
     if(students.length == 0) {
         throw new Error("The array is empty");
     }
@@ -13,11 +12,10 @@ function findBestAndWorstMarks(students) {
         }
     }
 
-    var minMark = students[0];
+    let minMark = students[0];
+    let maxMark = students[0];
 
-    var maxMark = students[0];
-
-    for (var i = 0; i < students.length; i++) {
+    for (let i = 0; i < students.length; i++) {
         if(students[i].mark < minMark.mark) {
             minMark = students[i];
         }
