@@ -1,6 +1,5 @@
 //A function that changed the order of the elements in an list in random order
-
-function randomizeElem(list) {
+const randomizeElem = list => {
   if(list.length == 0) {
     throw new Error('The list cannot be empty');
   }
