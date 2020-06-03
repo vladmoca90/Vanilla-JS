@@ -1,5 +1,5 @@
 //A function that converts a string (name) into abbreviated form (ex. Alex Mocanu => A.M.)
-function becomeAbbreviated(text) {
+const becomeAbbreviated = text => {
     if(text.length == 0) {
         throw new Error('Text cannot be empty');
     }
@@ -7,7 +7,7 @@ function becomeAbbreviated(text) {
         return text + '.';
     }
 
-    var splitText = text.trim().split(' ');
+    let splitText = text.trim().split(' ');
 
     if(splitText.length > 1) {
         return splitText[0].charAt(0) + '.' + splitText[1].charAt(0) + '.';
