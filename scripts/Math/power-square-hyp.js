@@ -1,6 +1,6 @@
-﻿//The function takes two non-zero natural numbers n and p, and return n^p
+﻿//The const takes two non-zero natural numbers n and p, and return n^p
 
-function power(n, p) {
+const power = (n, p) => {
     if(n == 1) {
         return 1;
     }
@@ -8,8 +8,8 @@ function power(n, p) {
         return n;
     }
 
-    var i = 1;
-    var multip = n;
+    let i = 1;
+    let multip = n;
 
     while (i < p) {
         multip = multip * n;
@@ -19,9 +19,9 @@ function power(n, p) {
     return multip;
 }
 
-//The function square receives a number and returns the square of that number
+//The const square receives a number and returns the square of that number
 
-function square(n) {
+const square = n => {
     if(n <= 0) {
         throw new Error("n must non-zero and positive");
     }
