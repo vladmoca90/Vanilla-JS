@@ -5,7 +5,7 @@ describe('math-utilities', function () {
                 threeEvenNum(2, 4, 6).toBeTruthy()
             });
         });
-        it('returns falseif at least of of the numbers is not even.', function () {
+        it('returns false if at least of of the numbers is not even.', function () {
             expect(function () {
                 threeEvenNum(2, 5, 6).toBeFalsy()
             });
