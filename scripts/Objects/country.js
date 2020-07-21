@@ -1,13 +1,14 @@
 //A object with properties of a country
 
 const country = {
-    name: "Uzbekistan",
+    name: 'Uzbekistan',
     population: 27, // in millions //
-    capital: "Tashkent",
-    otherCities: ["Samarkhand", "Burkhara", "Nukus", "Fergana Valley"],
+    capital: 'Tashkent',
+    otherCities: ['Samarkhand', 'Burkhara', 'Nukus', 'Fergana Valley'],
     size: 447400,
-    region: "Central Asia",
+    region: 'Central Asia',
     independence: 1991,
+    landlocked: true,
 }
 
 const countryProp = country => Object.keys(country);
