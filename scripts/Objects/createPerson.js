@@ -16,4 +16,4 @@ const createPerson = list => {
     return person;
 }
 
-createPerson(['Alexandru', 25]);
+createPerson(['John Smith', 25]);
