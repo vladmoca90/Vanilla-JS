@@ -6,7 +6,6 @@ const city = {
     "New York City",
     "Los Angeles",
     "Atlanta",
-    "Detroit",
   ],
 }
 
@@ -20,9 +19,6 @@ const cities = city => {
       break;
     case "Atlanta":
       console.log("Atlanta is the capital of Georgia state.");
-      break;
-    case "Detroit":
-      console.log("Detroit in the state of Michigan.");
       break;
     default:
       throw new Error('City does not exist');
