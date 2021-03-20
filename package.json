@@ -1,7 +1,7 @@
 {
   "name": "javascript-jquery-practice",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vanilla-JS",
   "main": "index.js",
   "directories": {
     "lib": "lib"
