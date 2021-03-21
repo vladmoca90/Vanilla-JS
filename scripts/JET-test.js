@@ -8,7 +8,6 @@ function textUtilities() {
         if (text.length == 0) {
             return 0;
         }
-
         if (letter == null || letter.length == 0) {
             throw new Error('The letter cannot be empty or cannot have a null value');
         }
