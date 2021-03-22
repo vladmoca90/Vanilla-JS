@@ -10,3 +10,6 @@ console.log(language.log); // ['English']
 
 language.current = 'French';
 console.log(language.log); // ['English', 'French']
+
+language.current = 'Spanish';
+console.log(language.log); // ['English', 'French', 'Spanish']
