@@ -1,7 +1,7 @@
 //A function that returns certain properties of an object in another object
 
 const student = {
-    name: 'David Rayy',
+    name: 'David James Ray',
     degree: 'Bsc Computer Science',
     university: 'University of Birmingham',
     stuentId: 1098085,
