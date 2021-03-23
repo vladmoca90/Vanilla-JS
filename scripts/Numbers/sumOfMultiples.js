@@ -15,7 +15,6 @@ const sumOfMultiples = n => {
 
 sumOfMultiples(100);
 
-
 // Second verion of the function
 const sumOfMultiples = n => {
     if(n <= 0) {
