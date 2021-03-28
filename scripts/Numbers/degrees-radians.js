@@ -15,6 +15,7 @@ const degreesToRadians = degrees => {
 }
 
 //A function that transforms radians into degrees
+
 const radiansToDegrees = radians => {
     let pi = 3.14;
     let degrees = (radians*180)/pi;
