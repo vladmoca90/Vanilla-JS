@@ -10,5 +10,4 @@ const fixedNumber = (n, f) => {
     let m = n.toFixed(f);
 
     return m;
-
 }
