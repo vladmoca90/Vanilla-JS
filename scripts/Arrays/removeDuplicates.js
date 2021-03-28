@@ -1,6 +1,7 @@
 //A const that removes the duplicates from an array
 
 //Method 1 - sort the array and compare each element one by one
+
 const removeDuplicates = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
@@ -18,6 +19,7 @@ const removeDuplicates = list => {
 }
 
 //Method 2 - check if it exists or not already
+
 const removeDuplicates = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
@@ -37,6 +39,7 @@ const removeDuplicates = list => {
 }
 
 //Method 3 - use a dictionary
+
 let dict = {}
 
 const createDictionary = list => {
@@ -55,6 +58,7 @@ const createDictionary = list => {
 }
 
 //Method 4 - Splice your array
+
 const removeDuplicates = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
