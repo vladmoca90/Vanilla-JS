@@ -15,6 +15,7 @@ const degreesIntoRadians = n => {
 }
 
 //A function that converts radians into degrees
+
 const radiansIntoDegrees = n => {
     if(n == null) {
         throw new Error('The number cannot be null');

@@ -30,6 +30,7 @@ const square = n => {
 }
 
 //Given two numbers a and b, which are the "catetele", calculate the "ipotenuza"
+
 const calculateHyp = (a, b) => {
     if(a < 0 || b < 0) {
         throw new Error("Invalid parameters");
