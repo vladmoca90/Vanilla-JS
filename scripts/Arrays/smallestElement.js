@@ -11,7 +11,6 @@ const min = list => {
     let minSoFar = list[0];
 
     for (let i = 0; i < list.length; i++) {
-
         if(list[i] < minSoFar) {
             minSoFar = list[i];
         }
