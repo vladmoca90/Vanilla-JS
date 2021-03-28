@@ -3,7 +3,7 @@
 function numbersDivisibleWithOr(n, m) {
     let count = 0;
 
-    for (i = 1; i < 100; i++) {
+    for (let i = 1; i < 100; i++) {
         if(i % n == 0 || i % m == 0) {
             count++;
         }
@@ -17,7 +17,7 @@ function numbersDivisibleWithOr(n, m) {
 function numbersDivisibleWithAnd(n, m) {
     let count = 0;
 
-    for (i = 1; i < m; i++) {
+    for (let i = 1; i < m; i++) {
         if(i % n == 0) {
             count++;
         }
