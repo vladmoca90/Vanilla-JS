@@ -1,4 +1,4 @@
-﻿//sum of the elements of an list//
+﻿//Sum of the elements of an list 
 
 const sum = list => {
     if(list.length == 0) {
