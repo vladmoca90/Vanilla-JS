@@ -7,6 +7,7 @@
     hasZero: false
 }
 */
+
 const calculateProperties = list => {
     if(list.length == 0) {
         throw new Error("The list is empty");
