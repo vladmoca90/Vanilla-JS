@@ -13,6 +13,7 @@ function numbersDivisibleWithOr(n, m) {
 }
 
 //A function that returns all the numbers divisible by m up to n
+
 function numbersDivisibleWithAnd(n, m) {
     let count = 0;
 
@@ -26,6 +27,7 @@ function numbersDivisibleWithAnd(n, m) {
 }
 
 //A function that returns the total of numbers with 3 digits up to m
+
 const countNumbersBetweenInterval = (n, m) => {
     let count = 0;
 
