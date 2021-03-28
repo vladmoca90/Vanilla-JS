@@ -12,7 +12,6 @@ const allEven = list => {
     } else {
         return false;
     }
-
 }
 
 //Second case
@@ -23,7 +22,6 @@ const allEven = list => {
     let c = list[2];
 
     return a % 2 == 0 && b % 2 == 0 && c % 2 == 0;
-
 }
 
 //Return true is all numbers are odd
@@ -34,5 +32,4 @@ const allOdd = list => {
     let c = list[2];
 
     return a % 2 !== 0 && b % 2 !== 0 && c % 2 !== 0;
-
 }
