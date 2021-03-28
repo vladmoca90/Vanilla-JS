@@ -1,4 +1,6 @@
-﻿const fibonacci = n => {
+﻿//A code that calculates the Fobonacci numbers
+
+const fibonacci = n => {
     if(n < 0) {
         throw new Error("n must be positive or 0 only!");
     }
