@@ -1,6 +1,6 @@
 //smallest element in an list//
 
-const min = list => {
+const minElem = list => {
     if(list.length == 0) {
         throw new Error("The list cannot be empty");
     }
