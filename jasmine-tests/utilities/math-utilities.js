@@ -1,11 +1,20 @@
-//Returns true is at least one element in an array in smaller than a given number
+//smallest element in an list//
 
-const compareNumbersWith = (list, n) => {
+const min = list => {
     if(list.length == 0) {
-        throw new Error('the list cannot be empty');
+        throw new Error("The list cannot be empty");
+    }
+    if(list.length == 1) {
+        return list[0];
     }
 
-    return list.some(function(elem) {
-        return elem > n;
-    });
+    let minSoFar = list[0];
+
+    for (let i = 0; i < list.length; i++) {
+        if(list[i] < minSoFar) {
+            minSoFar = list[i];
+        }
+    }
+
+    return minSoFar;
 }
