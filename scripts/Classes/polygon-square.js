@@ -1,5 +1,4 @@
 //A class that calculates the area of a polygon
-
 class Polygon {
     constructor(height, width) {
         this.area = width * height;
@@ -7,7 +6,6 @@ class Polygon {
 }
 
 //A class that is sibling of another class
-
 class Square extends Polygon {
     constructor(height, width) {
       super(height, width);
