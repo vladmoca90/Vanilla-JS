@@ -1,24 +1,23 @@
 describe('math-utilities', function () {
-    describe('longestList()', function () {
-        it('returns an error if one of the lists is empty', function () {
+    describe('everyElemSmaller()', function () {
+        it('returns an error if list is empty', function () {
             expect(function () {
-                longestList([], [1, 2, 3])
+                everyElemSmaller([], 1)
             }).toThrowError();
         });
-        it('returns any of the list if they are equal in number of characters', function () {
+        it('returns an error if n does not exist', function () {
             expect(function () {
-                longestList([1, 2], [1, 2]).toBe([1, 2]);
-            });
+                everyElemSmaller([10, 20, 30])
+            }).toThrowError();
         });
-        it('returns the first list if it is longer than the second', function () {
-            expect(function () {
-                longestList([1, 2, 3], [1, 2]).toBe([1, 2, 3]);
-            });
+        it('returns true is at least one element is greater than n', function () {
+            expect(everyElemSmaller([1, 2, 3], 4)).toBeTruthy();
         });
-        it('returns the second list if it is longer than the first', function () {
-            expect(function () {
-                longestList([1, 2, 3], [1, 2, 6, 7]).toBe([1, 2, 6, 7]);
-            });
+        it('returns false if no element is greater than n', function () {
+            expect(everyElemSmaller([1, 2, 3], 3)).toBeFalsy();
+        });
+        it('returns false if all elements in the list are equal and no element is greater than n', function () {
+            expect(everyElemSmaller([7, 7], 7)).toBeFalsy();
         });
     });
 });
