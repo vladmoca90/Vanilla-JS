@@ -1,20 +1,15 @@
-//smallest element in an list//
+//A function that compares the length of two lists and returns the longest one
 
-const minElem = list => {
-    if(list.length == 0) {
-        throw new Error("The list cannot be empty");
+const longestList = (x, y) => {
+    if(x.length == 0 || y.length == 0) {
+        throw new Error("None of the lists can be empty");
     }
-    if(list.length == 1) {
-        return list[0];
+    if(x.length == y.length) {
+        return x;
     }
-
-    let minSoFar = list[0];
-
-    for (let i = 0; i < list.length; i++) {
-        if(list[i] < minSoFar) {
-            minSoFar = list[i];
-        }
+    if(x.length > y.length) {
+        return x;
+    } else {
+        return y;
     }
-
-    return minSoFar;
 }
