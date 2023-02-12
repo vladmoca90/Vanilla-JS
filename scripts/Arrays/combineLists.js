@@ -11,32 +11,32 @@ const combineLists = (a, b) => {
 
     let c = [];
 
-    let listaMica = [], listaMare = [];
+    let shortList = [], longList = [];
 
     if(a.length > b.length) {
-        listaMare = a;
-        listaMica = b;
+        longList = a;
+        shortList = b;
     }
     else {
-        listaMare = b;
-        listaMica = a;
+        longList = b;
+        shortList = a;
     }
 
-    let primaListaEMare = a == listaMare;
+    let firstLongList = a == longList;
 
-    for (let i = 0; i < listaMica.length; i++) {
-        if(primaListaEMare) {
-            c.push(listaMare[i]);
-            c.push(listaMica[i]);
+    for (let i = 0; i < shortList.length; i++) {
+        if(firstLongList) {
+            c.push(longList[i]);
+            c.push(shortList[i]);
         }
         else {
-            c.push(listaMica[i]);
-            c.push(listaMare[i]);
+            c.push(shortList[i]);
+            c.push(longList[i]);
         }
     }
 
-    for (let i = listaMica.length; i < listaMare.length; i++) {
-        c.push(listaMare[i]);
+    for (let i = shortList.length; i < longList.length; i++) {
+        c.push(longList[i]);
     }
 
     return c;
