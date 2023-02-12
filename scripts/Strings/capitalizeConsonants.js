@@ -1,4 +1,5 @@
 //A function that capitalizes every consonant in text
+
 const capitalizeConsonants = text => {
     if(text.length == 0) {
         throw new error('The text must be given');
