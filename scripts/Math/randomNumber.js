@@ -1,4 +1,4 @@
-//A function that returns a random number between a cartain interval
+//A function that returns a random number between a certain interval
 
 const randomNumber = (min, max) => {
     if(min > max) {
