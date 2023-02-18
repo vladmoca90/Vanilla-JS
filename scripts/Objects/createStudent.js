@@ -4,10 +4,10 @@ const student = {
     name: 'David James Ray',
     degree: 'Bsc Computer Science',
     university: 'University of Birmingham',
-    stuentId: 1098085,
+    studentId: 1098085,
     age: 16,
     nationality: 'Canadian',
-    accomodation: 'Maple Bank',
+    accommodation: 'Maple Bank',
 };
 
 const addStudentProp = student => {
