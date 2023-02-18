@@ -1,6 +1,6 @@
 //A function that uses map and makes a multiplication
 
-const mappingMultiplication = list => {
+const mappingMult = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
@@ -18,7 +18,7 @@ const mappingMultiplication = list => {
 
 //A function that uses and makes an addition
 
-const mappingAddition = list => {
+const mappingAdd = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
@@ -36,7 +36,7 @@ const mappingAddition = list => {
 
 //A function that uses and makes a substraction
 
-const mappingSubstraction = list =>{
+const mappingSubstr = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
@@ -54,7 +54,7 @@ const mappingSubstraction = list =>{
 
 //A function that uses and makes a division
 
-const mappingDivision = list => {
+const mappingDiv = list => {
     if(list.length == 0) {
         throw new Error('List cannot be empty');
     }
