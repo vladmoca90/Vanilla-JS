@@ -1,6 +1,6 @@
 //A function that assigns values to an object
 const student = {
-    name: 'Lech Katchinsky',
+    name: 'Angelika Kloc',
     age: 25,
     nationality: 'Polish'
 };
