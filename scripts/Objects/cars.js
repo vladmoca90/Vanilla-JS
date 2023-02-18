@@ -12,11 +12,6 @@ const cars = [
         number: '06GF090',
     },
     {
-        model: 'Lada',
-        country: 'Russia',
-        number: '11EE779',
-    },
-    {
         model: 'Mercedes',
         country: 'Germany',
         number: '00JY676',
