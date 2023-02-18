@@ -1,13 +1,13 @@
 //A function that calculates the length of an object
 
 const student = {
-    name: "David Rayy",
+    name: "David Ray",
     degree: "Bsc Computer Science",
     university: "University of Birmingham",
-    stuentId: 1098085,
+    studentId: 1098085,
     age: 16,
     nationality: "Canadian",
-    accomodation: "Maple Bank",
+    accommodation: "Maple Bank",
 };
 
 const getStudentLength = student => {
