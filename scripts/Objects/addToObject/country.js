@@ -8,7 +8,7 @@ const country = {
 
 const addToCountry = country => {
     return Object.assign(country, {
-        size: 447400,
+        size: 447400, // in square km
         region: "Central Asia",
         continent: "Asia",
         independence: 1991,
