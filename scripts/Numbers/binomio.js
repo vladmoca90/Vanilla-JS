@@ -17,7 +17,7 @@ const calcGeneralBinomio = (a, b, n) => {
 }
 
 
-//This functions calculates the bonomio with combinations
+//This functions calculates the binomio with combinations
 
 const calculateBinomioWithCombinations = (a, b, n) => {
     if(a <= 0 || b <= 0 || n <= 0) {
