@@ -7,7 +7,7 @@ const duplicateElem = list => {
 
     for (let i = 0; i < list.length; i++) {
         list.forEach(function () {
-            return list[i] += 10;
+            return list[i] += 5;
         });
     }
 
