@@ -5,7 +5,7 @@ const findElem = (list) => {
         throw new Error('The list cannot be empty');
     }
 
-    const found = list.find((element) => element > 10);
+    const found = list.find((element) => element % 2 == 0);
 
-    console.log(found);
+    return found;
 }
