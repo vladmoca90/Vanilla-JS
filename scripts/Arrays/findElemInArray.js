@@ -1,6 +1,6 @@
 //A function that find certain element/elements in a given array
 
-const findElem = (list, text) => {
+const findElem = (list) => {
     if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
@@ -8,9 +8,9 @@ const findElem = (list, text) => {
     let foundList = [];
 
     for (let i = 0; i < list.length; i++) {
-        foundList = list.find(text.length > 10);
+        foundList = list.find(list[i] > 10);
 
-        if (text.length > 10) {
+        if (list[i].length > 10) {
             return foundList;
         } else {
             throw new Error('The text does not have more than 10 characters');
