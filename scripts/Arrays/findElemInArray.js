@@ -5,11 +5,7 @@ const findElem = (list) => {
         throw new Error('The list cannot be empty');
     }
 
-    const found = [];
-
-    for (let i = 0; i < list.length; i++) {;
-        found.push(list.find(list => list[i] % 2 == 0));
-    }
+    const found = list.find((element) => element % 2 == 0);
 
     return found;
 }
