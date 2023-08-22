@@ -1,12 +1,19 @@
 //A function that find certain element/elements in a given array. 
 //find() locates a specific entry by a predicate and returns it. .map() is for all entries!
+//.filter() returns an array of matched objects while .find() returns the first matched object
 
-const findElem = (list) => {
-    if (list.length == 0) {
-        throw new Error('The list cannot be empty');
-    }
+let animals = [
+    { name: 'Tibbers', type: 'cat', isNeutered: true, age: 2 },
+    { name: 'Fluffball', type: 'rabbit', isNeutered: false, age: 1 },
+    { name: 'Strawhat', type: 'cat', isNeutered: true, age: 5 }
+]
 
-    const found = list.find((element) => element % 2 == 0);
+animalTypeFound = animals.find(animal => animal.type === 'cat');
 
-    return found;
-}
+// animalTypeFound will return:
+// {name: 'Tibbers', type: 'cat', isNeutered: true, age: 2}
+
+animalTypeFilter = animals.filter(animal => animal.type === 'cat');
+
+// animalTypeFilter will return:
+// [{name: 'Tibbers', type: 'cat', isNeutered: true, age: 2}, {name: 'Strawhat', type: 'cat', isNeutered: true, age: 5}]
