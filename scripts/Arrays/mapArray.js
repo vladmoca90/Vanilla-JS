@@ -1,3 +1,6 @@
+//find() locates a specific entry by a predicate and returns it. 
+//.map() is for all entries!
+
 //A function that uses map and makes a multiplication
 const mappingMult = list => {
     if(list.length == 0) {

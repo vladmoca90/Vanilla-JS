@@ -1,4 +1,5 @@
-//A function that find certain element/elements in a given array
+//A function that find certain element/elements in a given array. 
+//find() locates a specific entry by a predicate and returns it. .map() is for all entries!
 
 const findElem = (list) => {
     if (list.length == 0) {
