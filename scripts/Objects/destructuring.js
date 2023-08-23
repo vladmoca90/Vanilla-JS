@@ -6,8 +6,28 @@ const person = {
 }
 
 //old style
-const name = person.name;
-const age = person.age;
-const isMarried = person.isMarried;
+/*
+  const name = person.name;
+  const age = person.age;
+  const isMarried = person.isMarried; 
+*/
 
-//destructure
+//one option
+
+/*  const {name, age, isMarried} = person;  */
+
+//another option
+const name = 'Vlad Mocanu';
+const age = 33;
+const isMarried = false;
+
+const person = {
+    name,
+    age,
+    isMarried,
+}
+
+const person2 = {
+    ...person,
+    name: 'Ana Mocanu',
+} //an object exact as person = {} but only the name property has a different value
