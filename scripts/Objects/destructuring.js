@@ -1,4 +1,4 @@
-//A file that shows how to destructure an object
+//a file that shows how to destructure an object
 const person = {
     name: 'Vlad Mocanu',
     age: 33,
