@@ -26,7 +26,7 @@ const person1 = {
     myMarriedStatus,
 }
 
-//an object exact as person = {} but only the name property has a different value
+//an object exact as person = {} but only the name property has a different value. You can easily use ... (spread operator)
 const person2 = {
     ...person1,
     name: 'Ana Mocanu',
