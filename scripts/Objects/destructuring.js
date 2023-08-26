@@ -15,20 +15,20 @@ const person = {
 const {name, age, isMarried} = person;
 
 //another option
-const name = 'Vlad Mocanu';
-const age = 33;
-const isMarried = false;
+const myName = 'Vlad Mocanu';
+const myAge = 33;
+const myMarriedStatus = false;
 
-//another way to write the object - ignore the error!
-const person = {
-    name,
-    age,
-    isMarried,
+//another way to write the object
+const person1 = {
+    myName,
+    myAge,
+    myMarriedStatus,
 }
 
 //an object exact as person = {} but only the name property has a different value
 const person2 = {
-    ...person,
+    ...person1,
     name: 'Ana Mocanu',
 }
 
