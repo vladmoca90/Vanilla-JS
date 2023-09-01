@@ -10,7 +10,7 @@ const num = [1800, 50, 300, 20, 100];
 let difference = num.reduce(
     (accumulator, currentValue) => accumulator - currentValue
     // 1800 - 50 - 300 - 20 - 100 (the first element is the accumulator in this case)
-    // currentValue represents all elements from the array
+    // currentValue represents all elements from the array.
 );
 
 console.log(difference); // The result will be 1330
@@ -28,9 +28,8 @@ for( let n of numbers) {
 console.log(sum); //will display 5.
 
 //Same example with .reduce()
-
-const total = numbers.reduce((accumulator, currentValue) => { //accumulator is like the above sum variable
+const total = numbers.reduce((accumulator, currentValue) => { //accumulator is like the above sum variable.
     return accumulator + currentValue
-}, 0); //The 0 value is initial value for the accumulator
+}, 0); //The 0 value is initial value for the accumulator.
 
 console.log(total);
