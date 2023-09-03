@@ -13,6 +13,4 @@ const calculateArea = shape => {
         default:
             throw new Error("Shape not valid");
     }
-
 }
-
