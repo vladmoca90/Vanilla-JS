@@ -4,7 +4,7 @@
 //General form is like this:
 //array.reduce(callbackFn, initialValue); //callbackFn is called reducer and the initialValue is an optional one
 
-//Example
+//Example - basic example
 const num = [1800, 50, 300, 20, 100];
 
 let difference = num.reduce(
@@ -13,7 +13,7 @@ let difference = num.reduce(
     // currentValue represents all elements from the array.
 );
 
-console.log(difference); // The result will be 1330
+console.log(difference); //The result will be 1330
 
 
 
@@ -25,7 +25,7 @@ for (let n of numbers) {
     sum += n;
 }
 
-console.log(sum); //will display 5 as it will add all the elements => 1 - 1 + 2 + 3 = 5
+console.log(sum); //Will display 5 as it will add all the elements => 1 - 1 + 2 + 3 = 5
 
 //Same example with .reduce()
 const total = numbers.reduce((accumulator, currentValue) => { //accumulator is like the above sum variable.
