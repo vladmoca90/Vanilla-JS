@@ -15,7 +15,7 @@ const cities = city => {
       console.log("The city is called New York City.");
       break;
     case "Los Angeles":
-      console.log("This californian city is Los Angeles.");
+      console.log("This Californian city is Los Angeles.");
       break;
     case "Atlanta":
       console.log("Atlanta is the capital of Georgia state.");
