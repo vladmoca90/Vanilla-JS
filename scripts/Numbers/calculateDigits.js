@@ -1,9 +1,10 @@
 //A function that calculates the addition between the digits of a number
+
 const digitsAddition = n => {
-    if(!n) {
+    if (!n) {
         throw new Error('The number must be given');
     }
-    if(n < 0) {
+    if (n < 0) {
         throw new Error('The number must be positive');
     }
 

@@ -1,10 +1,10 @@
 //A function that returns all the numbers divisible by m and n
 
-function numbersDivisibleWithOr(n, m) {
+const numbersDivisibleWithOr = (n, m) => {
     let count = 0;
 
     for (let i = 1; i < 100; i++) {
-        if(i % n == 0 || i % m == 0) {
+        if (i % n == 0 || i % m == 0) {
             count++;
         }
     }
@@ -14,11 +14,11 @@ function numbersDivisibleWithOr(n, m) {
 
 //A function that returns all the numbers divisible by m up to n
 
-function numbersDivisibleWithAnd(n, m) {
+const numbersDivisibleWithAnd = (n, m) => {
     let count = 0;
 
     for (let i = 1; i < m; i++) {
-        if(i % n == 0) {
+        if (i % n == 0) {
             count++;
         }
     }
@@ -32,7 +32,7 @@ const countNumbersBetweenInterval = (n, m) => {
     let count = 0;
 
     for (let i = 0; i < m; i++) {
-        if(i >= n) {
+        if (i >= n) {
             count++;
         }
     }
