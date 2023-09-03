@@ -21,7 +21,7 @@ console.log(difference); // The result will be 1330
 const numbers = [1, -1, 2, 3];
 let sum = 0;
 
-for( let n of numbers) {
+for (let n of numbers) {
     sum += n;
 }
 
