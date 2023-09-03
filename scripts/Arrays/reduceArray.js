@@ -25,11 +25,11 @@ for (let n of numbers) {
     sum += n;
 }
 
-console.log(sum); //will display 5.
+console.log(sum); //will display 5 as it will add all the elements => 1 - 1 + 2 + 3 = 5
 
 //Same example with .reduce()
 const total = numbers.reduce((accumulator, currentValue) => { //accumulator is like the above sum variable.
     return accumulator + currentValue
 }, 0); //The 0 value is initial value for the accumulator.
 
-console.log(total);
+console.log(total); //5
