@@ -3,11 +3,11 @@
 const returnDaysUntilChristmas = today => {
     let today = new Date();
 
-    if(today.getMonth() == 11) {
-        if(today.getDate() < 25) {
+    if (today.getMonth() == 11) {
+        if (today.getDate() < 25) {
             return 25 - today.getDate();
         }
-        if(today.getDate() == 25) {
+        if (today.getDate() == 25) {
             return 0;
         }
 
@@ -20,12 +20,10 @@ const returnDaysUntilChristmas = today => {
     for (let i = today.getMonth() + 1; daysOfTheMonth.length - 1; i++) {
         daysLeft += daysOfTheMonth[i] + (daysOfTheMonth[today.getMonth()] - today.getDate());
 
-        if(daysOfTheMonth[1] == 29 && today.getMonth() == 0 || today.getMonth() == 1) {
+        if (daysOfTheMonth[1] == 29 && today.getMonth() == 0 || today.getMonth() == 1) {
             daysLeft += daysOfTheMonth[i] + (daysOfTheMonth[today.getMonth()] - today.getDate()) + 1;
         }
     }
 
     return daysLeft;
 }
-
-

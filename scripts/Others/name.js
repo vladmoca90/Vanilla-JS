@@ -5,4 +5,5 @@ const person = {
 }
 
 person.name = 'Vlad Mocanu';
+
 console.log(person.name);
