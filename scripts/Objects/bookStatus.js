@@ -19,14 +19,14 @@ const library = [
 ];
 
 const bookStatus = library => {
-    if(library.length == 0) {
+    if (library.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
     let status = [];
 
     for (let i = 0; i < library.length; i++) {
-        if(library[i].readingStatus == true) {
+        if (library[i].readingStatus == true) {
             status.push(Object.values(library[i]));
         }
     }

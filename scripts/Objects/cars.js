@@ -20,7 +20,7 @@ const cars = [
 
 //Returns the values of the properties
 const chooseCarModel = n => {
-    if(n < 0 || n > 3) {
+    if (n < 0 || n > 3) {
         throw new Error('The number must be 0, 1, 2 or 3');
     }
 
@@ -31,7 +31,7 @@ chooseCarModel(3);
 
 //Returns the the properties
 const chooseCarProperty = n => {
-    if(n < 0 || n > 2) {
+    if (n < 0 || n > 2) {
         throw new Error('The number must be 0, 1, 2 or 3');
     }
 
@@ -42,7 +42,7 @@ chooseCarProperty(0);
 
 //Returns the properties and values as pairs of arrays
 const chooseCarEntries = n => {
-    if(n < 0 || n > 3) {
+    if (n < 0 || n > 3) {
         throw new Error('The number must be 0, 1 or 2');
     }
 
