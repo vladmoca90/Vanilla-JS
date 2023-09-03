@@ -11,7 +11,7 @@ class Tiger extends Animal {
     }
 
     get animalType() {
-        return this.family + ' ' +  'and' + ' ' +  this.species;
+        return this.family + ' ' + 'and' + ' ' + this.species;
     }
 }
 
