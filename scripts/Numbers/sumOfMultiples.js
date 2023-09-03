@@ -1,12 +1,12 @@
-const sumOfMultiples = n => {
-    if(n <= 0) {
+const sumOfMultiplesOne = n => {
+    if (n <= 0) {
         throw new Error('The n must be positive and greater than 0');
     }
 
     let sum = 0;
 
     for (let i = 0; i < n; i++) {
-        if(i % 3 == 0) {
+        if (i % 3 == 0) {
             sum += i;
         }
     }
@@ -15,17 +15,17 @@ const sumOfMultiples = n => {
 
 sumOfMultiples(100);
 
-// Second verion of the function
-const sumOfMultiples = n => {
-    if(n <= 0) {
+// Second version of the function
+const sumOfMultiplesTwo = n => {
+    if (n <= 0) {
         throw new Error('The n must be positive and greater than 0');
     }
 
     let sum = 0;
 
     for (let i = 0; i < n; i++) {
-        if(i % 3 == 0) {
-            sum += i;
+        if (i % 3 == 0) {
+            sum += i;s
         }
     }
     return sum;
