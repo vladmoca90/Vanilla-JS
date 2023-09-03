@@ -1,3 +1,5 @@
+//A function that increases a number x by n
+
 const increaseXbyN = n => {
     let x;
 
