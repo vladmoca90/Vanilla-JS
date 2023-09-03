@@ -1,9 +1,9 @@
 const increaseXbyN = n => {
     let x;
 
-    while(n < 6) {
+    while (n < 6) {
         n++;
-        x =+ n;
+        x = + n;
     }
 
     return x;
