@@ -1,4 +1,4 @@
-//A function that filters an list
+//A function that filters an list according to a certain condition.
 
 const filterList = list => {
     if(list.length == 0) {

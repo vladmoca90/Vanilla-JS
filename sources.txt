@@ -4,4 +4,5 @@ https://www.javascripttutorial.net/javascript-array-reduce/
 
 https://blog.teamtreehouse.com/javascript-array-methods-reduce
 
-https://code.tutsplus.com/5-real-life-uses-for-the-javascript-reduce-method--cms-39096a
+
+https://code.tutsplus.com/5-real-life-uses-for-the-javascript-reduce-method--cms-39096a - what you need for React
