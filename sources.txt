@@ -3,3 +3,5 @@ https://www.freecodecamp.org/news/javascript-skills-you-need-for-react-practical
 https://www.javascripttutorial.net/javascript-array-reduce/
 
 https://blog.teamtreehouse.com/javascript-array-methods-reduce
+
+https://code.tutsplus.com/5-real-life-uses-for-the-javascript-reduce-method--cms-39096a
