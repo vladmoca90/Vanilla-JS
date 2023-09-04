@@ -15,8 +15,6 @@ let difference = num.reduce(
 
 console.log(difference); //The result will be 1330
 
-
-
 //Another example, but without .reduce()
 const numbers = [1, -1, 2, 3];
 let sum = 0;
