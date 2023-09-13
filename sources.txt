@@ -7,4 +7,11 @@ https://blog.teamtreehouse.com/javascript-array-methods-reduce
 
 https://code.tutsplus.com/5-real-life-uses-for-the-javascript-reduce-method--cms-39096a - what you need for React
 
-https://builtin.com/software-engineering-perspectives/javascript-reduce - how to use .reduce()
+
+How to use .reduce()
+
+https://builtin.com/software-engineering-perspectives/javascript-reduce
+
+https://blog.teamtreehouse.com/javascript-array-methods-reduce 
+
+https://www.crocoder.dev/blog/map-filter-reduce-exercises/
