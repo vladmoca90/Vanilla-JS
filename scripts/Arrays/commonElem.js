@@ -1,5 +1,7 @@
 //A function that returns the element that appears more than once in an array
 
+let list = ['a', 'b', 'c', 'a', 'a'];
+
 const showCommonElem = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
