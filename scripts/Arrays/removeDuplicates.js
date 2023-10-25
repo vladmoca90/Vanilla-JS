@@ -59,7 +59,7 @@ const createDictionary = list => {
 
 //Method 4 - Splice your array
 
-const removeDuplicates = list => {
+const removeDuplicates2 = list => {
     if(list.length == 0) {
         throw new Error('The list cannot be empty');
     }
