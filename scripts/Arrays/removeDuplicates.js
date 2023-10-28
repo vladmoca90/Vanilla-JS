@@ -1,16 +1,15 @@
 //A const that removes the duplicates from an array
 
 //Method 1 - sort the array and compare each element one by one
-
 const removeDuplicatesOne = list => {
-    if(list.length == 0) {
+    if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
     let withoutDuplicates = [];
 
     for (let i = 0; i < list.length; i++) {
-        if(list[i] != list[i + 1]) {
+        if (list[i] != list[i + 1]) {
             withoutDuplicates.push(list[i]);
         }
     }
@@ -19,9 +18,8 @@ const removeDuplicatesOne = list => {
 }
 
 //Method 2 - check if it exists or not already
-
 const removeDuplicatesTwo = list => {
-    if(list.length == 0) {
+    if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
@@ -30,7 +28,7 @@ const removeDuplicatesTwo = list => {
     let withoutDuplicates = [];
 
     for (let i = 0; i < list.length; i++) {
-        if(withoutDuplicates.indexOf(list[i]) == -1) {
+        if (withoutDuplicates.indexOf(list[i]) == -1) {
             withoutDuplicates.push(list[i]);
         }
     }
@@ -39,14 +37,13 @@ const removeDuplicatesTwo = list => {
 }
 
 //Method 3 - use a dictionary
-
 let dict = {}
 
 const createDictionary = list => {
     for (let i = 0; i < list.length; i++) {
         let key = list[i];
 
-        if(dict[key]) {
+        if (dict[key]) {
             dict[key]++;
         }
         else {
@@ -57,17 +54,16 @@ const createDictionary = list => {
     return Object.keys(dict);
 }
 
-//Method 4 - Splice your array
-
+//Method 4 - splice your array
 const removeDuplicatesThree = list => {
-    if(list.length == 0) {
+    if (list.length == 0) {
         throw new Error('The list cannot be empty');
     }
 
     list.sort();
 
     for (let i = 0; i < list.length - 1; i++) {
-        if(list[i] == list[i + 1]) {
+        if (list[i] == list[i + 1]) {
             list.splice(i + 1, 1);
         }
     }
