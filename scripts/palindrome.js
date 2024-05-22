@@ -1,6 +1,8 @@
-// A function that checks if a text is a palindrome
+// A function that checks if a text is a palindrome.
 
-function checkPalindrome(text) {
+// https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/ (example)
+
+function checkPalindromeText(text) {
     if (text.length === 0) {
         throw new Error("The text must be provided");
     }
@@ -16,3 +18,9 @@ function checkPalindrome(text) {
 
     return false;
 }
+
+// checkPalindromeText("t"); => return "t";
+// checkPalindromeText("dad"); => return true;
+// checkPalindromeText("text"); => return false;
+
+// it will be a similar example for arrays, numbers or texts.
