@@ -1,4 +1,4 @@
-﻿//The const takes two non-zero natural numbers n and p, and return n^p
+﻿// The const takes two non-zero natural numbers n and p, and return n^p
 
 const power = (n, p) => {
     if (n == 1) {
@@ -19,7 +19,7 @@ const power = (n, p) => {
     return multip;
 }
 
-//The const square receives a number and returns the square of that number
+// The const square receives a number and returns the square of that number
 
 const square = n => {
     if (n <= 0) {
@@ -29,7 +29,7 @@ const square = n => {
     return power(n, 2);
 }
 
-//Given two numbers a and b, which are the "catetele", calculate the "ipotenuza"
+// Given two numbers a and b, which are the "catetele", calculate the "ipotenuza"
 
 const calculateHyp = (a, b) => {
     if (a < 0 || b < 0) {

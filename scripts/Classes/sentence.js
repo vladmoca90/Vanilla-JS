@@ -10,10 +10,10 @@ class Greeting extends Sentence {
     }
 
     get wordType() {
-        return 'The word is ' + this.word;
+        return "The word is " + this.word;
     }
 }
 
-const greeting = new Greeting('Hello world!');
+const greeting = new Greeting("Hello world!");
 
 console.log(text.wordType);

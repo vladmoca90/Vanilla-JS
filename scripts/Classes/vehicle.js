@@ -11,10 +11,10 @@ class Car extends Vehicle {
     }
 
     get vehicleType() {
-        return 'This car is a ' + this.make + ' ' + this.model;
+        return "This car is a " + this.make + " " + this.model;
     }
 }
 
-const car = new Car('Seat', 'Leon');
+const car = new Car("Seat", "Leon");
 
 console.log(car.vehicleType);

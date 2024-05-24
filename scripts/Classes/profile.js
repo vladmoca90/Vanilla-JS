@@ -10,7 +10,7 @@ class Name extends Profile {
         super(name, age);
     }
 
-    //this is called a method
+    // this is called a method
     get greet() {
         return 'My name is ' + this.name + ' and I am ' + this.age + ' years old';
     }
