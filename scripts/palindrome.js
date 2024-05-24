@@ -2,7 +2,7 @@
 
 // https://www.linkedin.com/pulse/javascript-most-commonly-asked-data-structure-questions-sanjay-kumar/ (example)
 
-function checkPalindromeText(text) {
+const checkPalindromeText = (text) => {
     if (text.length === 0) {
         throw new Error("The text must be provided");
     }
