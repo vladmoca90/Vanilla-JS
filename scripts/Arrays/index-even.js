@@ -1,4 +1,4 @@
-//A function that removes the elements on an even index
+// A function that removes the elements on an even index
 
 const removeEvenIndexes = list => {
     if(list.length == 0) {

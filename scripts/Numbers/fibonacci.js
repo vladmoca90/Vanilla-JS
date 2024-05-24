@@ -1,4 +1,4 @@
-﻿//A code that calculates the Fobonacci numbers
+﻿// A code that calculates the Fobonacci numbers
 
 const fibonacci = n => {
     if (n < 0) {

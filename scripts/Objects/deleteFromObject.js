@@ -1,4 +1,4 @@
-//A function that deletes a property from an object
+// A function that deletes a property from an object
 
 const library = [
     {

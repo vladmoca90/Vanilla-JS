@@ -1,4 +1,4 @@
-﻿//A function receives a list of words and return a string with all the words, 
+﻿// A function receives a list of words and return a string with all the words, 
 //but are separated through a space, and you have "." at the end
 
 const createdSentence = sentence => {

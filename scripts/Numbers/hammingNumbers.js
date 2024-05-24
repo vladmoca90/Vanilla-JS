@@ -1,4 +1,4 @@
-//A function that returns the total of Hammning numbers up to 1000 (or any other limit)
+// A function that returns the total of Hammning numbers up to 1000 (or any other limit)
 
 const totalOfHamming = (n, m, p) => {
     let count = 0;

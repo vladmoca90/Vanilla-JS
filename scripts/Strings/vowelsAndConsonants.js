@@ -1,4 +1,4 @@
-//A function that return a json object with vowels and consonants or a text
+// A function that return a json object with vowels and consonants or a text
 
 const showVowelsAndConsonants = text => {
     if(text.length == 0) {

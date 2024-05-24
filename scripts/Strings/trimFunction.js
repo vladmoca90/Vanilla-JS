@@ -1,4 +1,4 @@
-//A function that trims texts
+// A function that trims texts
 
 const trimText = text => {
     if(text.length == 0) {

@@ -1,4 +1,4 @@
-//A function that uses the theorem of Pitagora
+// A function that uses the theorem of Pitagora
 
 const calcPitagora = (a, b, c) => {
     if (a == 0 || b == 0 || c == 0) {

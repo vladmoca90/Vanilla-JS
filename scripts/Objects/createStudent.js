@@ -1,4 +1,4 @@
-//A function that returns certain properties of an object in another object
+// A function that returns certain properties of an object in another object
 
 const student = {
     name: 'David James Ray',

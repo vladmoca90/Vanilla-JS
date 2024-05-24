@@ -1,4 +1,4 @@
-//a function that truncates a string with a certain number of words
+// A function that truncates a string with a certain number of words
 
 const truncateString = (text, n) => {
     if(text.length == 0) {

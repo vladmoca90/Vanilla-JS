@@ -1,4 +1,4 @@
-//A function that capitalizes every vowels in a text
+// A function that capitalizes every vowels in a text
 
 const capitalizeVowels = text => {
     if(text.length == 0) {

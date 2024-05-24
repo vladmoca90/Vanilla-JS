@@ -1,4 +1,4 @@
-//A function that assigns values to an object
+// A function that assigns values to an object
 const student = {
     name: 'Angelika Kloc',
     age: 25,

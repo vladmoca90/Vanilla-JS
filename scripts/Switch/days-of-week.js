@@ -1,4 +1,4 @@
-//A function that switches the days of the week
+// A function that switches the days of the week
 
 const getCurrentDay = day => {
     let day = new Date();

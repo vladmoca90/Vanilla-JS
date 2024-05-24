@@ -1,4 +1,4 @@
-//A function that converts a string (name) into abbreviated form (ex. Alex Mocanu => A.M.)
+// A function that converts a string (name) into abbreviated form (ex. Alex Mocanu => A.M.)
 
 const becomeAbbreviated = text => {
     if(text.length == 0) {

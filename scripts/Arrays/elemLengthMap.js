@@ -1,4 +1,4 @@
-//A function that returns an array with the length of elements
+// A function that returns an array with the length of elements
 
 const returnElemLength = elements => {
     if(elements.length == 0) {

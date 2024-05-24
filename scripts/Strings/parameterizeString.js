@@ -1,4 +1,4 @@
-//A function the parameterizes a string
+// A function the parameterizes a string
 
 const parameterizeText = text => {
     if(text.length == 0) {

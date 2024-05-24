@@ -1,4 +1,4 @@
-﻿//A function has a string and receives and array, with all the words of the string
+﻿// A function has a string and receives and array, with all the words of the string
 
 const createList = text => {
     if(text.length == 0) {

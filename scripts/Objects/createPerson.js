@@ -1,4 +1,4 @@
-//A function that creates an object with the properties and values of a Person
+// A function that creates an object with the properties and values of a Person
 
 const createPerson = list => {
     if (list.length == 0) {

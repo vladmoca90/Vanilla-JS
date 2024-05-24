@@ -1,4 +1,4 @@
-//A function that calculates how many times a word appears in a text
+// A function that calculates how many times a word appears in a text
 
 const countWord = (word, text) => {
     if(word.length == 0) {

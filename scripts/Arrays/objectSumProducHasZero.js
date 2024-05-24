@@ -1,4 +1,4 @@
-﻿//A function that receives an list of numbers and returns and object with the following properties:
+﻿// A function that receives an list of numbers and returns and object with the following properties:
 //the sum of all numbers, the product of all numbers and if the value 0 exists or not. 
 /*
 {

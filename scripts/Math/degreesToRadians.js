@@ -1,4 +1,4 @@
-//A function that converts degrees into radians
+// A function that converts degrees into radians
 
 const degreesIntoRadians = n => {
     if (n == null) {
@@ -14,7 +14,7 @@ const degreesIntoRadians = n => {
     return radian;
 }
 
-//A function that converts radians into degrees
+// A function that converts radians into degrees
 
 const radiansIntoDegrees = n => {
     if (n == null) {

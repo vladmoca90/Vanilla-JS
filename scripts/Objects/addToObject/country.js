@@ -1,4 +1,4 @@
-//A object with properties of a country
+// A object with properties of a country
 const country = {
     name: "Uzbekistan",
     population: 27, // in millions //

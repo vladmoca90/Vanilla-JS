@@ -1,4 +1,4 @@
-//A function that calculates the addition between the digits of a number
+// A function that calculates the addition between the digits of a number
 
 const digitsAddition = n => {
     if (!n) {

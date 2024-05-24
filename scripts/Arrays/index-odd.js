@@ -1,4 +1,4 @@
-//A function that removes the elements on an odd index
+// A function that removes the elements on an odd index
 
 const removeOddIndexes = list => {
     if(list.length == 0) {

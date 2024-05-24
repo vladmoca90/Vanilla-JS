@@ -1,4 +1,4 @@
-//A function that filters an list according to a certain condition.
+// A function that filters an list according to a certain condition.
 const names = ['Ana', 'Vlad', 'Alex', 'James', 'Thomas', 'Fiona', 'Anastasia', 'Zachary', 'Ian'];
 
 const filterNames = names => {

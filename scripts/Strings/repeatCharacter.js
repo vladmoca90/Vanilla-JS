@@ -1,4 +1,4 @@
-//A function that repeats characters in a string
+// A function that repeats characters in a string
 
 const repeatCharacter = (text, n) => {
     if(text.length == 0) {

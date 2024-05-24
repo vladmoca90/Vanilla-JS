@@ -1,4 +1,4 @@
-//A const that transforms a text in an array
+// A const that transforms a text in an array
 
 //will make the entire text as an array
 const textToList1 = text => {

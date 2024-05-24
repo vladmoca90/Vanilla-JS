@@ -1,4 +1,4 @@
-//A function that removes a certain number of characters from a string
+// A function that removes a certain number of characters from a string
 
 const removeCharacters = (text, n) => {
     if(text.length == 0) {

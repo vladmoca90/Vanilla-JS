@@ -1,4 +1,4 @@
-  //A function that calculates how many times you have a letter in a text
+  // A function that calculates how many times you have a letter in a text
 const letterCount = (text, letter, capitalLetter) => {
     let count = 0;
 

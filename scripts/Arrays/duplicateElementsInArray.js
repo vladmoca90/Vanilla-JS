@@ -1,4 +1,4 @@
-//A function that duplicates elements of an array
+// A function that duplicates elements of an array
 
 const duplicateElements = list => {
     if(list.length == 0) {
@@ -16,7 +16,7 @@ const duplicateElements = list => {
 }
 
 
-//A function that duplicates elements of an array n times
+// A function that duplicates elements of an array n times
 
 const duplicateMultipleTimes = (list, n) => {
     if(list.length == 0) {

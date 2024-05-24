@@ -1,4 +1,4 @@
-//A function that return how many days are left until Christmas
+// A function that return how many days are left until Christmas
 
 const returnDaysUntilChristmas = today => {
     let today = new Date();

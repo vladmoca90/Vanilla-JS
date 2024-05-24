@@ -1,4 +1,4 @@
-//A function that returns a new form for each element in an array
+// A function that returns a new form for each element in an array
 
 const duplicateElem = list => {
     if(list.length == 0) {

@@ -1,4 +1,4 @@
-//A function that concatenates a string multiple times
+// A function that concatenates a string multiple times
 
 const concatenateMultiple = (text, n) => {
     if(text.length == 0) {

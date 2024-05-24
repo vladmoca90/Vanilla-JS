@@ -1,4 +1,4 @@
-//A function that calculates a sum of multiples
+// A function that calculates a sum of multiples
 
 const sumOfMultiplesOne = n => {
     if (n <= 0) {

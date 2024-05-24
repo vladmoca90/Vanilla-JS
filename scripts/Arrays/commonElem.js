@@ -1,4 +1,4 @@
-//A function that returns the element that appears more than once in an array
+// A function that returns the element that appears more than once in an array
 
 const showCommonElemTwo = list => {
     if (list.length == 0) {

@@ -1,4 +1,4 @@
-//A function that makes every uppercase letter of a text as lowercase and every lowercase as uppercase
+// A function that makes every uppercase letter of a text as lowercase and every lowercase as uppercase
 
 const swapcaseText = text => {
     if(text.length == 0) {

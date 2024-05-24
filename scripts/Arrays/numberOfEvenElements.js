@@ -1,4 +1,4 @@
-//A function that returns the number of even elements in an list
+// A function that returns the number of even elements in an list
 
 const numberOfEvenElements = list => {
     if(list.length == 0) {

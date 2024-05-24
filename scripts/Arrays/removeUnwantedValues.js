@@ -1,4 +1,4 @@
-//A const that removes null, undefined, ' ', 0, NaN values from an array
+// A const that removes null, undefined, ' ', 0, NaN values from an array
 
 const removeUnwantedValues = list => {
     if(list.length == 0) {

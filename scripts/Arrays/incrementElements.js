@@ -1,4 +1,4 @@
-//A function that increments the elements in an list by n
+// A function that increments the elements in an list by n
 
 const incrementElements = (list, n) => {
     if(list.length == 0) {

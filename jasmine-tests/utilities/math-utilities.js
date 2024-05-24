@@ -1,4 +1,4 @@
-//A function that returns true if all elements have a certain condition
+// A function that returns true if all elements have a certain condition
 
 const everyElemSmaller = (list, n) => {
     

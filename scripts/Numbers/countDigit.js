@@ -1,4 +1,4 @@
-//A function that counts how many times a digit is present
+// A function that counts how many times a digit is present
 
 const countDigit = (number, digit) => {
     if (number == null || digit == null) {

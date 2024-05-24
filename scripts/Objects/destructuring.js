@@ -1,4 +1,4 @@
-//a file that shows how to destructure an object
+// A file that shows how to destructure an object
 const person = {
     name: 'Vlad Mocanu',
     age: 33,
@@ -32,6 +32,6 @@ const person2 = {
     name: 'Ana Mocanu',
 }
 
-//a way to destructure arrays
+// A way to destructure arrays
 const names = ['Pedro', 'Jack', 'Jessica'];
 const names2 = [...names, 'Joel'];

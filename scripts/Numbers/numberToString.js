@@ -1,4 +1,4 @@
-//A function that convers a number into a string an returns true if the length is equal to 2
+// A function that convers a number into a string an returns true if the length is equal to 2
 
 const numberToString = n => {
     if (n <= 0) {

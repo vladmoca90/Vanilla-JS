@@ -1,4 +1,4 @@
-//A function that checks if all elements in an list fulfill a certain condition
+// A function that checks if all elements in an list fulfill a certain condition
 
 const checkElementsInList = list => {
     if(list.length == 0) {

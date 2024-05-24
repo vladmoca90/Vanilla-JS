@@ -1,4 +1,4 @@
-﻿//a function receives an object that contains the property "type"
+﻿// A function receives an object that contains the property "type"
 //"type" can have circle, rectangle, square
 //the function returns the area of the shape
 

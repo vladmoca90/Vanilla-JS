@@ -1,4 +1,4 @@
-//A function that repeats a text n times
+// A function that repeats a text n times
 
 const repeatText = (text, n) => {
     if(text.length == 0) {

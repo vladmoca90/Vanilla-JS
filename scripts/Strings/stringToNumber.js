@@ -1,4 +1,4 @@
-//A function that transforms a string into a number
+// A function that transforms a string into a number
 
 const textToNumber = text => {
     if(text.length == 0) {

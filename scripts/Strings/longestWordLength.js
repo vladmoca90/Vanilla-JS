@@ -1,4 +1,4 @@
-//A function that returns the longest word in a text
+// A function that returns the longest word in a text
 
 const longestWordLength = text => {
     if(text.length == 0) {

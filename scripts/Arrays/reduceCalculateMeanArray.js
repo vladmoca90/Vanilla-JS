@@ -1,4 +1,4 @@
-//A function that calculates the mean of the numbers in an array using .reduce()
+// A function that calculates the mean of the numbers in an array using .reduce()
 
 const numbers = [1, 2, 4, 7, 9, 15, 16];
 

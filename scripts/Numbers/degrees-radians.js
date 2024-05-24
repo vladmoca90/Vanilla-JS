@@ -1,4 +1,4 @@
-//A function that transforms degrees into radians
+// A function that transforms degrees into radians
 
 const degreesToRadians = degrees => {
     let pi = 3.14;
@@ -14,7 +14,7 @@ const degreesToRadians = degrees => {
     return radians;
 }
 
-//A function that transforms radians into degrees
+// A function that transforms radians into degrees
 
 const radiansToDegrees = radians => {
     let pi = 3.14;

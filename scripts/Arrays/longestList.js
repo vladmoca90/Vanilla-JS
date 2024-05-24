@@ -1,4 +1,4 @@
-//A function that compares the length of two lists and returns the longest one
+// A function that compares the length of two lists and returns the longest one
 
 const longestList = (x, y) => {
     if(x.length == 0 || y.length == 0) {

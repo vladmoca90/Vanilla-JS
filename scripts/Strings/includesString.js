@@ -1,4 +1,4 @@
-//A function that returns true if a certain string is found in another string
+// A function that returns true if a certain string is found in another string
 
 const includeText = (text, includer) => {
     if(text.length == 0 || includer.length == 0) {

@@ -1,4 +1,4 @@
-//A function that calculates the length of an object
+// A function that calculates the length of an object
 
 const student = {
     name: "David Ray",

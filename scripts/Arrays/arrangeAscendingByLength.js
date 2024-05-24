@@ -1,4 +1,4 @@
-//A function that sorts the strings of an array by length from shortest to longest
+// A function that sorts the strings of an array by length from shortest to longest
 
 const sortAscByLength = list => {
     if(list.length == 0) {

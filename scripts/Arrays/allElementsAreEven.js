@@ -1,4 +1,4 @@
-//A function that returns true if all elements in an list are even and false otherwise
+// A function that returns true if all elements in an list are even and false otherwise
 
 const allElementsAreEven = list => {
     if(list.length == 0) {

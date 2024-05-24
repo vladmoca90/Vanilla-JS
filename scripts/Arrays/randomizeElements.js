@@ -1,4 +1,4 @@
-//A function that changed the order of the elements in an list in random order
+// A function that changed the order of the elements in an list in random order
 
 const randomizeElem = list => {
   if(list.length == 0) {

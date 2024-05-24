@@ -1,4 +1,4 @@
-//A function that checks if a string ends with a specific string
+// A function that checks if a string ends with a specific string
 
 const specificStringEnd = (sentence, end) => {
     if(sentence.length == 0) {

@@ -1,4 +1,4 @@
-//A function the returns the max and minimum number of two digits
+// A function the returns the max and minimum number of two digits
 
 const numberOfTwo = (min, max) => {
     let max = Math.ceil(max);

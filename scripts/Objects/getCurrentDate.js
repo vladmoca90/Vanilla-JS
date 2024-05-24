@@ -1,4 +1,4 @@
-//A function that return the current date
+// A function that return the current date
 
 const getCurrentDate = today => {
     let today = new Date();

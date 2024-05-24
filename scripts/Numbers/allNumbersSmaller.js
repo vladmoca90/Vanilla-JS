@@ -1,4 +1,4 @@
-//A function that returns a list with all the numbers smaller than a certain number
+// A function that returns a list with all the numbers smaller than a certain number
 
 const allNumbersSmaller = n => {
     if (n <= 0) {

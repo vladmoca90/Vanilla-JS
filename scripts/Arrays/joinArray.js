@@ -1,4 +1,4 @@
-//A function that joins the elements of an list into a string
+// A function that joins the elements of an list into a string
 
 const joinList = list => {
     if(list.length == 0) {

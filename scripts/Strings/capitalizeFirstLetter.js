@@ -1,4 +1,4 @@
-//A function that capitalizes each word in a text
+// A function that capitalizes each word in a text
 
 const capitalizeFirstLetter = text => {
     if(text.length == 0) {

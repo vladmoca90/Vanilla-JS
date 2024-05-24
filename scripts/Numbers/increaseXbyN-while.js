@@ -1,4 +1,4 @@
-//A function that increases a number x by n
+// A function that increases a number x by n
 
 const increaseXbyN = n => {
     let x;

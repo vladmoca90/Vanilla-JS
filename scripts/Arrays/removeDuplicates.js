@@ -1,4 +1,4 @@
-//A const that removes the duplicates from an array
+// A const that removes the duplicates from an array
 
 //Method 1 - sort the array and compare each element one by one
 const removeDuplicatesOne = list => {

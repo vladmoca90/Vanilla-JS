@@ -1,4 +1,4 @@
-//A function that sort the elements of an array
+// A function that sort the elements of an array
 
 const sortList = list =>{
   let sortedList = [];
