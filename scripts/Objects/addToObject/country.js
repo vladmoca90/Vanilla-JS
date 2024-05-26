@@ -1,7 +1,8 @@
 // A object with properties of a country
+
 const country = {
     name: "Uzbekistan",
-    population: 27, // in millions //
+    population: 27, // in millions
     capital: "Tashkent",
     otherCities: ["Samarkhand", "Burkhara", "Nukus"],
 }

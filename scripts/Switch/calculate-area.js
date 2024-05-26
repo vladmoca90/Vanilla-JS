@@ -1,6 +1,8 @@
 ﻿// A function receives an object that contains the property "type"
-//"type" can have circle, rectangle, square
-//the function returns the area of the shape
+
+// "type" can have circle, rectangle, square
+
+// the function returns the area of the shape
 
 const calculateArea = shape => {
     switch (shape.type) {

@@ -1,8 +1,9 @@
 // A function that assigns values to an object
+
 const student = {
-    name: 'Angelika Kloc',
+    name: "Angelika Kloc",
     age: 25,
-    nationality: 'Polish'
+    nationality: "Polish"
 };
 
 const addToStudent = student => {

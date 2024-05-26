@@ -1,5 +1,6 @@
-//An object that is named city and has the property name
-//The function cities() analyzes the cases
+// An object that is named city and has the property name
+
+// The function cities() analyzes the cases
 
 const city = {
   name: [
@@ -21,6 +22,6 @@ const cities = city => {
       console.log("Atlanta is the capital of Georgia state.");
       break;
     default:
-      throw new Error('City does not exist');
+      throw new Error("City does not exist");
   }
 }

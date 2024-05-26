@@ -1,26 +1,26 @@
-//Write a JavaScript program that display the book title with true status
+// Write a JavaScript program that display the book title with true status
 
 const library = [
     {
-        author: 'Bill Gates',
-        title: 'The Road Ahead',
+        author: "Bill Gates",
+        title: "The Road Ahead",
         readingStatus: true,
     },
     {
-        author: 'Steve Jobs',
-        title: 'Walter Isaacson',
+        author: "Steve Jobs",
+        title: "Walter Isaacson",
         readingStatus: true,
     },
     {
-        author: 'Suzanne Collins',
-        title: 'Mockingjay: The Final Book of The Hunger Games',
+        author: "Suzanne Collins",
+        title: "Mockingjay: The Final Book of The Hunger Games",
         readingStatus: false,
     }
 ];
 
 const bookStatus = library => {
     if (library.length == 0) {
-        throw new Error('The list cannot be empty');
+        throw new Error("The list cannot be empty");
     }
 
     let status = [];
