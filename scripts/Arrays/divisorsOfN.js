@@ -4,7 +4,7 @@ const allDivisors = (list, n) => {
     if(n <= 0) {
         throw new Error("The n must be positive only");
     }
-    if(list.length == 0) {
+    if (list.length == 0) {
         return list;
     }
 

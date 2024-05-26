@@ -1,7 +1,7 @@
 ﻿//Give a list of numbers, return a list with the squares of these numbers
 
 const squareList = list => {
-    if(list.length == 0) {
+    if (list.length == 0) {
         return list;
     }
 

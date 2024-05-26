@@ -1,10 +1,10 @@
 ﻿//search the element in an list//
 
 const searchInList = (list, n) => {
-    if(list.length == 0) {
+    if (list.length == 0) {
         return false;
     }
-    if(list.length == 1) {
+    if (list.length == 1) {
         if(n == list[0]) {
             return true;
         } else {

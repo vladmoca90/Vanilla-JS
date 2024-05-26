@@ -20,7 +20,7 @@ const library = [
 
 const deleteLibraryId = library => {
     if(library.length == 0) {
-        throw new Error('The list cannot be empty');
+        throw new Error("The list cannot be empty");
     }
 
     for (let i = 0; i < library.length; i++) {

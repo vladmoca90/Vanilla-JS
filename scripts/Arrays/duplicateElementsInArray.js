@@ -1,8 +1,8 @@
 // A function that duplicates elements of an array
 
 const duplicateElements = list => {
-    if(list.length == 0) {
-        throw new Error('The list cannot be empty');
+    if (list.length == 0) {
+        throw new Error("The list cannot be empty");
     }
 
     let duplicated = [];
@@ -19,8 +19,8 @@ const duplicateElements = list => {
 // A function that duplicates elements of an array n times
 
 const duplicateMultipleTimes = (list, n) => {
-    if(list.length == 0) {
-        throw new Error('The list cannot be empty');
+    if (list.length == 0) {
+        throw new Error("The list cannot be empty");
     }
     if(n < 0) {
         throw new Error('n must be greater or equal to 0');

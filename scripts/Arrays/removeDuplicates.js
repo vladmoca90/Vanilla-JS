@@ -3,7 +3,7 @@
 //Method 1 - sort the array and compare each element one by one
 const removeDuplicatesOne = list => {
     if (list.length == 0) {
-        throw new Error('The list cannot be empty');
+        throw new Error("The list cannot be empty");
     }
 
     let withoutDuplicates = [];
@@ -20,7 +20,7 @@ const removeDuplicatesOne = list => {
 //Method 2 - check if it exists or not already
 const removeDuplicatesTwo = list => {
     if (list.length == 0) {
-        throw new Error('The list cannot be empty');
+        throw new Error("The list cannot be empty");
     }
 
     list.sort();
@@ -57,7 +57,7 @@ const createDictionary = list => {
 //Method 4 - splice your array
 const removeDuplicatesThree = list => {
     if (list.length == 0) {
-        throw new Error('The list cannot be empty');
+        throw new Error("The list cannot be empty");
     }
 
     list.sort();

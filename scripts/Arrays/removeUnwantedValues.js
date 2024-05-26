@@ -1,8 +1,8 @@
 // A const that removes null, undefined, ' ', 0, NaN values from an array
 
 const removeUnwantedValues = list => {
-    if(list.length == 0) {
-        throw new Error('The list cannot be empty');
+    if (list.length == 0) {
+        throw new Error("The list cannot be empty");
     }
 
     let newList = [];
