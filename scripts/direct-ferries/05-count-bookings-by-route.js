@@ -1,32 +1,42 @@
-/*
-Exercise:
-Count the number of bookings made for each route and return an object such as
-{ "Dover-Calais": 2, "Portsmouth-Caen": 1 }.
-*/
+// Exercise 05: Count bookings by route
+// Goal:
+// Turn an array of bookings into an object showing how many bookings each route has.
+
+function validateBooking(booking) {
+  if (booking === null || typeof booking !== "object" || Array.isArray(booking)) {
+    throw new TypeError("Each booking must be an object.");
+  }
+
+  if (typeof booking.route !== "string" || booking.route.trim() === "") {
+    throw new TypeError("Each booking must have a non-empty string route.");
+  }
+}
 
 function countBookingsByRoute(bookings) {
-  // This object will map each route name to its running total.
+  if (!Array.isArray(bookings)) {
+    throw new TypeError("bookings must be an array.");
+  }
+
   const counts = {};
 
   for (const booking of bookings) {
-    // If the route is not present yet, ?? supplies 0. We then add one for the
-    // current booking and save the updated count back onto the object.
-    counts[booking.route] = (counts[booking.route] ?? 0) + 1;
+    validateBooking(booking);
+
+    // If the route has not appeared yet, start at zero before adding one.
+    counts[booking.route] = (counts[booking.route] || 0) + 1;
   }
 
   return counts;
 }
 
 const bookings = [
-  { route: "Dover-Calais" },
-  { route: "Portsmouth-Caen" },
-  { route: "Dover-Calais" }
+  { id: "A", route: "Dover-Calais" },
+  { id: "B", route: "Dover-Calais" },
+  { id: "C", route: "Portsmouth-Caen" },
 ];
 
-const result = countBookingsByRoute(bookings);
-
-// Bracket notation works with property names containing hyphens.
-console.assert(result["Dover-Calais"] === 2);
-console.assert(result["Portsmouth-Caen"] === 1);
-console.log("Booking counts:", result);
+const counts = countBookingsByRoute(bookings);
+console.log(counts);
+console.assert(counts["Dover-Calais"] === 2, "Dover-Calais should have two bookings.");
+console.assert(counts["Portsmouth-Caen"] === 1, "Portsmouth-Caen should have one booking.");
 

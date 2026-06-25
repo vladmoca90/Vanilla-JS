@@ -1,41 +1,63 @@
-/*
-Exercise:
-Turn a flat sailing array into an object whose keys are operator names and
-whose values are arrays containing that operator's sailings.
-*/
+// Exercise 02: Group sailings by operator
+// Goal:
+// Convert an array of sailings into an object where each key is an operator name.
 
-// This generic helper can group any kind of item. getKey is a callback that
-// tells the function which property or calculated value should be the key.
+function validateArray(items, name) {
+  if (!Array.isArray(items)) {
+    throw new TypeError(`${name} must be an array.`);
+  }
+}
+
+function validateGroupKey(key) {
+  // Object keys should be strings, numbers, or symbols.
+  // For interview exercises, strings are usually the safest answer.
+  if (typeof key !== "string" || key.trim() === "") {
+    throw new TypeError("Group key must be a non-empty string.");
+  }
+}
+
 function groupBy(items, getKey) {
+  validateArray(items, "items");
+
+  if (typeof getKey !== "function") {
+    throw new TypeError("getKey must be a function.");
+  }
+
   return items.reduce((groups, item) => {
     const key = getKey(item);
+    validateGroupKey(key);
 
-    // Nullish assignment creates the array only if this key has no value yet.
+    // Create the array for this key only when it is first needed.
     groups[key] ??= [];
-
-    // Add the current item to the correct group.
     groups[key].push(item);
-
-    // reduce() uses this returned object as the accumulator for the next item.
     return groups;
   }, {});
 }
 
+function validateSailing(sailing) {
+  if (sailing === null || typeof sailing !== "object" || Array.isArray(sailing)) {
+    throw new TypeError("Each sailing must be an object.");
+  }
+
+  if (typeof sailing.operator !== "string" || sailing.operator.trim() === "") {
+    throw new TypeError("Each sailing must have a non-empty string operator.");
+  }
+}
+
 function groupByOperator(sailings) {
-  // The arrow function extracts the operator name used as the grouping key.
-  return groupBy(sailings, sailing => sailing.operator);
+  validateArray(sailings, "sailings");
+  sailings.forEach(validateSailing);
+  return groupBy(sailings, (sailing) => sailing.operator);
 }
 
 const sailings = [
-  { id: 1, operator: "DFDS" },
-  { id: 2, operator: "P&O" },
-  { id: 3, operator: "DFDS" }
+  { operator: "DFDS", route: "Dover-Calais" },
+  { operator: "Brittany Ferries", route: "Portsmouth-Caen" },
+  { operator: "DFDS", route: "Dover-Dunkirk" },
 ];
 
-const result = groupByOperator(sailings);
-
-// Bracket notation is needed for a property name containing "&".
-console.assert(result.DFDS.length === 2);
-console.assert(result["P&O"].length === 1);
-console.log("Grouped sailings:", result);
+const grouped = groupByOperator(sailings);
+console.log(grouped);
+console.assert(grouped.DFDS.length === 2, "DFDS should have two sailings.");
+console.assert(grouped["Brittany Ferries"].length === 1, "Brittany Ferries should have one sailing.");
 

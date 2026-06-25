@@ -1,41 +1,68 @@
-/*
-Exercise:
-Calculate the total passenger cost, add the booking fee, and then apply the
-percentage discount. For real payment systems, store money as integer pennies
-to avoid floating-point rounding problems.
-*/
+// Exercise 03: Calculate booking total
+// Goal:
+// Calculate the final price of a booking from passengers, booking fee, and discount.
+
+function validatePassenger(passenger) {
+  if (passenger === null || typeof passenger !== "object" || Array.isArray(passenger)) {
+    throw new TypeError("Each passenger must be an object.");
+  }
+
+  if (!Number.isInteger(passenger.quantity) || passenger.quantity < 0) {
+    throw new TypeError("Passenger quantity must be a non-negative integer.");
+  }
+
+  if (typeof passenger.price !== "number" || !Number.isFinite(passenger.price) || passenger.price < 0) {
+    throw new TypeError("Passenger price must be a valid non-negative number.");
+  }
+}
+
+function validateBooking(booking) {
+  if (booking === null || typeof booking !== "object" || Array.isArray(booking)) {
+    throw new TypeError("booking must be an object.");
+  }
+
+  if (!Array.isArray(booking.passengers)) {
+    throw new TypeError("booking.passengers must be an array.");
+  }
+
+  booking.passengers.forEach(validatePassenger);
+
+  if (typeof booking.bookingFee !== "number" || !Number.isFinite(booking.bookingFee) || booking.bookingFee < 0) {
+    throw new TypeError("bookingFee must be a valid non-negative number.");
+  }
+
+  if (typeof booking.discount !== "number" || !Number.isFinite(booking.discount) || booking.discount < 0) {
+    throw new TypeError("discount must be a valid non-negative number.");
+  }
+}
 
 function calculateTotal(booking) {
-  // reduce() adds price multiplied by quantity for every passenger category.
-  // The final 0 is the accumulator's starting value.
-  const passengerTotal = booking.passengers.reduce(
-    (total, passenger) => total + passenger.price * passenger.quantity,
-    0
-  );
+  validateBooking(booking);
 
-  // ?? uses the fallback only when the value is null or undefined. A valid fee
-  // of 0 therefore remains 0.
-  const subtotal = passengerTotal + (booking.bookingFee ?? 0);
-  const discountPercent = booking.discountPercent ?? 0;
+  const passengerTotal = booking.passengers.reduce((total, passenger) => {
+    return total + passenger.quantity * passenger.price;
+  }, 0);
 
-  // Convert the percentage into a multiplier: a 10% discount becomes 0.9.
-  // toFixed returns a string, so Number converts it back to a numeric value.
-  return Number((subtotal * (1 - discountPercent / 100)).toFixed(2));
+  const totalBeforeDiscount = passengerTotal + booking.bookingFee;
+  const totalAfterDiscount = totalBeforeDiscount - booking.discount;
+
+  // Do not return a negative customer total if the discount is larger than the subtotal.
+  const safeTotal = Math.max(0, totalAfterDiscount);
+
+  // Return a number rounded to two decimals.
+  return Number(safeTotal.toFixed(2));
 }
 
 const booking = {
   passengers: [
-    { type: "adult", price: 40, quantity: 2 },
-    { type: "child", price: 20, quantity: 1 }
+    { type: "adult", quantity: 2, price: 45 },
+    { type: "child", quantity: 1, price: 25 },
   ],
   bookingFee: 5,
-  discountPercent: 10
+  discount: 10,
 };
 
-const result = calculateTotal(booking);
-
-// £100 passengers + £5 fee = £105; minus 10% gives £94.50.
-console.assert(result === 94.5);
-console.assert(calculateTotal({ passengers: [], bookingFee: 0 }) === 0);
-console.log("Booking total:", result);
+const total = calculateTotal(booking);
+console.log(total);
+console.assert(total === 110, "Total should be 110.");
 

@@ -1,41 +1,53 @@
-/*
-Exercise:
-Find and fix the bugs in a function intended to return available sailings in
-ascending price order.
-*/
+// Exercise 09: Debug an existing function
+// Goal:
+// You may be shown broken code and asked to explain what is wrong.
 
 // Broken version:
 // function getAvailable(sailings) {
 //   return sailings
-//     .filter(sailing => sailing.seats = 0)
+//     .filter(sailing => sailing.seats)
 //     .sort((a, b) => a.price > b.price);
 // }
+//
+// Problems:
+// 1. It does not validate the input.
+// 2. `filter(sailing => sailing.seats)` relies on truthy/falsy values.
+// 3. `sort((a, b) => a.price > b.price)` returns true/false, not a numeric sort value.
 
-/*
-Problems in the broken version:
-1. `=` assigns 0 to seats instead of comparing a value.
-2. An available sailing should have more than zero seats, not zero seats.
-3. A sort comparator should return a negative number, zero, or a positive
-   number. The expression `a.price > b.price` returns only true or false.
-*/
+function validateSailing(sailing) {
+  if (sailing === null || typeof sailing !== "object" || Array.isArray(sailing)) {
+    throw new TypeError("Each sailing must be an object.");
+  }
+
+  if (!Number.isInteger(sailing.seats) || sailing.seats < 0) {
+    throw new TypeError("Each sailing must have a non-negative integer seats value.");
+  }
+
+  if (typeof sailing.price !== "number" || !Number.isFinite(sailing.price) || sailing.price < 0) {
+    throw new TypeError("Each sailing must have a valid non-negative numeric price.");
+  }
+}
 
 function getAvailable(sailings) {
+  if (!Array.isArray(sailings)) {
+    throw new TypeError("sailings must be an array.");
+  }
+
+  sailings.forEach(validateSailing);
+
   return sailings
-    // Keep only records with at least one available seat.
-    .filter(sailing => sailing.seats > 0)
-    // Subtraction is the standard numeric ascending sort comparator.
+    .filter((sailing) => sailing.seats > 0)
     .sort((a, b) => a.price - b.price);
 }
 
 const sailings = [
-  { id: "S1", seats: 3, price: 80 },
-  { id: "S2", seats: 0, price: 40 },
-  { id: "S3", seats: 2, price: 60 }
+  { id: 1, seats: 0, price: 50 },
+  { id: 2, seats: 3, price: 80 },
+  { id: 3, seats: 2, price: 60 },
 ];
 
-const result = getAvailable(sailings);
-
-// S2 is sold out; S3 is cheaper than S1.
-console.assert(result.map(sailing => sailing.id).join(",") === "S3,S1");
-console.log("Available sailings:", result);
+const available = getAvailable(sailings);
+console.log(available);
+console.assert(available.length === 2, "Should keep only sailings with seats available.");
+console.assert(available[0].id === 3, "Should sort available sailings by cheapest price.");
 

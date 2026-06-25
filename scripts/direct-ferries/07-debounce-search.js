@@ -1,48 +1,57 @@
-/*
-Exercise:
-Create a debounce helper. Rapid calls should continually restart a timer so
-only the final search runs after the user stops typing for the chosen delay.
-*/
+// Exercise 07: Debounce search
+// Goal:
+// Create a function that delays running a callback until the user stops typing.
+// This is common for search boxes so we do not call the server after every keypress.
 
 function debounce(callback, delay) {
-  // This variable lives in the returned function's closure, so it survives
-  // after debounce itself has finished executing.
-  let timeoutId;
-
-  function debounced(...args) {
-    // Cancel the previous scheduled callback, if one exists.
-    clearTimeout(timeoutId);
-
-    // Schedule a new callback and remember its timer ID for the next call.
-    // apply preserves the caller's `this` value and forwards every argument.
-    timeoutId = setTimeout(() => callback.apply(this, args), delay);
+  if (typeof callback !== "function") {
+    throw new TypeError("callback must be a function.");
   }
 
-  // Attaching a method gives callers a way to cancel pending work explicitly.
-  debounced.cancel = () => clearTimeout(timeoutId);
+  if (!Number.isInteger(delay) || delay < 0) {
+    throw new TypeError("delay must be a non-negative integer in milliseconds.");
+  }
+
+  let timerId = null;
+
+  function debounced(...args) {
+    // If the user calls the function again before the delay finishes,
+    // cancel the old timer and start a new one.
+    if (timerId !== null) {
+      clearTimeout(timerId);
+    }
+
+    timerId = setTimeout(() => {
+      callback(...args);
+      timerId = null;
+    }, delay);
+  }
+
+  debounced.cancel = function cancel() {
+    if (timerId !== null) {
+      clearTimeout(timerId);
+      timerId = null;
+    }
+  };
 
   return debounced;
 }
 
-// These variables record how often the example callback executes and which
-// search term it receives.
-let calls = 0;
-let lastQuery = "";
+let searchCount = 0;
+let lastSearch = "";
 
-const search = debounce(query => {
-  calls += 1;
-  lastQuery = query;
+const search = debounce((term) => {
+  searchCount += 1;
+  lastSearch = term;
 }, 20);
 
-// Because these calls happen together, each one cancels the previous timer.
 search("do");
 search("dov");
 search("dover");
 
-// Wait longer than the debounce delay before checking the result.
 setTimeout(() => {
-  console.assert(calls === 1);
-  console.assert(lastQuery === "dover");
-  console.log("Debounced search query:", lastQuery);
+  console.log({ searchCount, lastSearch });
+  console.assert(searchCount === 1, "Search should run only once.");
+  console.assert(lastSearch === "dover", "Search should use the latest value.");
 }, 40);
 

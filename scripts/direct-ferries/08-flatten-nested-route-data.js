@@ -1,25 +1,60 @@
-/*
-Exercise:
-Convert nested operator -> route -> sailing data into one flat sailing array.
-Copy the parent operator and route names onto every resulting sailing.
-*/
+// Exercise 08: Flatten nested route data
+// Goal:
+// Convert nested operator -> route -> sailing data into one flat array.
+
+function validateOperator(operator) {
+  if (operator === null || typeof operator !== "object" || Array.isArray(operator)) {
+    throw new TypeError("Each operator must be an object.");
+  }
+
+  if (typeof operator.name !== "string" || operator.name.trim() === "") {
+    throw new TypeError("Each operator must have a non-empty string name.");
+  }
+
+  if (!Array.isArray(operator.routes)) {
+    throw new TypeError("Each operator must have a routes array.");
+  }
+}
+
+function validateRoute(route) {
+  if (route === null || typeof route !== "object" || Array.isArray(route)) {
+    throw new TypeError("Each route must be an object.");
+  }
+
+  if (typeof route.name !== "string" || route.name.trim() === "") {
+    throw new TypeError("Each route must have a non-empty string name.");
+  }
+
+  if (!Array.isArray(route.sailings)) {
+    throw new TypeError("Each route must have a sailings array.");
+  }
+}
+
+function validateSailing(sailing) {
+  if (sailing === null || typeof sailing !== "object" || Array.isArray(sailing)) {
+    throw new TypeError("Each sailing must be an object.");
+  }
+}
 
 function flattenSailings(operators) {
-  // The outer flatMap processes every operator and removes the array level
-  // produced for each operator.
-  return operators.flatMap(operator =>
-    // The inner flatMap does the same for every route belonging to the operator.
-    operator.routes.flatMap(route =>
-      // map creates one enriched object for every sailing on this route.
-      route.sailings.map(sailing => ({
-        // Object spread copies the original sailing properties without changing
-        // the original object.
+  if (!Array.isArray(operators)) {
+    throw new TypeError("operators must be an array.");
+  }
+
+  operators.forEach(validateOperator);
+
+  return operators.flatMap((operator) => {
+    return operator.routes.flatMap((route) => {
+      validateRoute(route);
+      route.sailings.forEach(validateSailing);
+
+      return route.sailings.map((sailing) => ({
         ...sailing,
         operator: operator.name,
-        route: route.name
-      }))
-    )
-  );
+        route: route.name,
+      }));
+    });
+  });
 }
 
 const operators = [
@@ -28,29 +63,23 @@ const operators = [
     routes: [
       {
         name: "Dover-Calais",
-        sailings: [
-          { id: "S1", price: 50 },
-          { id: "S2", price: 65 }
-        ]
-      }
-    ]
+        sailings: [{ time: "09:00" }, { time: "12:00" }],
+      },
+    ],
   },
   {
     name: "P&O",
     routes: [
       {
-        name: "Hull-Rotterdam",
-        sailings: [{ id: "S3", price: 90 }]
-      }
-    ]
-  }
+        name: "Dover-Calais",
+        sailings: [{ time: "10:00" }],
+      },
+    ],
+  },
 ];
 
-const result = flattenSailings(operators);
-
-// Three nested sailings should become three top-level array elements.
-console.assert(result.length === 3);
-console.assert(result[0].operator === "DFDS");
-console.assert(result[2].route === "Hull-Rotterdam");
-console.log("Flattened sailings:", result);
+const flat = flattenSailings(operators);
+console.log(flat);
+console.assert(flat.length === 3, "Should flatten three sailings.");
+console.assert(flat[0].operator === "DFDS", "Should add operator name to each sailing.");
 

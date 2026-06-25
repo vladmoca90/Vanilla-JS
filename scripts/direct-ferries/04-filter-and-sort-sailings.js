@@ -1,39 +1,54 @@
-/*
-Exercise:
-Return only available sailings within the customer's budget. Sort them by
-lowest price first, then by earliest departure when prices are equal.
-*/
+// Exercise 04: Filter and sort sailings
+// Goal:
+// Return only available sailings under a maximum price,
+// sorted by cheapest price first, then earliest departure.
+
+function validateSailing(sailing) {
+  if (sailing === null || typeof sailing !== "object" || Array.isArray(sailing)) {
+    throw new TypeError("Each sailing must be an object.");
+  }
+
+  if (typeof sailing.available !== "boolean") {
+    throw new TypeError("Each sailing must have an available boolean.");
+  }
+
+  if (typeof sailing.price !== "number" || !Number.isFinite(sailing.price) || sailing.price < 0) {
+    throw new TypeError("Each sailing must have a valid non-negative numeric price.");
+  }
+
+  if (typeof sailing.departure !== "string" || Number.isNaN(Date.parse(sailing.departure))) {
+    throw new TypeError("Each sailing must have a valid departure date string.");
+  }
+}
 
 function filterSailings(sailings, maximumPrice) {
-  return sailings
-    // filter() creates a new array containing only matching records. Because it
-    // creates a new array, the later sort does not reorder the original input.
-    .filter(sailing => sailing.available && sailing.price <= maximumPrice)
-    .sort((a, b) => {
-      // A negative comparator result places a before b. Subtracting numeric
-      // prices therefore produces ascending price order.
-      if (a.price !== b.price) {
-        return a.price - b.price;
-      }
+  if (!Array.isArray(sailings)) {
+    throw new TypeError("sailings must be an array.");
+  }
 
-      // Equal prices use the parsed departure timestamp as the tie-breaker.
+  if (typeof maximumPrice !== "number" || !Number.isFinite(maximumPrice) || maximumPrice < 0) {
+    throw new TypeError("maximumPrice must be a valid non-negative number.");
+  }
+
+  sailings.forEach(validateSailing);
+
+  return sailings
+    .filter((sailing) => sailing.available && sailing.price <= maximumPrice)
+    .sort((a, b) => {
+      if (a.price !== b.price) return a.price - b.price;
       return Date.parse(a.departure) - Date.parse(b.departure);
     });
 }
 
-// This data covers unavailable, over-budget and equal-price cases.
 const sailings = [
-  { id: "S1", available: true, price: 80, departure: "2026-06-24T10:00:00Z" },
-  { id: "S2", available: true, price: 60, departure: "2026-06-24T12:00:00Z" },
-  { id: "S3", available: false, price: 40, departure: "2026-06-24T08:00:00Z" },
-  { id: "S4", available: true, price: 60, departure: "2026-06-24T09:00:00Z" },
-  { id: "S5", available: true, price: 120, departure: "2026-06-24T07:00:00Z" }
+  { id: 1, price: 100, available: true, departure: "2026-07-01T12:00:00Z" },
+  { id: 2, price: 70, available: true, departure: "2026-07-01T14:00:00Z" },
+  { id: 3, price: 60, available: false, departure: "2026-07-01T09:00:00Z" },
+  { id: 4, price: 70, available: true, departure: "2026-07-01T08:00:00Z" },
 ];
 
-const result = filterSailings(sailings, 100);
-
-// S4 beats S2 on departure time; S3 and S5 are excluded.
-console.assert(result.map(sailing => sailing.id).join(",") === "S4,S2,S1");
-console.assert(sailings[0].id === "S1", "The original array should not be reordered");
-console.log("Filtered sailings:", result);
+const filtered = filterSailings(sailings, 80);
+console.log(filtered);
+console.assert(filtered.length === 2, "Should return two available sailings under 80.");
+console.assert(filtered[0].id === 4, "Same price should sort by earliest departure.");
 

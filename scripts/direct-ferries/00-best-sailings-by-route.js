@@ -1,73 +1,85 @@
-/*
-Exercise:
-Return the cheapest available sailing for each route. When two sailings have
-the same price, choose the one that departs first. Finally, order the selected
-sailings by departure time.
-*/
+// Exercise 00: Best sailings by route
+// Goal:
+// Given a list of ferry sailings, choose the best available sailing for each route.
+// "Best" means:
+// 1. Cheapest price first.
+// 2. If prices are equal, choose the earliest departure.
 
-function getBestSailings(sailings) {
-  // Fail early with a useful error if the function receives the wrong data type.
-  if (!Array.isArray(sailings)) {
-    throw new TypeError("sailings must be an array");
+function validateSailing(sailing) {
+  // Validate that each item is a real object.
+  if (sailing === null || typeof sailing !== "object" || Array.isArray(sailing)) {
+    throw new TypeError("Each sailing must be an object.");
   }
 
-  // A Map lets us store exactly one current "best" sailing for every route.
-  // The route is the key and the full sailing object is the value.
+  // A route is needed so we know what group this sailing belongs to.
+  if (typeof sailing.route !== "string" || sailing.route.trim() === "") {
+    throw new TypeError("Each sailing must have a non-empty string route.");
+  }
+
+  // Price must be a real number. NaN and Infinity are not useful prices.
+  if (typeof sailing.price !== "number" || !Number.isFinite(sailing.price) || sailing.price < 0) {
+    throw new TypeError("Each sailing must have a valid non-negative numeric price.");
+  }
+
+  // The date must be parseable by JavaScript.
+  if (typeof sailing.departure !== "string" || Number.isNaN(Date.parse(sailing.departure))) {
+    throw new TypeError("Each sailing must have a valid departure date string.");
+  }
+
+  // Available should be a boolean so the code does not guess from truthy/falsy values.
+  if (typeof sailing.available !== "boolean") {
+    throw new TypeError("Each sailing must have an available boolean.");
+  }
+}
+
+function getBestSailings(sailings) {
+  // Validate the outer input first.
+  if (!Array.isArray(sailings)) {
+    throw new TypeError("sailings must be an array.");
+  }
+
   const bestByRoute = new Map();
 
-  // Inspect each sailing once, making the selection part O(n).
   for (const sailing of sailings) {
-    // Date.parse converts the date string into milliseconds for easy comparison.
-    // If the date is invalid, it returns NaN.
-    const departureTime = Date.parse(sailing && sailing.departure);
+    validateSailing(sailing);
 
-    // Ignore incomplete, unavailable or invalid records.
-    if (
-      !sailing ||
-      !sailing.route ||
-      sailing.seats <= 0 ||
-      !Number.isFinite(sailing.price) ||
-      Number.isNaN(departureTime)
-    ) {
+    // Ignore unavailable sailings because customers cannot book them.
+    if (!sailing.available) continue;
+
+    const currentBest = bestByRoute.get(sailing.route);
+
+    // If this is the first available sailing for the route, keep it.
+    if (!currentBest) {
+      bestByRoute.set(sailing.route, sailing);
       continue;
     }
 
-    // Look up the best sailing already found for this route, if one exists.
-    const current = bestByRoute.get(sailing.route);
+    const isCheaper = sailing.price < currentBest.price;
+    const isSamePriceButEarlier =
+      sailing.price === currentBest.price &&
+      Date.parse(sailing.departure) < Date.parse(currentBest.departure);
 
-    // A sailing wins when it is the first for its route, is cheaper, or has
-    // the same price but departs earlier.
-    const isBetter =
-      !current ||
-      sailing.price < current.price ||
-      (sailing.price === current.price &&
-        departureTime < Date.parse(current.departure));
-
-    if (isBetter) {
+    if (isCheaper || isSamePriceButEarlier) {
       bestByRoute.set(sailing.route, sailing);
     }
   }
 
-  // Map.values() gives us the selected objects. Spread converts the iterator
-  // into an array, which can then be sorted chronologically.
+  // Return the chosen sailings in departure order.
   return [...bestByRoute.values()].sort(
     (a, b) => Date.parse(a.departure) - Date.parse(b.departure)
   );
 }
 
-// Sample data includes an equal-price tie and a cheaper but sold-out sailing.
 const sailings = [
-  { id: "DF101", route: "Dover-Calais", departure: "2026-06-24T10:00:00Z", price: 85, seats: 4 },
-  { id: "DF102", route: "Dover-Calais", departure: "2026-06-24T08:00:00Z", price: 85, seats: 2 },
-  { id: "DF103", route: "Dover-Calais", departure: "2026-06-24T07:00:00Z", price: 70, seats: 0 },
-  { id: "DF201", route: "Portsmouth-Caen", departure: "2026-06-24T12:00:00Z", price: 120, seats: 3 },
-  { id: "DF202", route: "Portsmouth-Caen", departure: "2026-06-24T15:00:00Z", price: 110, seats: 5 }
+  { route: "Dover-Calais", price: 80, departure: "2026-07-01T09:00:00Z", available: true },
+  { route: "Dover-Calais", price: 75, departure: "2026-07-01T12:00:00Z", available: true },
+  { route: "Portsmouth-Caen", price: 120, departure: "2026-07-01T08:00:00Z", available: false },
+  { route: "Portsmouth-Caen", price: 130, departure: "2026-07-01T10:00:00Z", available: true },
 ];
 
 const result = getBestSailings(sailings);
-
-// console.assert reports a failure only when its condition is false.
-console.assert(result.map(sailing => sailing.id).join(",") === "DF102,DF202");
-console.assert(getBestSailings([]).length === 0);
-console.log("Best sailings:", result);
+console.log(result);
+console.assert(result.length === 2, "Should return one best sailing per available route.");
+console.assert(result[0].route === "Dover-Calais", "Dover-Calais should come first by departure.");
+console.assert(result[0].price === 75, "Should pick the cheapest Dover-Calais sailing.");
 

@@ -1,33 +1,34 @@
-/*
-Exercise:
-Return the first character that occurs exactly once in a string. Return null
-when every character is repeated or the string is empty.
-*/
+// Exercise 10: First unique character
+// Goal:
+// Return the first character in a string that appears only once.
+// This is a common plain JavaScript interview exercise.
 
 function firstUniqueCharacter(value) {
-  // Map stores a frequency count for each distinct character.
-  const counts = new Map();
-
-  // First pass: count every occurrence. ?? supplies zero for a new character.
-  for (const character of value) {
-    counts.set(character, (counts.get(character) ?? 0) + 1);
+  if (typeof value !== "string") {
+    throw new TypeError("value must be a string.");
   }
 
-  // Second pass: travelling through the original string preserves its order,
-  // allowing us to return the first character whose count is one.
+  if (value.length === 0) {
+    return null;
+  }
+
+  const counts = new Map();
+
+  for (const character of value) {
+    counts.set(character, (counts.get(character) || 0) + 1);
+  }
+
   for (const character of value) {
     if (counts.get(character) === 1) {
       return character;
     }
   }
 
-  // Reaching this point means no unique character was found.
   return null;
 }
 
-// "s" and "i" repeat, while "w" is the first character occurring once.
-console.assert(firstUniqueCharacter("swiss") === "w");
-console.assert(firstUniqueCharacter("aabb") === null);
-console.assert(firstUniqueCharacter("") === null);
-console.log("First unique character in 'swiss':", firstUniqueCharacter("swiss"));
+console.log(firstUniqueCharacter("openferry"));
+console.assert(firstUniqueCharacter("openferry") === "o", "First unique character should be o.");
+console.assert(firstUniqueCharacter("aabbcc") === null, "Should return null when no character is unique.");
+console.assert(firstUniqueCharacter("") === null, "Should return null for an empty string.");
 
