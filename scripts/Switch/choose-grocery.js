@@ -1,43 +1,70 @@
-const getGrocery = groceryItem => {
-    if (!groceryItem) {
-        throw new Error("The grocery must exist");
-    }
-    if (groceryItem.length == 0) {
-        throw new Error("The grocery must be given.");
+const getGrocery = (groceryItem) => {
+    // Validate the input
+    if (!groceryItem || groceryItem.trim().length === 0) {
+        throw new Error("A grocery item is required.");
     }
 
-    switch (groceryItem) {
+    // Convert to lowercase so the function accepts
+    // "Papaya", "PAPAYA", "papaya", etc.
+    switch (groceryItem.toLowerCase()) {
         case "tomato":
-            console.log("Tomatoes are $0.79");
-            break;
+            return "Tomatoes are £0.79";
+
         case "lime":
-            console.log("Limes are £1.49");
-            break;
+            return "Limes are £1.49";
+
         case "apple":
-            console.log("Apples are £0.99");
-            break;
+            return "Apples are £0.99";
+
         case "papaya":
-            console.log("Papayas are £1.29");
-            break;
+            return "Papayas are £1.29";
+
         default:
-            console.log("Sorry we ran out of " + groceryItem);
-            break;
+            return `Sorry, we ran out of ${groceryItem}.`;
     }
+};
+
+// Print the returned message
+console.log(getGrocery("papaya"));
+
+/*
+Theory
+
+- The switch statement is an alternative to using multiple if...else if statements
+  when you are comparing the same variable against different values.
+
+- The switch keyword starts the statement and is followed by the expression
+  inside parentheses. In this example, the expression is groceryItem.toLowerCase().
+
+- Each case compares the expression with a specific value.
+  If a match is found, the code inside that case executes.
+
+- The break keyword stops execution of the switch statement.
+  Without break, JavaScript continues executing the next cases
+  (this is known as "fall-through").
+
+- The default case runs if none of the cases match.
+  It is similar to the final else in an if...else statement.
+
+Syntax:
+
+switch (expression) {
+    case value1:
+        // code
+        break;
+
+    case value2:
+        // code
+        break;
+
+    default:
+        // code
 }
 
-getGrocery("papaya");
+Notes
 
-
-// Theory
-
-// The switch keyword initiates the statement and is followed by ( ... ),
-// which contains the value that each case will compare. In the example, the value or expression of the switch statement
-// is groceryItem.
-// Inside the block, { ... }, there are multiple cases. The case keyword checks if the expression matches the specified
-// Value that comes after it. The value following the first case is "tomato". If the value of groceryItem equalled
-// "tomato", that case‘s console.log() would run.
-// The value of groceryItem is "papaya", so the third case runs— Papayas are $1.29 is logged to the console.
-// The break keyword tells the computer to exit the block and not execute any more code or check any other cases inside the code block. Note: Without the break keyword at the end of each case, the program would execute the code for all matching cases and the default code as well. This behavior is different from if/else conditional statements which execute only one block of code.
-// At the end of each switch statement, there is a default statement. If none of the cases are true, then the code in the default statement will run.
-
-// Only "default" has the ":", "case" does not.
+- Both case and default are followed by a colon (:).
+- break is optional, but in most situations you should include it.
+- In this example we return from each case instead of using break.
+  Because return immediately exits the function, break is no longer needed.
+*/
