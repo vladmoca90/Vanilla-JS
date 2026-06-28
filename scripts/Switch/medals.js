@@ -1,25 +1,18 @@
-const getAthletePosition = position => {
-    if (!position) {
-        throw new Error("The place must exist");
-    }
-    if (position.length == 0) {
-        throw new Error("The place must be given.");
+const getAthletePosition = (position) => {
+    if (!position || position.trim().length === 0) {
+        throw new Error("Position is required.");
     }
 
     switch (position) {
         case "first place":
-            console.log("You get the gold medal!");
-            break;
+            return "Gold medal";
         case "second place":
-            console.log("You get the silver medal!");
-            break;
+            return "Silver medal";
         case "third place":
-            console.log("You get the bronze medal!");
-            break;
+            return "Bronze medal";
         default:
-            console.log("No medal awarded.");
-            break;
+            return "No medal awarded";
     }
-}
+};
 
-getAthletePosition("first place");
+console.log(getAthletePosition("first place")); // Gold medal
