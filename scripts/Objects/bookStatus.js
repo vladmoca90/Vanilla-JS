@@ -1,4 +1,5 @@
-// Write a JavaScript program that display the book title with true status
+// Write a JavaScript program that displays the titles
+// of all books with a reading status of true.
 
 const library = [
     {
@@ -18,20 +19,24 @@ const library = [
     }
 ];
 
-const bookStatus = library => {
-    if (library.length == 0) {
-        throw new Error("The list cannot be empty");
+const bookStatus = (library) => {
+    // Validate the array
+    if (!library || library.length === 0) {
+        throw new Error("The library cannot be empty.");
     }
 
-    let status = [];
+    const books = [];
 
+    // Loop through every book
     for (let i = 0; i < library.length; i++) {
-        if (library[i].readingStatus == true) {
-            status.push(Object.values(library[i]));
+
+        // Only include books that have been read
+        if (library[i].readingStatus) {
+            books.push(library[i].title);
         }
     }
 
-    return status;
-}
+    return books;
+};
 
-bookStatus(library);
+console.log(bookStatus(library));
