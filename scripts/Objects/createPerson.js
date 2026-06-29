@@ -1,21 +1,52 @@
-// A function that creates an object with the properties and values of a Person
+// An array of objects representing different cars.
+const cars = [
+    {
+        model: "Volvo",
+        country: "Sweden",
+        number: "34BR345",
+    },
+    {
+        model: "Honda",
+        country: "Japan",
+        number: "06GF090",
+    },
+    {
+        model: "Mercedes",
+        country: "Germany",
+        number: "00JY676",
+    },
+];
 
-const createPerson = list => {
-    if (list.length == 0) {
-        throw new Error('The list cannot be empty.');
+// Returns the model of the selected car.
+const chooseCarModel = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error("The index is out of range.");
     }
-    if (list.length == 1) {
-        throw new Error('The list needs two elements.');
+
+    return cars[index].model;
+};
+
+// Returns the property names of the selected car.
+const chooseCarProperty = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error("The index is out of range.");
     }
 
-    let person = new Object();
+    return Object.keys(cars[index]);
+};
 
-    for (let i = 0; i < list.length; i++) {
-        person.name = list[0];
-        person.age = list[1];
+// Returns the property/value pairs of the selected car.
+const chooseCarEntries = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error("The index is out of range.");
     }
 
-    return person;
-}
+    return Object.entries(cars[index]);
+};
 
-createPerson(['John Smith', 25]);
+// Display the results
+console.log(chooseCarModel(2));
+
+console.log(chooseCarProperty(0));
+
+console.log(chooseCarEntries(1));
