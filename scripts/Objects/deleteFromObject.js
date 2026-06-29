@@ -1,31 +1,35 @@
-// A function that deletes a property from an object
-
 const library = [
-    {
-        title: 'The Road Ahead',
-        author: 'Bill Gates',
-        libraryId: 1775,
-    },
-    {
-        title: 'The Life of Walter Isaacson',
-        author: 'Steve Jobs',
-        libraryId: 4064,
-    },
-    {
-        title: 'Mockingjay: The Final Book of The Hunger Games',
-        author: 'Suzanne Collins',
-        libraryId: 1919,
-    }
+  {
+    title: 'The Road Ahead',
+    author: 'Bill Gates',
+    libraryId: 1775,
+  },
+  {
+    title: 'The Life of Walter Isaacson',
+    author: 'Steve Jobs',
+    libraryId: 4064,
+  },
+  {
+    title: 'Mockingjay: The Final Book of The Hunger Games',
+    author: 'Suzanne Collins',
+    libraryId: 1919,
+  }
 ];
 
-const deleteLibraryId = library => {
-    if(library.length == 0) {
-        throw new Error("The list cannot be empty");
-    }
+const deleteLibraryId = (books) => {
+  if (!Array.isArray(books)) {
+    throw new Error("Input must be an array.");
+  }
 
-    for (let i = 0; i < library.length; i++) {
-        delete library[i].libraryId;
-    }
+  if (books.length === 0) {
+    throw new Error("The list cannot be empty.");
+  }
 
-    return library;
-}
+  for (let i = 0; i < books.length; i++) {
+    delete books[i].libraryId;
+  }
+
+  return books;
+};
+
+console.log(deleteLibraryId(library));
