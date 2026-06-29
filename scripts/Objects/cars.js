@@ -1,4 +1,5 @@
-// An array of objects that has the properties of cars and returns an array with specific values from the object
+// An array of objects representing cars.
+
 const cars = [
     {
         model: "Volvo",
@@ -14,38 +15,38 @@ const cars = [
         model: "Mercedes",
         country: "Germany",
         number: "00JY676",
-    }
+    },
 ];
 
-// Returns the values of the properties
-const chooseCarModel = n => {
-    if (n < 0 || n > 3) {
-        throw new Error("The number must be 0, 1, 2 or 3");
+// Returns the model of the selected car.
+const chooseCarModel = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
     }
 
-    return Object.values(cars[n].model).join("");
-}
+    return cars[index].model;
+};
 
-chooseCarModel(3);
+console.log(chooseCarModel(2));
 
-// Returns the the properties
-const chooseCarProperty = n => {
-    if (n < 0 || n > 2) {
-        throw new Error("The number must be 0, 1, 2 or 3");
+// Returns the property names of the selected car.
+const chooseCarProperty = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
     }
 
-    return Object.keys(cars[n]);
-}
+    return Object.keys(cars[index]);
+};
 
-chooseCarProperty(0);
+console.log(chooseCarProperty(0));
 
-// Returns the properties and values as pairs of arrays
-const chooseCarEntries = n => {
-    if (n < 0 || n > 3) {
-        throw new Error("The number must be 0, 1 or 2");
+// Returns the property/value pairs of the selected car.
+const chooseCarEntries = (index) => {
+    if (index < 0 || index >= cars.length) {
+        throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
     }
 
-    return Object.entries(cars[n]);
-}
+    return Object.entries(cars[index]);
+};
 
-chooseCarEntries(1);
+console.log(chooseCarEntries(1));
