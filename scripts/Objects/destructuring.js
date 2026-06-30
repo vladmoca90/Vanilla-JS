@@ -7,9 +7,9 @@ const person = {
 };
 
 // Old way
-const name = person.name;
-const age = person.age;
-const isMarried = person.isMarried;
+const personName = person.name;
+const personAge = person.age;
+const personIsMarried = person.isMarried;
 
 // Object destructuring
 const { name, age, isMarried } = person;
