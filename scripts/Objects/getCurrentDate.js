@@ -1,9 +1,13 @@
-// A function that return the current date
+// Returns the current date in DD-MM-YYYY format
 
-const getCurrentDate = today => {
-    let today = new Date();
+const getCurrentDate = () => {
+  const today = new Date();
 
-    return today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
-}
+  const day = String(today.getDate()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const year = today.getFullYear();
 
-getCurrentDate();
+  return `${day}-${month}-${year}`;
+};
+
+console.log(getCurrentDate());
