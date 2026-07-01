@@ -1,12 +1,4 @@
-// Dictionaries (key-value collections)
-
-// A dictionary stores data as key-value pairs.
-// In JavaScript, dictionaries are usually implemented using plain objects ({})
-// or the built-in Map object.
-
-// ================================
-// Object dictionary
-// ================================
+// Objects can be used as dictionaries (key-value stores).
 
 const animalDict = {
     bird: "goose",
@@ -16,66 +8,21 @@ const animalDict = {
     reptile: "monitor",
 };
 
-// Access values
-console.log(animalDict.bird);        // Dot notation
-console.log(animalDict["fish"]);     // Bracket notation
+// Access or update values using bracket notation.
+animalDict["bird"] = "eagle";
 
-// Update values
+// Or use dot notation when the key is a valid identifier.
 animalDict.bird = "eagle";
-animalDict["fish"] = "salmon";
 
-// Dynamic keys (must use bracket notation)
-const key = "mammal";
-animalDict[key] = "lion";
+// Use bracket notation when the key is stored in a variable.
+const key = "fish";
+console.log(animalDict[key]);
 
-// Add new properties
-animalDict.amphibian = "frog";
+// Create an empty dictionary.
+const dictionary = {};
 
-// Delete properties
-delete animalDict.reptile;
+// JavaScript also provides the Map object.
+const map = new Map();
 
-// Check if a key exists
-console.log("bird" in animalDict); // true
-
-// Get all keys
-console.log(Object.keys(animalDict));
-
-// Get all values
-console.log(Object.values(animalDict));
-
-// Get all key-value pairs
-console.log(Object.entries(animalDict));
-
-// Loop through an object
-for (const key in animalDict) {
-    console.log(key, animalDict[key]);
-}
-
-// ================================
-// Map
-// ================================
-
-// Map is a built-in JavaScript object that also stores key-value pairs.
-// Unlike plain objects, a Map allows keys of any data type.
-
-const scores = new Map();
-
-scores.set("John", 95);
-scores.set("Sarah", 88);
-
-console.log(scores.get("John"));   // 95
-console.log(scores.has("Sarah"));  // true
-
-scores.delete("Sarah");
-
-// Objects can even be used as keys.
-const user = { id: 1 };
-
-scores.set(user, 100);
-
-console.log(scores.get(user)); // 100
-
-// Loop through a Map
-for (const [key, value] of scores) {
-    console.log(key, value);
-}
+map.set("apple", 5);
+console.log(map.get("apple"));
