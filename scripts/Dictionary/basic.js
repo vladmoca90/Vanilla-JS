@@ -1,29 +1,81 @@
-// Basic rules for dictionaries.
+// Dictionaries (key-value collections)
 
-// Dictionaries are objects that have keys and value. --> const dictionary[key] = value;
+// A dictionary stores data as key-value pairs.
+// In JavaScript, dictionaries are usually implemented using plain objects ({})
+// or the built-in Map object.
 
-// You can use the build-in Object, such as newObject(); or the literal notation {};
+// ================================
+// Object dictionary
+// ================================
 
-let animalDict = {
-    "bird": "goose",
-    "fish": "shark",
-    "insect": "spider",
-    "mammal": "wolf",
-    "reptile": "monitor",
+const animalDict = {
+    bird: "goose",
+    fish: "shark",
+    insect: "spider",
+    mammal: "wolf",
+    reptile: "monitor",
+};
+
+// Access values
+console.log(animalDict.bird);        // Dot notation
+console.log(animalDict["fish"]);     // Bracket notation
+
+// Update values
+animalDict.bird = "eagle";
+animalDict["fish"] = "salmon";
+
+// Dynamic keys (must use bracket notation)
+const key = "mammal";
+animalDict[key] = "lion";
+
+// Add new properties
+animalDict.amphibian = "frog";
+
+// Delete properties
+delete animalDict.reptile;
+
+// Check if a key exists
+console.log("bird" in animalDict); // true
+
+// Get all keys
+console.log(Object.keys(animalDict));
+
+// Get all values
+console.log(Object.values(animalDict));
+
+// Get all key-value pairs
+console.log(Object.entries(animalDict));
+
+// Loop through an object
+for (const key in animalDict) {
+    console.log(key, animalDict[key]);
 }
 
-animalDict["bird"] = "goose"; // using bracket.
+// ================================
+// Map
+// ================================
 
-animalDict.bird = "goose"; // accessing the property by dot.
+// Map is a built-in JavaScript object that also stores key-value pairs.
+// Unlike plain objects, a Map allows keys of any data type.
 
-// When using Typescript make sure you write the data type as well. --> const dictionary: any = {}; (example)
+const scores = new Map();
 
-// const dictionary: { [key: string]: string } = {}; (exact type of data)
+scores.set("John", 95);
+scores.set("Sarah", 88);
 
-// you can also use .map() on dictionaries --> const dictionary = new Map<string, number>()
+console.log(scores.get("John"));   // 95
+console.log(scores.has("Sarah"));  // true
 
-// if you use dictionaries on union, enums or more complex data use the Record<Keys, Type> notation.
+scores.delete("Sarah");
 
-// example you have type JobInfo = { ... }  and type JobPosition = { ... }
+// Objects can even be used as keys.
+const user = { id: 1 };
 
-// they can be included in a dictionary as const dictionary = new Map<JobInfo, JobPosition>()
+scores.set(user, 100);
+
+console.log(scores.get(user)); // 100
+
+// Loop through a Map
+for (const [key, value] of scores) {
+    console.log(key, value);
+}
