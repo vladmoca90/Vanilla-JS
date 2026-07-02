@@ -1,38 +1,36 @@
-// A function that calculates the number of properties in an object
+// A function that counts the number of properties in an object.
 
 const student = {
-    name: "David Ray",
-    degree: "BSc Computer Science",
-    university: "University of Birmingham",
-    studentId: 1098085,
-    age: 16,
-    nationality: "Canadian",
-    accommodation: "Maple Bank",
+  name: "David Ray",
+  degree: "BSc Computer Science",
+  university: "University of Birmingham",
+  studentId: 1098085,
+  age: 16,
+  nationality: "Canadian",
+  accommodation: "Maple Bank",
 };
 
-const getStudentLength = (student) => {
-    // Check if the argument is a valid object
-    if (
-        student === null ||
-        typeof student !== "object" ||
-        Array.isArray(student)
-    ) {
-        throw new Error("Expected a non-null object.");
-    }
+const getStudentPropertyCount = (student) => {
+  // Check if the argument is a valid object.
+  if (
+    student === null ||
+    typeof student !== "object" ||
+    Array.isArray(student)
+  ) {
+    throw new Error("Expected a non-null object.");
+  }
 
-    const keys = Object.keys(student);
+  // Check if the object is empty.
+  if (Object.keys(student).length === 0) {
+    throw new Error("The object cannot be empty.");
+  }
 
-    // Check if the object is empty
-    if (keys.length === 0) {
-        throw new Error("The object cannot be empty.");
-    }
-
-    return keys.length;
+  return Object.keys(student).length;
 };
 
 try {
-    const totalProperties = getStudentLength(student);
-    console.log(`The student object has ${totalProperties} properties.`);
+  const totalProperties = getStudentPropertyCount(student);
+  console.log(`The student object has ${totalProperties} properties.`);
 } catch (error) {
-    console.error(error.message);
+  console.error(error.message);
 }
