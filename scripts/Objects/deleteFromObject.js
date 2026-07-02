@@ -25,11 +25,9 @@ const deleteLibraryId = (books) => {
     throw new Error("The list cannot be empty.");
   }
 
-  for (let i = 0; i < books.length; i++) {
-    delete books[i].libraryId;
-  }
-
-  return books;
+  return books.map(({ libraryId, ...book }) => book);
 };
 
 console.log(deleteLibraryId(library));
+
+console.log(library); // Original array remains unchanged
