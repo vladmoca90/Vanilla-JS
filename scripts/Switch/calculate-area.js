@@ -1,18 +1,27 @@
-﻿// A function receives an object that contains the property "type"
+﻿const checkDay = (day) => {
+    switch (day) {
+        case "Monday":
+            console.log("This is the first day of the week!");
+            break;
 
-// "type" can have circle, rectangle, square
+        case "Wednesday":
+            console.log("This is the third day of the week!");
+            break;
 
-// the function returns the area of the shape
+        case "Sunday":
+            console.log("This is the last day of the week!");
+            break;
 
-const calculateArea = shape => {
-    switch (shape.type) {
-        case "circle":
-            return Math.PI * shape.r * shape.r;
-        case "square":
-            return shape.l * shape.l;
-        case "rectangle":
-            return shape.l * shape.h;
+        case "Tuesday":
+        case "Thursday":
+        case "Friday":
+        case "Saturday":
+            console.log("The day is not what you are looking for.");
+            break;
+
         default:
-            throw new Error("Shape not valid");
+            throw new Error("The day is not in a valid format.");
     }
-}
+};
+
+checkDay("Sunday");
