@@ -1,14 +1,16 @@
-// A function that increases a number x by n
+// A function that increases a number x by n using a while loop
 
-const increaseXbyN = n => {
-    let x;
+const increaseXbyN = (x, n) => {
+  let count = 0;
 
-    while (n < 6) {
-        n++;
-        x = + n;
-    }
+  while (count < n) {
+    x++;
+    count++;
+  }
 
-    return x;
-}
+  return x;
+};
 
-increaseXbyN(3);
+console.log(increaseXbyN(3, 4)); // 7
+console.log(increaseXbyN(10, 5)); // 15
+console.log(increaseXbyN(20, 0)); // 20
