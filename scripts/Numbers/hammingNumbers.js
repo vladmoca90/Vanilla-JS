@@ -1,13 +1,29 @@
-// A function that returns the total of Hammning numbers up to 1000 (or any other limit)
+// Returns all Hamming numbers up to a given limit.
 
-const totalOfHamming = (n, m, p) => {
-    let count = 0;
+const getHammingNumbers = (limit) => {
+    const hammingNumbers = [];
 
-    for (let i = 0; i < 1000; i++) {
-        if (i % n == 0 || i % m == 0 || i % p == 0) {
-            count++;
+    for (let i = 1; i <= limit; i++) {
+        let num = i;
+
+        while (num % 2 === 0) {
+            num /= 2;
+        }
+
+        while (num % 3 === 0) {
+            num /= 3;
+        }
+
+        while (num % 5 === 0) {
+            num /= 5;
+        }
+
+        if (num === 1) {
+            hammingNumbers.push(i);
         }
     }
 
-    return count;
-}
+    return hammingNumbers;
+};
+
+console.log(getHammingNumbers(100));
