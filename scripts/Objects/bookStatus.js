@@ -19,9 +19,9 @@ const library = [
     }
 ];
 
-const bookStatus = (library) => {
-    // Validate the array
-    if (!library || library.length === 0) {
+const getReadBooks = (library) => {
+    // Validate the input
+    if (!Array.isArray(library) || library.length === 0) {
         throw new Error("The library cannot be empty.");
     }
 
@@ -29,9 +29,8 @@ const bookStatus = (library) => {
 
     // Loop through every book
     for (let i = 0; i < library.length; i++) {
-
         // Only include books that have been read
-        if (library[i].readingStatus) {
+        if (library[i].readingStatus === true) {
             books.push(library[i].title);
         }
     }
@@ -39,4 +38,6 @@ const bookStatus = (library) => {
     return books;
 };
 
-console.log(bookStatus(library));
+console.log(getReadBooks(library));
+// Output:
+// ['The Road Ahead', 'Walter Isaacson']
