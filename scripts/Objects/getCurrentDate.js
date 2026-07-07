@@ -3,12 +3,12 @@
 const getCurrentDate = () => {
   const today = new Date();
 
-  const day = String(today.getDate()).padStart(2, '0');
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const year = today.getFullYear();
-
-  return `${day}-${month}-${year}`;
+  return [
+    String(today.getDate()).padStart(2, '0'),
+    String(today.getMonth() + 1).padStart(2, '0'),
+    today.getFullYear(),
+  ].join('-');
 };
 
 console.log(getCurrentDate());
-// Example output: 02-07-2026
+// Example output: 07-07-2026
