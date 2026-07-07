@@ -18,35 +18,47 @@ const cars = [
     },
 ];
 
-// Returns the model of the selected car.
-const chooseCarModel = (index) => {
+// Validates the selected index.
+const validateIndex = (index) => {
     if (index < 0 || index >= cars.length) {
         throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
     }
-
-    return cars[index].model;
 };
 
-console.log(chooseCarModel(2));
+// Returns the model of the selected car.
+const getCarModel = (index) => {
+    validateIndex(index);
+
+    const car = cars[index];
+    return car.model;
+};
+
+console.log(getCarModel(2));
+// Output: Mercedes
 
 // Returns the property names of the selected car.
-const chooseCarProperty = (index) => {
-    if (index < 0 || index >= cars.length) {
-        throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
-    }
+const getCarProperties = (index) => {
+    validateIndex(index);
 
-    return Object.keys(cars[index]);
+    const car = cars[index];
+    return Object.keys(car);
 };
 
-console.log(chooseCarProperty(0));
+console.log(getCarProperties(0));
+// Output: ['model', 'country', 'number']
 
 // Returns the property/value pairs of the selected car.
-const chooseCarEntries = (index) => {
-    if (index < 0 || index >= cars.length) {
-        throw new Error(`The index must be between 0 and ${cars.length - 1}.`);
-    }
+const getCarEntries = (index) => {
+    validateIndex(index);
 
-    return Object.entries(cars[index]);
+    const car = cars[index];
+    return Object.entries(car);
 };
 
-console.log(chooseCarEntries(1));
+console.log(getCarEntries(1));
+// Output:
+// [
+//   ['model', 'Honda'],
+//   ['country', 'Japan'],
+//   ['number', '06GF090']
+// ]
