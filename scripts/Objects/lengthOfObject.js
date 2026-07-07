@@ -10,22 +10,24 @@ const student = {
   accommodation: "Maple Bank",
 };
 
-const getStudentPropertyCount = (student) => {
+const getStudentPropertyCount = (obj) => { // Changed parameter name
   // Check if the argument is a valid object.
   if (
-    student === null ||
-    typeof student !== "object" ||
-    Array.isArray(student)
+    obj === null ||
+    typeof obj !== "object" ||
+    Array.isArray(obj)
   ) {
     throw new Error("Expected a non-null object.");
   }
 
+  const propertyCount = Object.keys(obj).length; // Store length once
+
   // Check if the object is empty.
-  if (Object.keys(student).length === 0) {
+  if (propertyCount === 0) {
     throw new Error("The object cannot be empty.");
   }
 
-  return Object.keys(student).length;
+  return propertyCount;
 };
 
 try {
