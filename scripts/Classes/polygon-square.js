@@ -1,23 +1,20 @@
-// A class that calculates the area of a polygon
-
 class Polygon {
-  constructor(height, width) {
-    this.area = width * height;
-  }
+    get area() {
+        throw new Error("Area must be implemented by subclasses.");
+    }
 }
-
-// A class that is sibling of another class
 
 class Square extends Polygon {
-  constructor(height, width) {
-    super(height, width);
-  }
+    constructor(side) {
+        super();
+        this.side = side;
+    }
 
-  get squareArea() {
-    return this.area;
-  }
+    get area() {
+        return this.side ** 2;
+    }
 }
 
-let square = new Square(100, 100);
+const square = new Square(100);
 
-console.log(square.squareArea);
+console.log(square.area); // 10000

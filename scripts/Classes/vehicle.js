@@ -3,15 +3,15 @@ class Vehicle {
         this.make = make;
         this.model = model;
     }
+
+    get description() {
+        return `${this.make} ${this.model}`;
+    }
 }
 
 class Car extends Vehicle {
-    constructor(make, model) {
-        super(make, model);
-    }
-
     get vehicleType() {
-        return "This car is a " + this.make + " " + this.model;
+        return `This car is a ${this.description}`;
     }
 }
 
