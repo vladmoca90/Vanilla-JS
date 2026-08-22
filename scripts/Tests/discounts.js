@@ -1,28 +1,28 @@
 const cart = [
   {
     id: 1,
-    product_name: "product_1",
+    product_name: "product1",
     qty: "2",
     price: "1500",
     discount_percentage: "6",
   },
   {
     id: 2,
-    product_name: "product_2",
+    product_name: "product2",
     qty: "1",
     price: "370",
     discount_percentage: "5",
   },
   {
     id: 3,
-    product_name: "product_3",
+    product_name: "product3",
     qty: "7",
     price: "800",
     discount_percentage: "5.5",
   },
   {
     id: 4,
-    product_name: "product_4",
+    product_name: "product4",
     qty: "3",
     price: "8750",
     discount_percentage: "9.75",
