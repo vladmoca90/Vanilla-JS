@@ -2,28 +2,28 @@ const cart = [
   {
     id: 1,
     product_name: "product1",
-    qty: "2",
+    quanity: "2",
     price: "1500",
     discount_percentage: "6",
   },
   {
     id: 2,
     product_name: "product2",
-    qty: "1",
+    quanity: "1",
     price: "370",
     discount_percentage: "5",
   },
   {
     id: 3,
     product_name: "product3",
-    qty: "7",
+    quanity: "7",
     price: "800",
     discount_percentage: "5.5",
   },
   {
     id: 4,
     product_name: "product4",
-    qty: "3",
+    quanity: "3",
     price: "8750",
     discount_percentage: "9.75",
   },
@@ -33,7 +33,7 @@ const cart = [
 // and returns a new object with the calculated values
 const items = cart.map((item) => {
   // Convert string values into numbers
-  const qty = Number(item.qty);
+  const qnty = Number(item.quanity);
   const price = Number(item.price);
   const discountPercentage = Number(item.discount_percentage);
 
@@ -44,21 +44,21 @@ const items = cart.map((item) => {
   const priceAfterDiscount = price - discountAmount;
 
   // Calculate total price before discount based on quantity
-  const totalBeforeDiscount = price * qty;
+  const totalBeforeDiscount = price * qnty;
 
   // Calculate total price after discount based on quantity
-  const totalAfterDiscount = priceAfterDiscount * qty;
+  const totalAfterDiscount = priceAfterDiscount * qnty;
 
   // Return a new object with the original data
   // plus the calculated values
   return {
     id: item.id,
     product_name: item.product_name,
-    qty: item.qty,
+    quanity: item.quanity,
     price: item.price,
     price_after_discount: priceAfterDiscount.toFixed(2),
     total_after_discount: totalAfterDiscount.toFixed(2),
-    discount_amount: (discountAmount * qty).toFixed(2),
+    discount_amount: (discountAmount * qnty).toFixed(2),
     total_before_discount: totalBeforeDiscount.toFixed(2)
   };
 });
