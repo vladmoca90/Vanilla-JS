@@ -1,7 +1,10 @@
+# Jasmine test sample
+
 https://jasmine.github.io/2.0/introduction.html 
 
-// First sample
+## First sample
 
+```typescript
 describe('math-utilities', function () {
     describe('everyElemSmaller()', function () {
         it('throws an error when the list is empty', function () {
@@ -33,10 +36,11 @@ describe('math-utilities', function () {
         });
     });
 });
+```
 
+## Second sample
 
-// Second sample
-
+```typescript
 describe('math-utilities', function () {
     describe('minElem()', function () {
         it('throws an error when the list is empty', function () {
@@ -62,3 +66,4 @@ describe('math-utilities', function () {
         });
     });
 });
+```
