@@ -1,30 +1,23 @@
 // A function that switches the days of the week
 
-const getCurrentDay = day => {
-    let day = new Date();
+const getCurrentDay = (date = new Date()) => {
 
-    switch (day.getDay()) {
+    switch (date.getDay()) {
         case 0:
-            day = "Sunday";
-            break;
+            return "Sunday";
         case 1:
-            day = "Monday";
-            break;
+            return "Monday";
         case 2:
-            day = "Tuesday";
-            break;
+            return "Tuesday";
         case 3:
-            day = "Wednesday";
-            break;
+            return "Wednesday";
         case 4:
-            day = "Thursday";
-            break;
+            return "Thursday";
         case 5:
-            day = "Friday";
-            break;
+            return "Friday";
         case 6:
-            day = "Saturday";
+            return "Saturday";
         default:
             throw new Error("Date is not a valid format");
     }
-}
+};
