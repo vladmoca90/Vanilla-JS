@@ -4,8 +4,8 @@ function returnCubeRoot(n) {
   return Math.cbrt(n);
 }
 
-returnCubicRoot(27);    // 3
-returnCubicRoot(64);    // 4
-returnCubicRoot(0);     // 0
-returnCubicRoot(-8);    // -2
-returnCubicRoot(2);     // 1.2599210498948732
+returnCubeRoot(27);    // 3
+returnCubeRoot(64);    // 4
+returnCubeRoot(0);     // 0
+returnCubeRoot(-8);    // -2
+returnCubeRoot(2);     // 1.2599210498948732
