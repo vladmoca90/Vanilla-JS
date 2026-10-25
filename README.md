@@ -29,8 +29,27 @@ The Math exercises are in `scripts/Math/`. Their Jasmine specs are in
 
 ## Running the Jasmine specs
 
-Open `jasmine-tests/SpecRunner.html` in a browser. The page loads the bundled
-Jasmine 3.1.0 runner, project scripts, and registered spec files, then displays
-the test results in the browser.
+The specs use the bundled Jasmine 3.1.0 browser runner. To run them:
+
+1. Open `jasmine-tests/SpecRunner.html` in a web browser.
+2. Wait for Jasmine to finish. The runner automatically executes every spec
+   file registered in the page.
+3. Check the summary at the top of the page for the number of passed and failed
+   specs. Select a failed spec to see its error details.
+4. To focus on one group, enter its suite name in Jasmine's **Spec Filter**:
+
+| Test group | Spec folder | Filter text |
+| --- | --- | --- |
+| Dictionary | `jasmine-tests/dictionary/` | `dictionary project` |
+| Switch | `jasmine-tests/switch/` | `switch projects` |
+| Other exercises | `jasmine-tests/others-tests/` | `name project`, `language project`, or `daysUntilChristmas project` |
+| Math | `jasmine-tests/Math/` | Use the suite name for the spec, such as `randomNumber project` or `cubic root project` |
+| Math utilities | `jasmine-tests/utilities/` | `math-utilities` |
+
+The filter matches spec descriptions; it does not execute a folder as a
+separate test command. The `jasmine-tests/switch-tests/` specs are not currently
+registered in `SpecRunner.html`, so they will not run with the steps above.
+To include a new spec in the browser run, add its script tag to
+`jasmine-tests/SpecRunner.html` after the script it tests, then reload the page.
 
 The `npm test` script is not configured to run the Jasmine suite.
