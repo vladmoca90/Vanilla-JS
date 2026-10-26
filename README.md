@@ -41,6 +41,7 @@ The specs use the bundled Jasmine 3.1.0 browser runner. To run them:
 | Test group | Spec folder | Filter text |
 | --- | --- | --- |
 | Dictionary | `jasmine-tests/dictionary/` | `dictionary project` |
+| Interview practice | `jasmine-tests/Tests-interview-practice/` | `countStatuses`, `discount calculations`, `getServiceStats`, `twoSum`, `prices`, `firstDuplicate`, or `unique service names` |
 | Other exercises | `jasmine-tests/others-tests/` | `name project`, `language project`, or `daysUntilChristmas project` |
 | Math | `jasmine-tests/Math/` | Use the suite name for the spec, such as `randomNumber project` or `cubic root project` |
 | Math utilities | `jasmine-tests/utilities/` | `math-utilities` |
