@@ -15,8 +15,6 @@ const sumOfMultiplesOne = n => {
     return sum;
 }
 
-sumOfMultiples(100);
-
 // Second version of the function
 
 const sumOfMultiplesTwo = n => {
@@ -28,7 +26,7 @@ const sumOfMultiplesTwo = n => {
 
     for (let i = 0; i < n; i++) {
         if (i % 3 == 0) {
-            sum += i; s
+            sum += i;
         }
     }
     return sum;

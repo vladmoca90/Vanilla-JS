@@ -40,5 +40,5 @@ const calcCombinations = (n, k) => {
         return 1;
     }
 
-    return fact(n) / [fact(n) * fact(n - k)];
+    return fact(n) / (fact(k) * fact(n - k));
 }

@@ -8,7 +8,7 @@ const preciseNumber = (n, p) => {
         return 0;
     }
 
-    m = n.toPrecision(p);
+    const m = n.toPrecision(p);
 
     return m;
 }

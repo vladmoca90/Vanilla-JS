@@ -15,5 +15,9 @@ const findDivisors = n => {
         }
     }
 
+    if (n > 1) {
+        divisors.push(n);
+    }
+
     return divisors;
 }
