@@ -1,13 +1,16 @@
 describe('degrees-radians project', function () {
+    // Check both a half-turn and a quarter-turn using the script's pi approximation.
     it('converts degrees to radians using the exercise pi approximation', function () {
         expect(degreesToRadians(180)).toBe(3.14);
         expect(degreesToRadians(90)).toBe(1.57);
     });
 
+    // Convert the approximate value of pi radians back to degrees.
     it('converts radians to degrees', function () {
         expect(radiansToDegrees(3.14)).toBe(180);
     });
 
+    // Degrees below zero or above one full turn should throw an error.
     it('rejects degrees outside the supported range', function () {
         expect(function () {
             degreesToRadians(-1);
