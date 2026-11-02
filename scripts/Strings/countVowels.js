@@ -8,7 +8,7 @@ const countVowels = text => {
 
     for (let i = 0; i < text.length; i++) {
         let c = text.charAt(i);
-        if(isVowel(c)) {
+        if(isVowelCharacter(c)) {
             count++;
         }
     }
@@ -16,7 +16,7 @@ const countVowels = text => {
     return count;
 }
 
-const isVowel = c => {
+const isVowelCharacter = c => {
     let v = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
 
     return v;
