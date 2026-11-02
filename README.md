@@ -44,7 +44,7 @@ The specs use the bundled Jasmine 3.1.0 browser runner. To run them:
 | Interview practice | `jasmine-tests/Tests-interview-practice/` | `countStatuses`, `discount calculations`, `getServiceStats`, `twoSum`, `prices`, `firstDuplicate`, or `unique service names` |
 | Other exercises | `jasmine-tests/others-tests/` | `name project`, `language project`, or `daysUntilChristmas project` |
 | Math | `jasmine-tests/Math/` | Use the suite name for the spec, such as `randomNumber project` or `cubic root project` |
-| Strings | `jasmine-tests/strings/` | `strings project` |
+| Strings | `jasmine-tests/strings/` | Use the project name, such as `name-initials project` or `palindrome project` |
 | Math utilities | `jasmine-tests/utilities/` | `math-utilities` |
 
 The filter matches spec descriptions; it does not execute a folder as a
