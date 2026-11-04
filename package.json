@@ -36,6 +36,11 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/jasmine-tests/**/*.test.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vladmoca90/Javascript-JQuery-Practice.git"
