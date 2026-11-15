@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Removes library IDs without changing the original books
+ * - Rejects non-array and empty input
+ */
 describe('deleteFromObject project', function () {
     it('removes library IDs without changing the original books', function () {
         return withObjectScript('deleteFromObject.js', function (evaluate) {

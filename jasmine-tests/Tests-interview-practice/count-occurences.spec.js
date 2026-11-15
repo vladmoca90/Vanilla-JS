@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Counts each status in the supplied array
+ * - Returns an empty object when there are no statuses
+ */
 describe("countStatuses", function () {
     it("counts each status in the supplied array", function () {
         expect(countStatuses(["error", "success", "error", "warning", "error"])).toEqual({

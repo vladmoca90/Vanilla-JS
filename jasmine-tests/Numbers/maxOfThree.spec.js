@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns the largest of three values
+ * - Handles equal values
+ */
 describe('maxOfThree project', function () {
     // Check that the greatest value is found in different argument positions.
     it('returns the largest of three values', function () {

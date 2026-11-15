@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Verifies the main behavior of this project.
+ */
 const showVowelsAndConsonants = require('../../scripts/Strings/vowelsAndConsonants');
 
 describe('showVowelsAndConsonants', () => {

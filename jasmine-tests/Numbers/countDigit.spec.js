@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Counts occurrences of the requested digit
+ * - Returns zero when the digit is absent
+ * - Rejects digits outside the decimal range
+ */
 describe('countDigit project', function () {
     // Count repeated appearances of the selected digit in the number.
     it('counts occurrences of the requested digit', function () {

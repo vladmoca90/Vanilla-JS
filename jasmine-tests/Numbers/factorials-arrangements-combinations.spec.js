@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Calculates factorials including zero factorial
+ * - Calculates arrangements
+ * - Calculates combinations
+ */
 describe('factorials-arrangements-combinations project', function () {
     // Check the special zero-factorial result as well as a regular factorial.
     it('calculates factorials including zero factorial', function () {

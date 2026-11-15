@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Returns initials for a name
+ */
 describe('name-initials project', function () {
     it('returns initials for a name', function () {
         expect(nameInitials('Vlad Mocanu')).toBe('VM');

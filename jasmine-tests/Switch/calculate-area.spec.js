@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Logs the correct message for Monday
+ * - Logs the correct message for Sunday
+ * - Throws for an invalid day
+ */
 describe('calculate area project', function () {
     it('logs the correct message for Monday', function () {
         const logSpy = spyOn(console, 'log');

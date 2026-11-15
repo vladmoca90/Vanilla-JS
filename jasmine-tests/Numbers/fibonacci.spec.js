@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns the sequence with the exercise base values
+ * - Rejects negative input
+ */
 describe('fibonacci project', function () {
     // Verify the exercise's base values and the following recursive sequence values.
     it('returns the sequence with the exercise base values', function () {

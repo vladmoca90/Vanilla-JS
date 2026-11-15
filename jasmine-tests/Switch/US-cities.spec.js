@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns the known message for New York City
+ * - Returns the known message for Los Angeles
+ * - Returns a not-available message for a city not in the list
+ */
 describe('US cities project', function () {
     it('returns the known message for New York City', function () {
         expect(getCity({ name: 'New York City' })).toBe('The city is called New York City.');

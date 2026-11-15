@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Increases x by n
+ * - Leaves x unchanged when n is zero
+ */
 describe('increaseXbyN-while project', function () {
     // Repeatedly increment x four times.
     it('increases x by n', function () {

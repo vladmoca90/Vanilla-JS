@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Calculates the square of a sum
+ * - Calculates the difference of two squares
+ */
 describe('BinomioSquares project', function () {
     // Verify the sum is squared, including when one addend is zero.
     it('calculates the square of a sum', function () {

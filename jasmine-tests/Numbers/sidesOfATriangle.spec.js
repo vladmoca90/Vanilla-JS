@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Recognizes sides that satisfy the triangle inequality
+ * - Rejects sides that cannot form a triangle
+ */
 describe('sidesOfATriangle project', function () {
     // Each pair of sides sums to more than the remaining side.
     it('recognizes sides that satisfy the triangle inequality', function () {

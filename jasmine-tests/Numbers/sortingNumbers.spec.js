@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Prints the three numbers in descending order
+ * - Throws when an argument is not a valid number
+ */
 describe('sortingNumbers project', function () {
     // Spy on console output so the test can check the printed descending order.
     it('prints the three numbers in descending order', function () {

@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Converts degrees to radians using the exercise pi approximation
+ * - Converts radians to degrees
+ * - Rejects degrees outside the supported range
+ */
 describe('degrees-radians project', function () {
     // Check both a half-turn and a quarter-turn using the script's pi approximation.
     it('converts degrees to radians using the exercise pi approximation', function () {

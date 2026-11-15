@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Aggregates requests, errors, and average duration by service
+ * - Returns an empty array when there are no events
+ */
 describe("getServiceStats", function () {
     it("aggregates requests, errors, and average duration by service", function () {
         expect(getServiceStats(events)).toEqual([

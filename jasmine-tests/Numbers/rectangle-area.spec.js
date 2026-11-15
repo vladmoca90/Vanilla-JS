@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Calculates the area of a rectangle
+ * - Rejects zero dimensions and square dimensions
+ */
 describe('rectangle-area project', function () {
     // The area is calculated by multiplying the rectangle's dimensions.
     it('calculates the area of a rectangle', function () {

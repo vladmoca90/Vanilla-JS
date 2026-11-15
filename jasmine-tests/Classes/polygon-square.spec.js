@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Calculates a square area from its side length
+ * - Throws when the base polygon area is requested
+ */
 describe('Polygon and Square classes project', function () {
     // Square provides the area implementation required by the base Polygon class.
     it('calculates a square area from its side length', function () {

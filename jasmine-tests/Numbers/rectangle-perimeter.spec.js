@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Calculates the perimeter of a rectangle
+ */
 describe('rectangle-perimeter project', function () {
     // The perimeter is twice the width plus twice the height.
     it('calculates the perimeter of a rectangle', function () {

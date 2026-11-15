@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns an error if list is empty
+ * - Returns an error if n does not exist
+ * - Returns true is at least one element is greater than n
+ */
 describe('math-utilities', function () {
     describe('everyElemSmaller()', function () {
         it('returns an error if list is empty', function () {

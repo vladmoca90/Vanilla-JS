@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Sums the multiples of three below the given limit
+ * - Rejects a non-positive limit
+ */
 describe('sumOfMultiples project', function () {
     // Both implementations should sum 0, 3, 6, and 9 below the limit of 10.
     it('sums the multiples of three below the given limit', function () {

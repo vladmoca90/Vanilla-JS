@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns positive numbers with no prime factors other than 2, 3, and 5
+ * - Returns an empty list for a limit below one
+ */
 describe('hammingNumbers project', function () {
     // These are the values up to 15 whose prime factors are limited to 2, 3, and 5.
     it('returns positive numbers with no prime factors other than 2, 3, and 5', function () {

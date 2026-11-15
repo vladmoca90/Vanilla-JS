@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Adds grade and conviction details to the student
+ */
 describe('addToStudent project', function () {
     it('adds grade and conviction details to the student', function () {
         return withObjectScript('addToObject/student.js', function (evaluate) {

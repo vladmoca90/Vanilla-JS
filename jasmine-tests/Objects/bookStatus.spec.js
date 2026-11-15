@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns the titles of books that have been read
+ * - Rejects an empty library and non-array input
+ */
 describe('bookStatus project', function () {
     it('returns the titles of books that have been read', function () {
         return withObjectScript('bookStatus.js', function (evaluate) {

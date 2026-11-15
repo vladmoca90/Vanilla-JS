@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns a string formatted to the requested decimal places
+ * - Returns zero for zero
+ * - Rejects negative input
+ */
 describe('fixedNumber project', function () {
     // toFixed formats the result as a string with the requested decimal places.
     it('returns a string formatted to the requested decimal places', function () {

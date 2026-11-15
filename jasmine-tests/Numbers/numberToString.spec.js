@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns true when a positive number has two digits
+ * - Returns false when the number does not have two digits
+ * - Rejects non-positive input
+ */
 describe('numberToString project', function () {
     // A two-character positive integer should pass the length check.
     it('returns true when a positive number has two digits', function () {

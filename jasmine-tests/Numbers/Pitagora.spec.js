@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Recognizes a right triangle
+ * - Returns true when the sides do not satisfy the Pythagorean theorem
+ * - Throws when any side is zero
+ */
 describe('Pitagora project', function () {
     // This function returns false when the sides form a right triangle.
     it('recognizes a right triangle', function () {

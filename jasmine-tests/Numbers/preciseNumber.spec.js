@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns a string formatted to the requested significant digits
+ * - Returns zero for zero
+ * - Rejects negative input
+ */
 describe('preciseNumber project', function () {
     // toPrecision returns a string rounded to the requested significant digits.
     it('returns a string formatted to the requested significant digits', function () {

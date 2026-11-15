@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Provides the expected price for each listed product
+ */
 describe("prices", function () {
     it("provides the expected price for each listed product", function () {
         expect(prices).toEqual({

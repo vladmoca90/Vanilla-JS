@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Separates vowels and consonants
+ */
 describe('vowels-and-consonants project', function () {
     it('separates vowels and consonants', function () {
         expect(showVowelsAndConsonants('abec')).toEqual({

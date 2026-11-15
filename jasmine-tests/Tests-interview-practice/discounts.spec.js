@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Calculates each discounted line total and the cart totals
+ */
 describe("discount calculations", function () {
     it("calculates each discounted line total and the cart totals", function () {
         expect(result.items.length).toBe(4);

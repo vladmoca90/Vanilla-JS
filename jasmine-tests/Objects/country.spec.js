@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Returns an object’s keys, values, and entries
+ */
 describe('country project', function () {
     it('returns an object’s keys, values, and entries', function () {
         return withObjectScript('country.js', function (evaluate) {

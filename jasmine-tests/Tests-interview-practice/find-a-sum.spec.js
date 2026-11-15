@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns the indices of two numbers that add to the target
+ * - Uses distinct entries when the target requires a repeated number
+ * - Returns an empty array when no pair matches
+ */
 describe("twoSum", function () {
     it("returns the indices of two numbers that add to the target", function () {
         expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);

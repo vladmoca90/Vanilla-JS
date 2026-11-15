@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns the keys, entries, values, and property count
+ * - Rejects an empty student object
+ */
 describe('createStudent project', function () {
     it('returns the keys, entries, values, and property count', function () {
         return withObjectScript('createStudent.js', function (evaluate) {

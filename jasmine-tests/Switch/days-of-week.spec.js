@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns Sunday for a Sunday date
+ * - Returns Monday for a Monday date
+ * - Returns Saturday for a Saturday date
+ */
 describe('days of week project', function () {
     it('returns Sunday for a Sunday date', function () {
         const sunday = new Date('2024-01-07');

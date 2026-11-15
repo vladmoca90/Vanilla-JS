@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Converts text to a whole-string, character, or word array
+ */
 describe('string-to-array project', function () {
     it('converts text to a whole-string, character, or word array', function () {
         expect(textToList1('hello world')).toEqual(['hello world']);

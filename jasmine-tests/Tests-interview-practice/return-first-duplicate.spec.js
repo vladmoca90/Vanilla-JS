@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns the first value encountered for a second time
+ * - Returns null when the array has no duplicates
+ * - Returns null for an empty array
+ */
 describe("firstDuplicate", function () {
     it("returns the first value encountered for a second time", function () {
         expect(firstDuplicate([2, 1, 3, 5, 3, 2])).toBe(3);

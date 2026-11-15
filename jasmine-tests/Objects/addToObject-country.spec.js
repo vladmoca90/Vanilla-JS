@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Adds the country details to the original object
+ * - Throws when no country object is provided
+ */
 describe('addToCountry project', function () {
     it('adds the country details to the original object', function () {
         return withObjectScript('addToObject/country.js', function (evaluate) {

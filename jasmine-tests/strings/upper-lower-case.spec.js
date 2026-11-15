@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Converts text to upper and lower case
+ */
 describe('upper-lower-case project', function () {
     it('converts text to upper and lower case', function () {
         expect(upperCaseText('Hello World')).toBe('HELLO WORLD');

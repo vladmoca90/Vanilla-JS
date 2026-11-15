@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns Gold for first place
+ * - Returns Silver for second place
+ * - Returns Bronze for third place
+ */
 describe('medals project', function () {
     it('returns Gold for first place', function () {
         expect(getAthletePosition('first place')).toBe('Gold medal');

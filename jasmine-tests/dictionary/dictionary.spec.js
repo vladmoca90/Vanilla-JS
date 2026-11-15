@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Updates and reads values by key
+ * - Creates an empty dictionary object
+ * - Stores and retrieves a value by key
+ */
 describe('dictionary project', function () {
     describe('object dictionaries', function () {
         it('updates and reads values by key', function () {

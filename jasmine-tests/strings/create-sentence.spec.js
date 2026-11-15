@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Joins words into a sentence ending in a period
+ */
 describe('create-sentence project', function () {
     it('joins words into a sentence ending in a period', function () {
         expect(createdSentence(['Hello', 'world'])).toBe('Hello world.');

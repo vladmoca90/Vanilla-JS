@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns a car model, its property names, and its entries
+ * - Rejects indexes outside the cars array
+ */
 describe('cars project', function () {
     it('returns a car model, its property names, and its entries', function () {
         return withObjectScript('cars.js', function (evaluate) {

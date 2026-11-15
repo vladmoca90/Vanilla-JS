@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Logs the correct message for Wednesday
+ * - Logs a generic message for a weekday that is not Monday or Wednesday
+ * - Throws for an invalid day
+ */
 describe('correct day project', function () {
     it('logs the correct message for Wednesday', function () {
         const logSpy = spyOn(console, 'log');

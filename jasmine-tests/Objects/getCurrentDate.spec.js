@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Returns the current date in DD-MM-YYYY format
+ */
 describe('getCurrentDate project', function () {
     it('returns the current date in DD-MM-YYYY format', function () {
         return withObjectScript('getCurrentDate.js', function (evaluate) {

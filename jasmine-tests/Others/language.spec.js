@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Records each language assigned to current in order
+ */
 describe('language project', function () {
     beforeEach(function () {
         language.log.length = 0;

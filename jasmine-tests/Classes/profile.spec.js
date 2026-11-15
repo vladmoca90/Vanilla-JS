@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Stores the profile details and returns a personalized greeting
+ */
 describe('Profile class project', function () {
     // Check that constructor values are stored and used to build the greeting.
     it('stores the profile details and returns a personalized greeting', function () {

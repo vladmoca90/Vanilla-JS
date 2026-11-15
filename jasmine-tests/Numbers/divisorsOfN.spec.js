@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns all positive divisors of a number
+ * - Returns one as the only divisor of one
+ * - Rejects non-positive input
+ */
 describe('divisorsOfN project', function () {
     // Check that the result includes each divisor, including the number itself.
     it('returns all positive divisors of a number', function () {

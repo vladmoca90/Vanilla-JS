@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Combines the inherited animal details in its type getter
+ */
 describe('Animal classes project', function () {
     // The subclass inherits the family and species values from its parent class.
     it('combines the inherited animal details in its type getter', function () {

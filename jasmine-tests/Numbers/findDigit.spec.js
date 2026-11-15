@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns the digit at a zero-based position
+ * - Rejects an unavailable position
+ * - Requires a number with at least two digits
+ */
 describe('findDigit project', function () {
     // Position 2 is the third character because positions are zero-based.
     it('returns the digit at a zero-based position', function () {

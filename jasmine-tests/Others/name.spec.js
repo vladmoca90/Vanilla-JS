@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Trims whitespace when setting a name
+ * - Trims whitespace from a name containing only spaces
+ */
 describe('name project', function () {
     it('trims whitespace when setting a name', function () {
         person.name = '  Vlad Mocanu  ';

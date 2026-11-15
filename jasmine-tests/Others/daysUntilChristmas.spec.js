@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Returns one day when Christmas is tomorrow
+ * - Returns zero on Christmas Day
+ * - Counts down to next year after Christmas has passed
+ */
 describe('daysUntilChristmas project', function () {
     beforeEach(function () {
         jasmine.clock().install();

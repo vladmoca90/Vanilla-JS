@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Adds the digits of a positive integer
+ * - Throws when the number is missing or negative
+ */
 describe('calculateDigits project', function () {
     // Add each decimal digit of the input number.
     it('adds the digits of a positive integer', function () {

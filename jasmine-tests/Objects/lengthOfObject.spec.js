@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns the number of properties in a non-empty object
+ * - Rejects invalid and empty objects
+ */
 describe('lengthOfObject project', function () {
     it('returns the number of properties in a non-empty object', function () {
         return withObjectScript('lengthOfObject.js', function (evaluate) {

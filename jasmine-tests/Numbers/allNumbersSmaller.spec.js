@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Returns all whole numbers from zero up to but not including n
+ * - Throws for a number that is not greater than zero
+ */
 describe('allNumbersSmaller project', function () {
     // Check that the result includes zero but stops before the input value.
     it('returns all whole numbers from zero up to but not including n', function () {

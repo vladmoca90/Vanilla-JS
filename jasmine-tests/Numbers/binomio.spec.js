@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Calculates a binomial power by repeated multiplication
+ * - Calculates a binomial power using combinations
+ * - Rejects non-positive inputs
+ */
 describe('binomio project', function () {
     beforeEach(function () {
         // Supply the combination and power helpers used by the binomial expansion.

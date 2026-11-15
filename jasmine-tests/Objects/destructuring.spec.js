@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Creates an updated copy without changing the original person
+ */
 describe('destructuring project', function () {
     it('creates an updated copy without changing the original person', function () {
         return withObjectScript('destructuring.js', function (evaluate) {

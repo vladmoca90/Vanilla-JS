@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Counts values below 100 divisible by either divisor
+ * - Counts values below the limit divisible by the given divisor
+ * - Counts integers in the half-open interval
+ */
 describe('allNumbersUpTo project', function () {
     // Count each number below 100 that is divisible by 4 or by 6.
     it('counts values below 100 divisible by either divisor', function () {

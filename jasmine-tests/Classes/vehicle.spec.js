@@ -1,3 +1,7 @@
+/*
+ * Test overview:
+ * - Returns a car description using the inherited vehicle details
+ */
 describe('Vehicle and Car classes project', function () {
     // Car reuses Vehicle's description getter to describe its make and model.
     it('returns a car description using the inherited vehicle details', function () {

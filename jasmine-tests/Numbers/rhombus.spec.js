@@ -1,3 +1,8 @@
+/*
+ * Test overview:
+ * - Calculates the area from the base and height
+ * - Rejects a zero base or height
+ */
 describe('rhombus project', function () {
     // The area is calculated as base multiplied by height.
     it('calculates the area from the base and height', function () {
