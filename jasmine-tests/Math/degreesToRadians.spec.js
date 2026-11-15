@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Checks degree-to-radian conversion against the known 180° = pi relationship.
+ * - Confirms null and invalid value inputs throw the correct errors.
+ * - Verifies the reverse conversion from radians to degrees is also correct.
+ */
 describe('angle conversion project', function () {
     describe('degreesToRadians()', function () {
         it('converts 180 degrees to pi radians', function () {

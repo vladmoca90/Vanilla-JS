@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Verifies the natural logarithm of e is approximately 1.
+ * - Confirms log(1) returns 0.
+ * - Checks that non-positive input values throw the correct error.
+ */
 describe('calcLog project', function () {
     it('calculates the natural logarithm', function () {
         expect(calcLog(Math.E)).toBeCloseTo(1);

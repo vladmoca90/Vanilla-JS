@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Confirms the function returns an integer within the requested inclusive range.
+ * - Verifies the single-value interval case returns that exact number.
+ * - Ensures invalid reversed ranges throw the expected error.
+ */
 describe('randomNumber project', function () {
     it('returns an integer within the inclusive interval', function () {
         spyOn(Math, 'random').and.returnValue(0.5);

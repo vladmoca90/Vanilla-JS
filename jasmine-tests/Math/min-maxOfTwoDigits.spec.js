@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Verifies the generated value stays within the inclusive two-digit range.
+ * - Checks rounding behavior for decimal bounds.
+ * - Ensures invalid bounds and reversed ranges throw the appropriate errors.
+ */
 describe('numberOfTwo project', function () {
     it('returns an integer in the inclusive interval', function () {
         spyOn(Math, 'random').and.returnValue(0.5);

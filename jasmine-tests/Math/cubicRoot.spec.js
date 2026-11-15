@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Confirms cube roots are computed correctly for positive numbers.
+ * - Verifies the function handles negative numbers correctly.
+ * - Ensures zero returns zero without producing an error.
+ */
 describe('cubic root project', function () {
     it('returns the cube root of a positive number', function () {
         expect(returnCubeRoot(27)).toBe(3);

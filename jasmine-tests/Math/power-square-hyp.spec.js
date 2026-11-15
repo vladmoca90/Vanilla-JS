@@ -1,3 +1,9 @@
+/*
+ * Test overview:
+ * - Verifies exponentiation works for valid non-negative inputs.
+ * - Confirms the square helper returns the correct result.
+ * - Checks the triangle hypotenuse calculation and invalid negative-side cases.
+ */
 describe('power, square and hypotenuse project', function () {
     describe('power()', function () {
         it('raises a number to a non-negative integer power', function () {
